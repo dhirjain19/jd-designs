@@ -1,0 +1,48 @@
+.home {
+  z-index: 3;
+}
+
+.home .container{
+
+}
+
+/* .home .container .image_1{
+  background-image: url("../images/project_1/1.png");
+}
+
+.home .container .image_2{
+  background-image: url("../images/project_1/2.png");
+}
+
+.home .container .image_3{
+  background-image: url("../images/project_1/3.png");
+}
+
+.home .container .image_4{
+  background-image: url("../images/Project_1/image_4.jpg");
+} */
+
+.home .container .parallax_images {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  opacity: 0.88;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.home .container .parallax_images .caption {
+  /* background-color:rgba(80, 80, 80, 0.9); */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  width: 60%;
+  margin: 0 -30%;
+}

@@ -1,0 +1,173 @@
+{
+  "home": [
+    {
+      "image": "../images/project_1/1.png",
+      "quote": "Chasing dreams and making memories."
+    },
+    {
+      "image": "../images/project_1/2.png",
+      "quote": "Adventure awaits around every corner."
+    },
+    {
+      "image": "../images/project_1/3.png",
+      "quote": "Finding beauty in the simple things."
+    }
+  ],
+  "projects": [
+    {
+      "academic": [
+        {
+          "name": "IIM Karjat",
+          "caption": "Indian Institute of Management Studies in the state of Maharashtra",
+          "description": "",
+          "images": [
+            {
+              "image": "../images/project_3/1.jpg"
+            },
+            {
+              "image": "../images/project_3/2.jpg"
+            },
+            {
+              "image": "../images/project_3/3.jpg"
+            },
+            {
+              "image": "../images/project_3/4.jpg"
+            },
+            {
+              "image": "../images/project_3/5.jpg"
+            },
+            {
+              "image": "../images/project_3/6.jpg"
+            },
+            {
+              "image": "../images/project_3/7.jpg"
+            },
+            {
+              "image": "../images/project_3/8.jpg"
+            },
+            {
+              "image": "../images/project_3/9.jpg"
+            },
+            {
+              "image": "../images/project_3/10.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Nesting Neighbors",
+          "caption": "A Mixed-use Mass Housing Complex in the suburbs of Mumbai",
+          "description": "",
+          "images": [
+            {
+              "image": "../images/project_3/1.jpg"
+            },
+            {
+              "image": "../images/project_3/2.jpg"
+            },
+            {
+              "image": "../images/project_3/3.jpg"
+            },
+            {
+              "image": "../images/project_3/4.jpg"
+            },
+            {
+              "image": "../images/project_3/5.jpg"
+            },
+            {
+              "image": "../images/project_3/6.jpg"
+            },
+            {
+              "image": "../images/project_3/7.jpg"
+            },
+            {
+              "image": "../images/project_3/8.jpg"
+            },
+            {
+              "image": "../images/project_3/9.jpg"
+            },
+            {
+              "image": "../images/project_3/10.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Eco-Resort",
+          "caption": "Landscape Design in an Eco-Resort in the district of Jodhpur",
+          "description": "",
+          "images": [
+            {
+              "image": "../images/project_3/1.jpg"
+            },
+            {
+              "image": "../images/project_3/2.jpg"
+            },
+            {
+              "image": "../images/project_3/3.jpg"
+            },
+            {
+              "image": "../images/project_3/4.jpg"
+            },
+            {
+              "image": "../images/project_3/5.jpg"
+            },
+            {
+              "image": "../images/project_3/6.jpg"
+            },
+            {
+              "image": "../images/project_3/7.jpg"
+            },
+            {
+              "image": "../images/project_3/8.jpg"
+            },
+            {
+              "image": "../images/project_3/9.jpg"
+            },
+            {
+              "image": "../images/project_3/10.jpg"
+            }
+          ]
+        }
+      ],
+      "professional": [
+        {
+          "name": "Dhanuari Wetlands Thesis",
+          "caption": "Conservation and Restoration of its Multifarious Ecology",
+          "description": "",
+          "images": [
+            {
+              "image": "../images/project_2/1.jpg"
+            },
+            {
+              "image": "../images/project_2/2.jpg"
+            },
+            {
+              "image": "../images/project_2/3.jpg"
+            },
+            {
+              "image": "../images/project_2/4.jpg"
+            },
+            {
+              "image": "../images/project_2/5.jpg"
+            },
+            {
+              "image": "../images/project_2/6.jpg"
+            },
+            {
+              "image": "../images/project_2/7.jpg"
+            },
+            {
+              "image": "../images/project_2/8.jpg"
+            },
+            {
+              "image": "../images/project_2/9.jpg"
+            },
+            {
+              "image": "../images/project_2/10.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contact": ""
+}

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  /* color: #000000; */
+  /* height: 100%; */
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y:auto;
+  /* background-color: rgb(230, 190, 170); */
+
+}
+
+.nav-bar {
+  width: 100%;
+  /* height: 100%; */
+  margin: auto;
+  font-size: 18px;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar .container {
+  width: 100%;
+  padding: 40px 40px;
+}
+
+.onLoadDisplay {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.97;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* display: none; */
+  z-index: 2;
+  transition: background-color 1s;
+}
+
+.logo_image {
+  position: fixed;
+  cursor: pointer;
+  transition: width 1s, height 1s, top 1s, left 1s, margin 1s;
+  transition-timing-function: linear;
+  /* display: none; */
+  width: 120px;
+  height: 160px;
+  top: 50%;
+  left: 50%;
+  margin: -140px -80px;
+  z-index: 3;
+}
+
+.logo_title {
+  position: fixed;
+  cursor: pointer;
+  /* transition: width 1s, height 1s, top 1s, left 1s, margin 1s; */
+  transition: all 1s;
+  transition-timing-function: linear;
+  /* display: none; */
+  width: 200px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  margin-left: -125px;
+  z-index: 3;
+  color: #c6c0c0;
+  text-align: center;
+  /* font-size: 32px; */
+  text-transform: uppercase;
+}
+
+.logo_title.top {
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo_title.middle {
+  margin-top: 90px;
+  font-size: 24px;
+}
+
+.logo_title.down {
+  margin-top: 120px;
+  font-size: 24px;
+}
+
+.logo_title_active {
+  width: unset;
+  top: 0%;
+  left: 0%;
+}
+
+.logo_title_active.top {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 60px;
+}
+
+.logo_title_active.middle {
+  font-size: 16px;
+  margin: 30px 92px;
+  font-weight: 600;
+}
+
+.logo_title_active.down {
+  font-size: 16px;
+  margin: 30px 210px;
+  font-weight: 600;
+}
+
+.onLoadDisplay_active {
+  background-color: unset;
+}
+
+.onLoadDisplay_deactive {
+  display: none;
+}
+
+.logo_image_active {
+  width: 39px;
+  height: 52px;
+  top: 0%;
+  left: 0%;
+  margin: 13px 13px;
+}
+
+.menu-button-container {
+  position: fixed;
+  margin: 40px;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: end;
+  z-index: 1;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #c6c0c0;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+.menu-button-clicked::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+.menu-button-clicked {
+  background: rgba(255, 255, 255, 0);
+}
+
+.menu-button-clicked::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+.menu-list {
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top 500ms cubic-bezier(0.23, 1, 0.32, 1);
+  /* gap: 15%; */
+}
+
+.menu-list-show {
+  top: 0;
+}
+
+.menu-list .menu-item {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+ 
+.menu-list .menu-item a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 4px;
+  /* position: relative; */
+}
+
+.menu-sublist {
+  width: 100%;
+  display: none;
+}
+
+.menu-sublist-show {
+  display: block;
+}
+
+.menu-sublist .menu-subitem {
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.menu-list hr {
+  width: 40px;
+  height: 3px;
+  background: #f00;
+}
+/*
+.menu li a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+*/
+
+.section {
+  display: none;
+}
+
+.section.active-section {
+  display: block;
+}

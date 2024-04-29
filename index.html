@@ -1,0 +1,211 @@
+<html>
+
+<head>
+    <title>
+        Dhir Jain Portfolio
+    </title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <section class="nav-bar">
+            <div class="container">
+
+                <div class="onLoadDisplay" id="onLoadDisplay" onclick="onLoadDisplay()"></div>
+
+                <img class="logo_image" id="logo" src="images\logo.png">
+
+                <div class="logo_title top">J D</div>
+                <div class="logo_title middle">Archi&#x2022;terior</div>
+                <div class="logo_title down">designs</div>
+
+                <label class='menu-button-container' onclick="menuToggle()">
+                    <div class='menu-button' id="menu-toggle"></div>
+                </label>
+
+                <ul class="menu-list" id="menu-list">
+
+                    <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
+                    <hr>
+                    <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
+                    <hr>
+                    <li class="menu-item" onmouseover="opensubmenu()" onmouseout="closesubmenu()">
+                        <a href="#">PROJECTS</a>
+
+                        <ul class="menu-sublist" id="menu-sublist">
+                            <li class="menu-subitem">
+                                <a href="#" onclick="opensection('academic_projects')">ACADEMIC</a>
+                            </li>
+                            <li class="menu-subitem"><a href="#"
+                                    onclick="opensection('professional_projects')">PROFESSIONAL</a></li>
+                        </ul>
+
+                    </li class="menu-item">
+                    <hr>
+
+                    <li class="menu-item"><a href="#" onclick="opensection('contact')">CONTACT</a></li>
+
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="section home active-section" id="home">
+            <div class="container"> </div>
+        </section>
+
+
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="title">ABOUT ME</div>
+                <div class="sub-container">
+                    <div class="description">
+                        Hello there! I'm Ar. Dhir Jain, a budding architect with a fervent dedication to crafting spaces
+                        that not only inspire but also enrich lives.
+                        <br><br>
+                        My approach to architecture is rooted in the belief that every design should be a reflection of
+                        its context, culture, and purpose. Whether it's a residential oasis, a commercial hub, or a
+                        public space, I strive to create environments that foster connection, innovation, and wellbeing.
+                        <br><br>
+                        With a solid foundation in architectural principles and a flair for creativity, I bring a
+                        diverse skill set to the table. From conceptualization to execution, I am adept at translating
+                        ideas into tangible spaces, leveraging the latest technology and sustainable practices along the
+                        way.
+                        <br><br>
+                        As I embark on this exhilarating journey in the world of architecture, my vision is clear—to
+                        push boundaries, challenge conventions, and leave a meaningful mark on the built environment.
+                        Every project is an opportunity to explore new horizons, collaborate with like-minded
+                        individuals, and make a positive impact on communities.
+                        <br><br>
+                        Whether you're envisioning your dream home, revitalizing a commercial space, or embarking on a
+                        larger architectural endeavor, I'm here to turn your vision into reality. Let's embark on this
+                        creative journey together!
+                    </div>
+                    <div class="profile">
+                        <img src="images/profile.jpg" alt="Profile" width="240" height="300">
+                        <div class="name">Dhir Jain<br>Architect</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section projects" id="academic_projects">
+            <div class="title" id="project-page-title">ACADEMIC PROJECTS</div>
+            <div class="container">
+                <div class="content" onclick="showProject('academic', 0)">
+                    <div class="content-overlay"></div>
+                    <img src="images/image_1.jpg" alt="project1">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">IIM Karjat</h3>
+                        <p class="content-text">Indian Institute of Management Studies in the state of Maharashtra</p>
+                    </div>
+                </div>
+                <div class="content" onclick="showProject('academic', 1)">
+                    <div class="content-overlay"></div>
+                    <img src="images/image_1.jpg" alt="project1">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Nesting Neighbors</h3>
+                        <p class="content-text">A Mixed-use Mass Housing Complex in the suburbs of Mumbai</p>
+                    </div>
+                </div>
+                <div class="content" onclick="showProject('academic', 2)">
+                    <div class="content-overlay"></div>
+                    <img src="images/image_1.jpg" alt="project1">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Eco-Resort</h3>
+                        <p class="content-text">Landscape Design in an Eco-Resort in the district of Jodhpur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section projects" id="professional_projects">
+            <div class="title" id="project-page-title">PROFESSIONAL PROJECTS</div>
+            <div class="container">
+                <div class="content" onclick="showProject('professional', 0)">
+                    <div class="content-overlay"></div>
+                    <img src="images/image_1.jpg" alt="project1">
+                    <div class="content-details fadeIn-bottom">
+                        <h3 class="content-title">Dhanuari Wetlands Thesis</h3>
+                        <p class="content-text">Conservation and Restoration of its Multifarious Ecology</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section gallery" id="gallery">
+            <div class="container">
+
+                <!-- <div class="image_slideshow"><img src="images\project_2\1.jpg"></div>
+                <div class="image_slideshow"><img src="images\project_2\10.jpg"></div> -->
+
+                <button class="slide-button slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="slide-button slide-button-right" onclick="plusDivs(+1)">&#10095;</button>
+
+                <!-- <div class="project_title">Project Title</div>
+                <div class="project_detail">Project Decription</div>
+                <div class="project_gallery">
+                    <div class="project_images"><img src="images\project_2\1.jpg"></div>
+                    <div class="project_images"><img src="images\project_2\10.jpg"></div>
+                </div> -->
+            </div>
+        </section>
+
+
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="title">GET IN TOUCH</div>
+                <div>
+                    <p>
+                        Are you dreaming of the perfect home, looking to inject new life into a commercial property, or
+                        planning a larger
+                        architectural project? I am here to bring your vision to life. Join me on this exciting journey
+                        of creativity and
+                        innovation. Let's create something extraordinary together!
+                    </p>
+                </div>
+                <div class="description">
+                    <div class="left">
+                        <div class="left_head">
+                            <b>Reach out to us</b><br><br>
+                        </div>
+                        <div>
+                            Phone: <br>+91 8850628979
+                        </div>
+                        <div>
+                            Email: <br>dhirjain@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <div class="right_head">
+                            <b>Connect with us</b><br><br>
+                        </div>
+                        <div>
+                            Facebook
+                        </div>
+                        <div>
+                            Instagram
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
