@@ -61,7 +61,7 @@ img {
   height: 160px;
   top: 50%;
   left: 50%;
-  margin: -140px -80px;
+  margin: -140px -60px;
   z-index: 3;
 }
 
@@ -76,7 +76,7 @@ img {
   height: 40px;
   top: 50%;
   left: 50%;
-  margin-left: -125px;
+  margin-left: -100px;
   z-index: 3;
   color: #c6c0c0;
   text-align: center;

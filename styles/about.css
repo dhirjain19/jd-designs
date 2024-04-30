@@ -1,7 +1,12 @@
 .about .container {
   margin: 80px auto;
   width: 70%;
+}
 
+.about .container .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .about .sub-container {
@@ -11,20 +16,49 @@
   gap: 30px;
 }
 
-.about .container .title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .about .sub-container .description {
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .about .profile img {
   max-width: fit-content;
+  width: 240px;
+  height: 300px;
 }
 
 .about .profile .name {
   text-align: right;
+  font-size: 18px;
+  font-style: italic;
+}
+
+@media (max-width: 500px) {
+  .about .container {
+    width: 90%;
+  }
+  .about .container .title {
+    font-size: 18px;
+    text-align: center;
+  }
+  .about .sub-container {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .about .sub-container .description {
+    font-size: 12px;
+  }
+  .about .profile {
+    margin: 0 auto;
+  }
+
+  .about .profile img {
+    max-width: fit-content;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .about .profile .name {
+    font-size: 12px ;
+  }
+
 }
