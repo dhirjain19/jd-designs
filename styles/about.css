@@ -1,7 +1,16 @@
+.about {
+  height: inherit;
+  background-color: rgb(155 161 187);
+  color: white;
+  overflow-y: scroll;
+}
+
 .about .container {
   margin: 80px auto;
   width: 70%;
 }
+/* background-color: rgb(155 161 187); */
+/* background-color: #2A5190; */
 
 .about .container .title {
   font-size: 24px;

@@ -30,30 +30,25 @@
                 <label class='menu-button-container' onclick="menuToggle()">
                     <div class='menu-button' id="menu-toggle"></div>
                 </label>
-
-                <ul class="menu-list" id="menu-list">
-
-                    <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
-                    <hr>
-                    <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
-                    <hr>
-                    <li class="menu-item" onmouseover="opensubmenu()" onmouseout="closesubmenu()">
-                        <a href="#">PROJECTS</a>
-
-                        <ul class="menu-sublist" id="menu-sublist">
-                            <li class="menu-subitem">
-                                <a href="#" onclick="opensection('academic_projects')">ACADEMIC</a>
-                            </li>
-                            <li class="menu-subitem"><a href="#"
-                                    onclick="opensection('professional_projects')">PROFESSIONAL</a></li>
-                        </ul>
-
-                    </li class="menu-item">
-                    <hr>
-
-                    <li class="menu-item"><a href="#" onclick="opensection('contact')">CONTACT</a></li>
-
-                </ul>
+                
+                <div class="menu-list" id="menu-list">
+                    <ul class="menu-list-one">
+                
+                        <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
+                        <hr>
+                        <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
+                        <hr>
+                        <li class="menu-item" onclick="open_menu_two()"><a href="#">PROJECTS</a></li>
+                        <hr>
+                        <li class="menu-item"><a href="#" onclick="opensection('contact')">CONTACT</a></li>
+                    </ul>
+                    <div class="menulist-back-one" onclick="open_menu_two()">&#10094; Back</div>
+                    <ul class="menu-list-two" id="menu-sublist">
+                        <li class="menu-item"><a href="#" onclick="opensection('academic_projects')">ACADEMIC</a></li>
+                        <hr>
+                        <li class="menu-item"><a href="#" onclick="opensection('professional_projects')">PROFESSIONAL</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
 

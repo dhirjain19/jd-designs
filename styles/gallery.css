@@ -14,10 +14,11 @@
 }
 
 .gallery .container .slide-button {
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  background-color:#fff;
+  margin: -45px 15px;
+  height: 90px;
+  font-size: 60px;
+  background-color: unset;
+  color: white;
   border: none;
   position: absolute;
   top: 50%;
@@ -58,4 +59,10 @@
 
 .project_images img {
   border: 3px #fff solid;
+}
+
+@media (max-width: 500px) {
+  .gallery .container .image_slideshow {
+  
+  }
 }

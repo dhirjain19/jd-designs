@@ -16,20 +16,18 @@ function onLoadDisplay() {
 
 
 function menuToggle() {
-  document.getElementById('menu-toggle').classList.toggle("menu-button-clicked")
-  document.getElementById('menu-list').classList.toggle("menu-list-show")
+  document.getElementById('menu-toggle').classList.toggle("menu-button-clicked");
+  document.getElementById('menu-list').classList.toggle("menu-list-show");
+  document.getElementsByClassName('menu-list-one')[0].classList.remove("menu-list-one-hide");
+  document.getElementsByClassName('menu-list-two')[0].classList.remove("menu-list-two-hide");
+  document.getElementsByClassName('menulist-back-one')[0].classList.remove("menulist-back-one-active");
 }
 
-function opensubmenu() {
-  // document.getElementById('menu-toggle').classList.toggle("menu-button-clicked")
-  document.getElementById('menu-sublist').classList.add("menu-sublist-show")
+function open_menu_two() {
+  document.getElementsByClassName('menu-list-one')[0].classList.toggle("menu-list-one-hide");
+  document.getElementsByClassName('menu-list-two')[0].classList.toggle("menu-list-two-hide");
+  document.getElementsByClassName('menulist-back-one')[0].classList.toggle("menulist-back-one-active");
 }
-
-function closesubmenu() {
-  // document.getElementById('menu-toggle').classList.toggle("menu-button-clicked")
-  document.getElementById('menu-sublist').classList.remove("menu-sublist-show")
-}
-
 
 var sectionNames = document.getElementsByClassName("section");
 
@@ -42,19 +40,6 @@ function opensection(sectionTab){
   document.getElementById(sectionTab).classList.add("active-section");
   menuToggle()
 }
-
-function opensection(sectionTab){
-
-  for(sectionName of sectionNames){
-    sectionName.classList.remove('active-section');
-  }
-  
-  document.getElementById(sectionTab).classList.add("active-section");
-  menuToggle()
-
-}
-
-
 
 
 let site = `{
