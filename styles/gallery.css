@@ -63,7 +63,11 @@
 }
 
 @media (max-width: 500px) {
-  .gallery .container .image_slideshow {
+  .gallery .project_title {
+    font-size: 18px;
+  }
   
+  .gallery .container .project_gallery {
+    grid-template-columns: auto;
   }
 }
