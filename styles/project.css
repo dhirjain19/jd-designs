@@ -23,6 +23,11 @@
   width: 70%;
 }
 
+.projects .content img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .projects .content .content-overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -74,4 +79,20 @@
 
 .fadeIn-bottom {
   top: 80%;
+}
+
+@media (max-width: 500px) {
+  .projects .title {
+    font-size: 18px;
+  }
+
+  .projects .container {
+    margin: 0 15px;
+    padding: 10px 0px 20px;
+    gap: 30px;
+  }
+
+  .projects .content {
+    width: 90%;
+  }
 }
