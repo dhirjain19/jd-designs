@@ -53,8 +53,28 @@ let site = `{
       "quote": "Adventure awaits around every corner."
     },
     {
-      "image": "../images/project_1/3.png",
+      "image": "../images/project_2/1.jpg",
       "quote": "Finding beauty in the simple things."
+    },
+    {
+      "image": "../images/project_2/2.jpg",
+      "quote": "Chasing dreams and making memories."
+    },
+    {
+      "image": "../images/project_4/1.png",
+      "quote": "Adventure awaits around every corner."
+    },
+    {
+      "image": "../images/project_4/2.png",
+      "quote": "Finding beauty in the simple things."
+    },
+    {
+      "image": "../images/project_3/1.jpg",
+      "quote": "Chasing dreams and making memories."
+    },
+    {
+      "image": "../images/project_3/2.jpg",
+      "quote": "Adventure awaits around every corner."
     }
   ],
   "projects": [
@@ -116,34 +136,13 @@ let site = `{
           "description": "",
           "images": [
             {
-              "image": "../images/project_2/11.jpg"
+              "image": "../images/project_4/1.png"
             },
             {
-              "image": "../images/project_2/12.jpg"
+              "image": "../images/project_4/2.png"
             },
             {
-              "image": "../images/project_2/13.jpg"
-            },
-            {
-              "image": "../images/project_2/14.jpg"
-            },
-            {
-              "image": "../images/project_2/15.jpg"
-            },
-            {
-              "image": "../images/project_2/16.jpg"
-            },
-            {
-              "image": "../images/project_2/17.jpg"
-            },
-            {
-              "image": "../images/project_2/18.jpg"
-            },
-            {
-              "image": "../images/project_2/19.jpg"
-            },
-            {
-              "image": "../images/project_2/20.jpg"
+              "image": "../images/project_4/3.png"
             }
           ]
         }
