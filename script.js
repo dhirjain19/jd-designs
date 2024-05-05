@@ -70,112 +70,12 @@ let site = `{
             },
             {
               "image": "../images/project_3/2.jpg"
-            },
-            {
-              "image": "../images/project_3/3.jpg"
-            },
-            {
-              "image": "../images/project_3/4.jpg"
-            },
-            {
-              "image": "../images/project_3/5.jpg"
-            },
-            {
-              "image": "../images/project_3/6.jpg"
-            },
-            {
-              "image": "../images/project_3/7.jpg"
-            },
-            {
-              "image": "../images/project_3/8.jpg"
-            },
-            {
-              "image": "../images/project_3/9.jpg"
-            },
-            {
-              "image": "../images/project_3/10.jpg"
             }
           ]
         },
         {
           "name": "Nesting Neighbors",
           "caption": "A Mixed-use Mass Housing Complex in the suburbs of Mumbai",
-          "description": "",
-          "images": [
-            {
-              "image": "../images/project_3/1.jpg"
-            },
-            {
-              "image": "../images/project_3/2.jpg"
-            },
-            {
-              "image": "../images/project_3/3.jpg"
-            },
-            {
-              "image": "../images/project_3/4.jpg"
-            },
-            {
-              "image": "../images/project_3/5.jpg"
-            },
-            {
-              "image": "../images/project_3/6.jpg"
-            },
-            {
-              "image": "../images/project_3/7.jpg"
-            },
-            {
-              "image": "../images/project_3/8.jpg"
-            },
-            {
-              "image": "../images/project_3/9.jpg"
-            },
-            {
-              "image": "../images/project_3/10.jpg"
-            }
-          ]
-        },
-        {
-          "name": "Eco-Resort",
-          "caption": "Landscape Design in an Eco-Resort in the district of Jodhpur",
-          "description": "",
-          "images": [
-            {
-              "image": "../images/project_3/1.jpg"
-            },
-            {
-              "image": "../images/project_3/2.jpg"
-            },
-            {
-              "image": "../images/project_3/3.jpg"
-            },
-            {
-              "image": "../images/project_3/4.jpg"
-            },
-            {
-              "image": "../images/project_3/5.jpg"
-            },
-            {
-              "image": "../images/project_3/6.jpg"
-            },
-            {
-              "image": "../images/project_3/7.jpg"
-            },
-            {
-              "image": "../images/project_3/8.jpg"
-            },
-            {
-              "image": "../images/project_3/9.jpg"
-            },
-            {
-              "image": "../images/project_3/10.jpg"
-            }
-          ]
-        }
-      ],
-      "professional": [
-        {
-          "name": "Dhanuari Wetlands Thesis",
-          "caption": "Conservation and Restoration of its Multifarious Ecology",
           "description": "",
           "images": [
             {
@@ -207,6 +107,73 @@ let site = `{
             },
             {
               "image": "../images/project_2/10.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Eco-Resort",
+          "caption": "Landscape Design in an Eco-Resort in the district of Jodhpur",
+          "description": "",
+          "images": [
+            {
+              "image": "../images/project_2/11.jpg"
+            },
+            {
+              "image": "../images/project_2/12.jpg"
+            },
+            {
+              "image": "../images/project_2/13.jpg"
+            },
+            {
+              "image": "../images/project_2/14.jpg"
+            },
+            {
+              "image": "../images/project_2/15.jpg"
+            },
+            {
+              "image": "../images/project_2/16.jpg"
+            },
+            {
+              "image": "../images/project_2/17.jpg"
+            },
+            {
+              "image": "../images/project_2/18.jpg"
+            },
+            {
+              "image": "../images/project_2/19.jpg"
+            },
+            {
+              "image": "../images/project_2/20.jpg"
+            }
+          ]
+        }
+      ],
+      "professional": [
+        {
+          "name": "Dhanuari Wetlands Thesis",
+          "caption": "Conservation and Restoration of its Multifarious Ecology",
+          "description": "",
+          "images": [
+            {
+              "image": "../images/project_1/1.png"
+            },
+            {
+              "image": "../images/project_1/2.png"
+            },
+            {
+              "image": "../images/project_1/3.png"
+            },
+            {
+              "image": "../images/project_1/4.jpg"
+            },
+            {
+              "image": "../images/project_1/5.jpg"
+            },
+            {
+              "image": "../images/project_1/6.jpg"
+            },
+            {
+              "image": "../images/project_1/7.png"
             }
           ]
         }
@@ -287,9 +254,9 @@ function removeSingleElement(parentClass, elementId) {
 
 function removeMultipleElements(parentClass, elementId) {
   var elements = parentClass.getElementsByClassName(elementId);
-
-  if (elements) {
-    for (var i = 0; i < elements.length; i++) {
+  
+  if (elements.length > 0) {
+    for (i = elements.length - 1; i > -1; i--) {
       elements[i].remove();
     }
   }
@@ -331,7 +298,7 @@ function createGalleryElements(category, value){
   
   gallery_container.appendChild(gallery_images);
 
-  showDivs(slideIndex);
+  showDivs(slideIndex = 1);
 }
 
 function showProject(category, value){
