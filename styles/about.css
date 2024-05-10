@@ -1,45 +1,129 @@
 .about {
-  height: 100vh;
   background-color: rgb(155 161 187);
   color: white;
-  /* overflow-y: scroll; */
 }
 
 .about .container {
   margin: 0px auto;
-  padding: 80px 0px;
+  padding: 40px 0px;
   width: 70%;
 }
 /* background-color: rgb(155 161 187); */
 /* background-color: #2A5190; */
 
-.about .container .title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.about .sub-container {
+.about .about-container {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 40px 30px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: black;
   display: flex;
-  justify-content: center;
   flex-direction: row;
   gap: 30px;
 }
 
-.about .sub-container .description {
+.about .about-container .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid rgb(80, 80, 100);
+}
+
+.about .about-container .description .text {
   font-size: 18px;
 }
 
-.about .profile img {
+.about .about-container .profile img {
   max-width: fit-content;
   width: 240px;
   height: 300px;
 }
 
-.about .profile .name {
+.about .about-container .profile .name {
   text-align: right;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
+}
+
+.skills-container {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 40px 30px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.skills-title {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 4px solid rgb(80, 80, 100);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  background-color: rgb(155 161 187);
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 10px;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.connect-container {
+  /* margin: 20px 0; */
+  padding: 40px 30px;
+  background-color: white;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: black;
+}
+
+.connect-title {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 4px solid rgb(80, 80, 100);
+}
+
+.connect-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.connect-button {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.connect-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(155, 161, 187, 0.625);
+  color: #000000;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.connect-button a:hover {
+  background-color: rgb(80, 80, 100);
+  color: white;
 }
 
 @media (max-width: 500px) {
@@ -51,21 +135,20 @@
     padding: 40px 0px;
   }
 
-  .about .container .title {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .about .sub-container {
+  .about .about-container {
     flex-direction: column-reverse;
     gap: 15px;
   }
-
-  .about .sub-container .description {
-    font-size: 12px;
+  .about .about-container .title {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .about .about-container .description .text {
+    font-size: 15px;
   }
 
-  .about .profile {
+  .about .about-container .profile {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -73,13 +156,40 @@
     gap: 5px;
   }
 
-  .about .profile img {
+  .about .about-container .profile img {
     width: 80%;
     height: 80%;
   }
 
-  .about .profile .name {
-    font-size: 12px;
+  .about .about-container .profile .name {
+    font-size: 15px;
     width: 80%;
+  }
+
+  .skills-container {
+    padding: 20px;
+  }
+
+  .skills-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .skill {
+    font-size: 15px;
+    
+  }
+  .connect-container {
+    padding: 20px;
+  }  
+
+  .connect-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .connect-text {
+    font-size: 15px;
+  }
+  .connect-button {
+    font-size: 15px;
   }
 }
