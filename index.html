@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         JD archi-terior designs
     </title>
@@ -13,27 +15,28 @@
     <link rel="stylesheet" href="styles/project.css">
 </head>
 
+<!-- <body onload="onLoadDisplay()"> -->
 <body>
     <div class="main">
 
         <section class="nav-bar">
             <div class="container">
 
-                <div class="onLoadDisplay" id="onLoadDisplay" onclick="onLoadDisplay()"></div>
+                <!-- <div class="onLoadDisplay" id="onLoadDisplay"></div> -->
 
-                <img class="logo_image" id="logo" src="images\logo.png">
+                <!-- <img class="logo_image" id="logo" src="images\logo_1.png"> -->
 
-                <div class="logo_title top">J D</div>
-                <div class="logo_title middle">Archi&#x2022;terior</div>
-                <div class="logo_title down">designs</div>
+                <!-- <div class="logo_title top">J D</div> -->
+                <!-- <div class="logo_title middle">Jain Dhir <br>Archi&#x2022;terior <br>Designs </div> -->
+                <!-- <div class="logo_title down">designs</div> -->
 
                 <label class='menu-button-container' onclick="menuToggle()">
                     <div class='menu-button' id="menu-toggle"></div>
                 </label>
-                
+
                 <div class="menu-list" id="menu-list">
                     <ul class="menu-list-one">
-                
+
                         <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
                         <hr>
                         <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
@@ -46,7 +49,8 @@
                     <ul class="menu-list-two" id="menu-sublist">
                         <li class="menu-item"><a href="#" onclick="opensection('academic_projects')">ACADEMIC</a></li>
                         <hr>
-                        <li class="menu-item"><a href="#" onclick="opensection('professional_projects')">PROFESSIONAL</a></li>
+                        <li class="menu-item"><a href="#"
+                                onclick="opensection('professional_projects')">PROFESSIONAL</a></li>
                     </ul>
                 </div>
             </div>
@@ -106,7 +110,7 @@
                 </div>
                 <div class="content" onclick="showProject('academic', 1)">
                     <div class="content-overlay"></div>
-                    <img src="images/project_2/1.jpg" alt="project1">
+                    <img src="images/project_2/1.png" alt="project1">
                     <div class="content-details fadeIn-bottom">
                         <h3 class="content-title">Nesting Neighbors</h3>
                         <p class="content-text">A Mixed-use Mass Housing Complex in the suburbs of Mumbai</p>
@@ -116,8 +120,8 @@
                     <div class="content-overlay"></div>
                     <img src="images/project_4/1.png" alt="project1">
                     <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Eco-Resort</h3>
-                        <p class="content-text">Landscape Design in an Eco-Resort in the district of Jodhpur</p>
+                        <h3 class="content-title">MARITIME MUSEUM VIEWS</h3>
+                        <p class="content-text"></p>
                     </div>
                 </div>
             </div>
@@ -131,7 +135,7 @@
                     <div class="content-overlay"></div>
                     <img src="images/project_1/2.png" alt="project1">
                     <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Dhanuari Wetlands Thesis</h3>
+                        <h3 class="content-title">Dhanuari Wetlands</h3>
                         <p class="content-text">Conservation and Restoration of its Multifarious Ecology</p>
                     </div>
                 </div>
@@ -141,48 +145,61 @@
 
         <section class="section gallery" id="gallery">
             <div class="container">
-
+                <div class="slideshow">
                 <button class="slide-button slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="slide-button slide-button-right" onclick="plusDivs(+1)">&#10095;</button>
-
+                </div>
             </div>
         </section>
 
 
         <section class="section contact" id="contact">
-            <div class="container">
-                <div class="title">GET IN TOUCH</div>
-                <div class="description">
-                    <p>
-                        Are you dreaming of the perfect home, looking to inject new life into a commercial property, or
-                        planning a larger
-                        architectural project? I am here to bring your vision to life. Join me on this exciting journey
-                        of creativity and
-                        innovation. Let's create something extraordinary together!
-                    </p>
-                </div>
-                <div class="contact_info">
-                    <div class="left">
-                        <div class="head left_head">
-                            <b>Reach out to us</b>
-                        </div>
-                        <div class="icons phone">
-                            <img src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone-icon"/> +91 8850628979
-                        </div>
-                        <div class="icons email">
-                            <img src="https://img.icons8.com/ios/50/gmail-new.png" alt="gmail-new"/> dhirjain@gmail.com
-                        </div>
+            <div class="content">
+                <div class="contact_image"><img src="./images/contact_page(2).jpg"></div>
+                <div class="container">
+                    <div class="title">GET IN TOUCH</div>
+                    <div class="description">
+                        <p>
+                            Are you dreaming of the perfect home, looking to inject new life into a commercial property,
+                            or
+                            planning a larger
+                            architectural project? I am here to bring your vision to life. Join me on this exciting
+                            journey
+                            of creativity and
+                            innovation. Let's create something extraordinary together!
+                        </p>
                     </div>
+                    <div class="contact_info">
+                        <div class="left">
+                            <div class="head left_head">
+                                <b>Reach out to us</b>
+                            </div>
+                            <div class="icons phone">
+                                <img src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone-icon" /> +91
+                                8850628979
+                            </div>
+                            <div class="icons email">
+                                <img src="https://img.icons8.com/ios/50/gmail-new.png" alt="gmail-new" />
+                                dhirjain@gmail.com
+                            </div>
+                        </div>
 
-                    <div class="right">
-                        <div class="head right_head">
-                            <b>Connect with us</b>
-                        </div>
-                        <div class="icons fb">
-                            <img src="https://img.icons8.com/ios/50/facebook-new.png" alt="facebook-icon"/> Facebook
-                        </div>
-                        <div class="icons ig">
-                            <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-icon"/> Instagram
+                        <div class="right">
+                            <div class="head right_head">
+                                <b>Connect with us</b>
+                            </div>
+                            <div class="icons fb">
+                                <img src="https://img.icons8.com/ios/50/facebook-new.png" alt="facebook-icon" />
+                                Facebook
+                            </div>
+                            <div class="icons ig">
+                                <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-icon" />
+                                Instagram
+                            </div>
+                            <div class="icons li">
+                                <img src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin-icon" />
+                                LinkedIn
+                            </div>
                         </div>
                     </div>
                 </div>

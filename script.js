@@ -1,18 +1,4 @@
-function onLoadDisplay() {
-  document.getElementById('logo').classList.add("logo_image_active");
-  var logo_title = document.getElementsByClassName('logo_title');
-  for (i=0; i < logo_title.length; i++) {
-    logo_title[i].classList.add("logo_title_active");
-  }
-  
-  setTimeout(() => {
-    document.getElementById('onLoadDisplay').classList.add("onLoadDisplay_active");
-  }, 500); 
 
-  setTimeout(() => {
-    document.getElementById('onLoadDisplay').classList.add("onLoadDisplay_deactive");
-  }, 1500); 
-}
 
 
 function menuToggle() {
@@ -32,12 +18,12 @@ function open_menu_two() {
 var sectionNames = document.getElementsByClassName("section");
 
 function opensection(sectionTab){
-
   for(sectionName of sectionNames){
     sectionName.classList.remove('active-section');
   }
   
   document.getElementById(sectionTab).classList.add("active-section");
+  // onLoadDisplay();
   menuToggle()
 }
 
@@ -83,57 +69,48 @@ let site = `{
         {
           "name": "IIM Karjat",
           "caption": "Indian Institute of Management Studies in the state of Maharashtra",
-          "description": "",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
               "image": "../images/project_3/1.jpg"
             },
             {
               "image": "../images/project_3/2.jpg"
+            },
+            {
+              "image": "../images/project_3/3.jpg"
             }
           ]
         },
         {
           "name": "Nesting Neighbors",
           "caption": "A Mixed-use Mass Housing Complex in the suburbs of Mumbai",
-          "description": "",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
-              "image": "../images/project_2/1.jpg"
+              "image": "../images/project_2/1.png"
             },
             {
-              "image": "../images/project_2/2.jpg"
+              "image": "../images/project_2/2.png"
             },
             {
-              "image": "../images/project_2/3.jpg"
+              "image": "../images/project_2/3.png"
             },
             {
-              "image": "../images/project_2/4.jpg"
+              "image": "../images/project_2/4.png"
             },
             {
-              "image": "../images/project_2/5.jpg"
+              "image": "../images/project_2/5.png"
             },
             {
-              "image": "../images/project_2/6.jpg"
-            },
-            {
-              "image": "../images/project_2/7.jpg"
-            },
-            {
-              "image": "../images/project_2/8.jpg"
-            },
-            {
-              "image": "../images/project_2/9.jpg"
-            },
-            {
-              "image": "../images/project_2/10.jpg"
+              "image": "../images/project_2/6.png"
             }
           ]
         },
         {
-          "name": "Eco-Resort",
+          "name": "Maritime Museum Views",
           "caption": "Landscape Design in an Eco-Resort in the district of Jodhpur",
-          "description": "",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
               "image": "../images/project_4/1.png"
@@ -143,15 +120,17 @@ let site = `{
             },
             {
               "image": "../images/project_4/3.png"
+            },
+            {
+              "image": "../images/project_4/4.png"
             }
           ]
         }
       ],
       "professional": [
         {
-          "name": "Dhanuari Wetlands Thesis",
-          "caption": "Conservation and Restoration of its Multifarious Ecology",
-          "description": "",
+          "name": "Dhanuari Wetlands: Conservation and Restoration of its Multifarious Ecology",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
               "image": "../images/project_1/1.png"
@@ -180,7 +159,7 @@ let site = `{
     }
   ],
   "contact": ""
-}`
+}`;
 
 site = JSON.parse(site)
 
@@ -208,6 +187,7 @@ createHomeElements();
 
 var gallery_element = document.querySelector(".gallery");
 var gallery_container = gallery_element.querySelector(".container");
+var gallery_slideshow = gallery_container.querySelector(".slideshow");
 
 function addImageElement(source){
   image = document.createElement("img");
@@ -226,7 +206,7 @@ function createGallerySlideElement(gallery_images, source){
   project_images.appendChild(addImageElement(source));
 
   gallery_images.appendChild(project_images);
-  gallery_container.appendChild(image_slideshow);
+  gallery_slideshow.appendChild(image_slideshow);
 }
 
 function createGalleryTextElement(title, detail){
@@ -281,7 +261,7 @@ function showDivs(n) {
 
 function createGalleryElements(category, value){
   
-  removeMultipleElements(gallery_container, "image_slideshow")
+  removeMultipleElements(gallery_slideshow, "image_slideshow")
   removeSingleElement(gallery_container, "project_title")
   removeSingleElement(gallery_container, "project_detail")
   removeSingleElement(gallery_container, "project_gallery")
@@ -295,7 +275,7 @@ function createGalleryElements(category, value){
 
   createGalleryTextElement(site.projects[0][category][value].name, site.projects[0][category][value].description);
   
-  gallery_container.appendChild(gallery_images);
+  gallery_container.appendChild(gallery_images);  
 
   showDivs(slideIndex = 1);
 }
@@ -306,4 +286,30 @@ function showProject(category, value){
   }
   createGalleryElements(category, value);
   document.getElementById("gallery").classList.add("active-section");
+}
+
+function onLoadDisplay() {
+  var logo_img = document.getElementById('logo'); 
+  var logo_title = document.getElementsByClassName('logo_title');  
+  var loading_page = document.getElementById("onLoadDisplay");
+  
+  loading_page.classList.remove("onLoadDisplay_deactive");
+  loading_page.classList.remove("onLoadDisplay_active");
+  logo_img.classList.remove("logo_image_active");
+  logo_title[0].classList.remove("logo_title_active");
+  
+  setTimeout(() => {
+    logo_img.classList.add("logo_image_active");
+    // for (i=0; i < logo_title.length; i++) {
+    logo_title[0].classList.add("logo_title_active");
+    // }
+  }, 2500); 
+
+  setTimeout(() => {
+    loading_page.classList.add("onLoadDisplay_active");
+  }, 3000); 
+
+  setTimeout(() => {
+    loading_page.classList.add("onLoadDisplay_deactive");
+  }, 4000); 
 }
