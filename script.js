@@ -31,19 +31,19 @@ function opensection(sectionTab){
 let site = `{
   "home": [
     {
-      "image": "../images/project_1/1.png",
+      "image": "../images/project_1/5.jpg",
       "quote": "Chasing dreams and making memories."
     },
     {
-      "image": "../images/project_1/2.png",
+      "image": "../images/project_1/6.jpg",
       "quote": "Adventure awaits around every corner."
     },
     {
-      "image": "../images/project_2/1.jpg",
+      "image": "../images/project_2/1.png",
       "quote": "Finding beauty in the simple things."
     },
     {
-      "image": "../images/project_2/2.jpg",
+      "image": "../images/project_2/2.png",
       "quote": "Chasing dreams and making memories."
     },
     {
