@@ -300,6 +300,10 @@
   .site-plan .description {
     font-size: 18px;
   }
+  .site-plan .image-3 img {
+    height: auto;
+    width: 100%;
+  }
 
   .gallery .container .gallery_title {
     font-size: 18px;
