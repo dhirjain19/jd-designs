@@ -269,12 +269,17 @@ function createGalleryElements(category, value){
   var gallery_images = document.createElement("div");
   gallery_images.className = "project_gallery";
 
+  gallery_title = document.createElement("div");
+  gallery_title.className = 'gallery_title';
+  gallery_title.innerHTML = "Gallery";
+
   for(var i = 0; i < site.projects[0][category][value].images.length; i++){
     createGallerySlideElement(gallery_images, site.projects[0][category][value].images[i].image);
   }
 
   createGalleryTextElement(site.projects[0][category][value].name, site.projects[0][category][value].description);
   
+  gallery_container.appendChild(gallery_title);
   gallery_container.appendChild(gallery_images);  
 
   showDivs(slideIndex = 1);
