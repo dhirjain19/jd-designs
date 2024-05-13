@@ -264,6 +264,7 @@ function createGalleryElements(category, value){
   removeMultipleElements(gallery_slideshow, "image_slideshow")
   removeSingleElement(gallery_container, "project_title")
   removeSingleElement(gallery_container, "project_detail")
+  removeSingleElement(gallery_container, "gallery_title")
   removeSingleElement(gallery_container, "project_gallery")
 
   var gallery_images = document.createElement("div");
