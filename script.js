@@ -3,16 +3,50 @@
 
 function menuToggle() {
   document.getElementById('menu-toggle').classList.toggle("menu-button-clicked");
-  document.getElementById('menu-list').classList.toggle("menu-list-show");
-  document.getElementsByClassName('menu-list-one')[0].classList.remove("menu-list-one-hide");
-  document.getElementsByClassName('menu-list-two')[0].classList.remove("menu-list-two-hide");
-  document.getElementsByClassName('menulist-back-one')[0].classList.remove("menulist-back-one-active");
+  document.getElementById('menu-page').classList.toggle("active");
+  setTimeout(() => {document.getElementById('menu-page').classList.toggle("show")} , 100);
+  
+  var menu_items = document.getElementById('menu-items-one').getElementsByClassName('menu-item');
+  
+  setTimeout(() => {
+    for (let i = 0; i < menu_items.length; i++){
+      menu_items[i].classList.toggle('active');
+    }  
+  } , 200);
+  
+    
+  // document.getElementsByClassName('menu-list-two')[0].classList.remove("menu-list-two-hide");
+  // document.getElementsByClassName('menulist-back-one')[0].classList.remove("menulist-back-one-active");
 }
 
+
 function open_menu_two() {
-  document.getElementsByClassName('menu-list-one')[0].classList.toggle("menu-list-one-hide");
-  document.getElementsByClassName('menu-list-two')[0].classList.toggle("menu-list-two-hide");
-  document.getElementsByClassName('menulist-back-one')[0].classList.toggle("menulist-back-one-active");
+  // document.getElementById("menu-page").classList.toggle("active");
+  
+  // setTimeout(() => {
+  //   document.getElementById("menu-page").classList.toggle("show");
+  // }, 100);
+
+  var menu_items_one = document.getElementById("menu-items-one").getElementsByClassName("menu-item");
+  var menu_items_two = document.getElementById("menu-items-two").getElementsByClassName("menu-item");
+
+  for (let i = 0; i < menu_items_one.length; i++) {
+    menu_items_one[i].classList.toggle("hide");
+  }
+
+  setTimeout(() => {
+    document.getElementsByClassName('menu-list-one')[0].classList.toggle("hide");
+  }, 300);
+
+  setTimeout(() => {
+    document.getElementsByClassName('menu-list-two')[0].classList.toggle("show");
+  }, 300);
+
+  setTimeout(() => {
+    for (let i = 0; i < menu_items_two.length; i++) {
+      menu_items_two[i].classList.toggle("active");
+    }
+  }, 600);
 }
 
 var sectionNames = document.getElementsByClassName("section");
