@@ -24,7 +24,7 @@
 
                 <!-- <div class="onLoadDisplay" id="onLoadDisplay"></div> -->
 
-                <img class="logo_image_active" id="logo" src="images\logo_1.png" onclick="opensection('home')">
+                <img class="logo_image_active" id="logo" src="images\logo_1.png" onclick="opensection('home', false)">
 
                 <!-- <div class="logo_title top">J D</div> -->
                 <!-- <div class="logo_title middle">Jain Dhir <br>Archi&#x2022;terior <br>Designs </div> -->
@@ -34,49 +34,44 @@
                     <div class='menu-button' id="menu-toggle"></div>
                 </label>
 
-
-
-
-
-                
-
-
                 <div class="menu-page" id="menu-page">
-                    <div class="menu-list-one">
+                    <div class="menu-list menu-list-one">
                         <ul class="menu-items" id="menu-items-one">
                             <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
-                            <!-- <hr> -->
                             <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
-                            <!-- <hr> -->
                             <li class="menu-item" onclick="toggle_menu_two(1)"><a href="#">PROJECTS <span>&rarr;</span></a></li>
-                            <!-- <hr> -->
                             <li class="menu-item"><a href="#" onclick="opensection('contact')">CONTACT</a></li>
                         </ul>
                     </div>
                 
-                    <div class="menu-list-two">
-                        <div class="menu-backto-one" onclick="toggle_menu_two(0)">&#10094; Back</div>
+                    <div class="menu-list menu-list-two hide">
+                        <div class="menu-back one" onclick="toggle_menu_two(0)">&#10094; Back</div>
                 
                         <ul class="menu-items" id="menu-items-two">
                 
-                            <li class="menu-item"><a href="#" onclick="opensection('academic_projects')">ACADEMIC <span onclick="open_menu_three(0)">&rarr;</span></a></li>
-                            <!-- <hr> -->
-                            <li class="menu-item"><a href="#" onclick="opensection('professional_projects')">PROFESSIONAL <span onclick="open_menu_three(1)">&rarr;</span></a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('academic_projects')">ACADEMIC </a><span onclick="toggle_menu_three(1)">&rarr;</span></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('professional_projects')">PROFESSIONAL </a><span onclick="toggle_menu_three(2)">&rarr;</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-three hide" id="academic-menu">
+                        <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
+                
+                        <ul class="menu-items" id="menu-items-three"> 
+                            <li class="menu-item"><a href="#" onclick="showProject('academic', 0, true)">IIM Karjat</a></li>
+                            <li class="menu-item"><a href="#" onclick="showProject('academic', 1, true)">Nesting Neighbors</a></li>
+                            <li class="menu-item"><a href="#" onclick="showProject('academic', 2, true)">Maritime Museum Views</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-three hide" id="professional-menu">
+                        <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
+                
+                        <ul class="menu-items" id="menu-items-three"> 
+                            <li class="menu-item"><a href="#" onclick="showProject('professional', 0, true)">Dhanuari Wetlands</a></li>
                         </ul>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
             </div>
         </section>
@@ -160,7 +155,7 @@
                     <div class="content-overlay"></div>
                     <img src="images/project_4/1.png" alt="project1">
                     <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">MARITIME MUSEUM VIEWS</h3>
+                        <h3 class="content-title">Maritime Museum Views</h3>
                         <p class="content-text"></p>
                     </div>
                 </div>
