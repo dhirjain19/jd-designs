@@ -49,6 +49,30 @@ let site = `{
             },
             {
               "image": "../images/project_3/3.jpg"
+            },
+            {
+              "image": "../images/project_3/4.png"
+            },
+            {
+              "image": "../images/project_3/5.png"
+            },
+            {
+              "image": "../images/project_3/6.png"
+            },
+            {
+              "image": "../images/project_3/7.png"
+            },
+            {
+              "image": "../images/project_3/8.png"
+            },
+            {
+              "image": "../images/project_3/9.png"
+            },
+            {
+              "image": "../images/project_3/10.png"
+            },
+            {
+              "image": "../images/project_3/11.png"
             }
           ]
         },
