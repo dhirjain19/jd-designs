@@ -20,33 +20,54 @@ function menuToggle() {
 }
 
 
-function open_menu_two() {
-  // document.getElementById("menu-page").classList.toggle("active");
-  
-  // setTimeout(() => {
-  //   document.getElementById("menu-page").classList.toggle("show");
-  // }, 100);
+function toggle_menu_two(val) {
 
   var menu_items_one = document.getElementById("menu-items-one").getElementsByClassName("menu-item");
   var menu_items_two = document.getElementById("menu-items-two").getElementsByClassName("menu-item");
 
-  for (let i = 0; i < menu_items_one.length; i++) {
-    menu_items_one[i].classList.toggle("hide");
-  }
 
-  setTimeout(() => {
-    document.getElementsByClassName('menu-list-one')[0].classList.toggle("hide");
-  }, 300);
 
-  setTimeout(() => {
-    document.getElementsByClassName('menu-list-two')[0].classList.toggle("show");
-  }, 300);
 
-  setTimeout(() => {
+
+  if (val == 0) {
     for (let i = 0; i < menu_items_two.length; i++) {
       menu_items_two[i].classList.toggle("active");
     }
-  }, 600);
+
+    setTimeout(() => {
+      document.getElementsByClassName('menu-list-two')[0].classList.toggle("show");
+    }, 300);
+
+    setTimeout(() => {
+      document.getElementsByClassName('menu-list-one')[0].classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      for (let i = 0; i < menu_items_one.length; i++) {
+        menu_items_one[i].classList.toggle("hide");
+      }
+    }, 325);
+  }  
+
+  else {
+    for (let i = 0; i < menu_items_one.length; i++) {
+      menu_items_one[i].classList.toggle("hide");
+    }
+    
+    setTimeout(() => {
+      document.getElementsByClassName('menu-list-one')[0].classList.toggle("hide");
+    }, 300);
+  
+    setTimeout(() => {
+      document.getElementsByClassName('menu-list-two')[0].classList.toggle("show");
+    }, 300);
+  
+    setTimeout(() => {
+      for (let i = 0; i < menu_items_two.length; i++) {
+        menu_items_two[i].classList.toggle("active");
+      }
+    }, 325);
+  }
 }
 
 var sectionNames = document.getElementsByClassName("section");
