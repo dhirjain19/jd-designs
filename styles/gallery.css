@@ -88,6 +88,36 @@
   border: 3px #fff solid;
 }
 
+.design-brief {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 40px 30px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: black;
+  gap: 30px;
+}
+
+.design-brief .image-2 {
+  background-color: white;
+  flex: 4;
+}
+
+.design-brief .description {
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 20px 20px;
+  text-align: left;
+  flex: 3;
+  /* min-width: 500px; */
+  border-right: 4px dotted rgb(80, 80, 100);
+}
 
 .design-philosophy {
   display: flex;
@@ -260,28 +290,25 @@
   .gallery .container .project_gallery {
     grid-template-columns: auto;
   }
-  .design-philosophy, .design-objectives, .site-plan, .floor-plan {
+  .design-brief, .design-philosophy, .design-objectives, .site-plan, .floor-plan {
     flex-direction: column;
   }
 
-  .design-philosophy .image-1, .design-objectives .image-2, .site-plan .image-3, .floor-plan .ground, .floor-plan .first {
+  .design-brief .image-2,.design-philosophy .image-1, .design-objectives .image-2, .site-plan .image-3, .floor-plan .ground, .floor-plan .first {
     min-width: unset;
   }
-  .design-philosophy .description, .design-objectives .description, .site-plan .description, .floor-plan .ground, .floor-plan .first {
+  .design-brief .description, .design-philosophy .description, .design-objectives .description, .site-plan .description, .floor-plan .ground, .floor-plan .first {
     min-width: unset;
-  }
-  .design-philosophy, .design-objectives, .site-plan {
-    gap: unset;
-  }
-  .design-philosophy .image-1, .design-objectives .image-2 {
-    padding: unset;
-  }
-  .design-philosophy .description, .design-objectives .description, .site-plan .description, .floor-plan .ground {
     border-left: unset;
     border-right: unset;
     padding: unset;
   }
-
+  .design-brief, .design-philosophy, .design-objectives, .site-plan {
+    gap: unset;
+  }
+  .design-brief .image-2, .design-philosophy .image-1, .design-objectives .image-2 {
+    padding: unset;
+  }
   .project_detail .description .heading {
     font-size: 18px;
     margin-top: 10px;
