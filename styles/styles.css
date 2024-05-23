@@ -12,8 +12,6 @@ img {
 }
 
 .main {
-  /* width: 100vw;
-  height: 100vh; */
   overflow-x: hidden;
 }
 
@@ -40,74 +38,57 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   transition: background-color 1s;
-}
-
-.logo_image {
-  position: fixed;
-  cursor: pointer;
-  transition: width 1s, height 1s, top 1s, left 1s, margin 1s;
-  transition-timing-function: linear;
-  width: 230px;
-  height: 160px;
-  top: 50%;
-  left: 50%;
-  margin: -80px -115px;
-  z-index: 3;
-}
-
-.logo_title {
-  position: fixed;
-  cursor: pointer;
+  opacity: 0;
+  display: none;
   transition: all 1s;
-  transition-timing-function: linear;
-  width: 200px;
+}
+
+.onLoadDisplay.display {
+  display: block;
+}
+
+.onLoadDisplay.opacity {
+  opacity: 1;
+}
+
+.onLoadDisplay .wrapper {
+  position: fixed;
   top: 50%;
   left: 50%;
-  margin-left: -100px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
   z-index: 3;
+}
+
+.onLoadDisplay .logo_image {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.onLoadDisplay .logo_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.onLoadDisplay .logo_title {
   color: #000000;
   text-align: center;
   text-transform: uppercase;
 }
 
-
-.logo_title.middle {
-  margin-top: 40px;
-  font-size: 24px;
-}
-
-
-.logo_title_active {
-  width: unset;
-  top: 0%;
-  left: 0%;
-  opacity: 0;
-}
-
-.display_hide {
-  display: none;
-}
-
-
-.onLoadDisplay_active {
-  background-color: unset;
-}
-
-.onLoadDisplay_deactive {
-  display: none;
-}
-
-.logo_image_active {
-  width: 80px;
-  height: 64px;
+#logo {
+  height: 50px;
   position: fixed;
   cursor: pointer;
   top: 0%;
   left: 0%;
-  margin: 4px 8px;
+  margin: 20px 20px;
 }
+
+/*--------------- MENU BUTTON ---------------*/
 
 .menu-button-container {
   position: fixed;

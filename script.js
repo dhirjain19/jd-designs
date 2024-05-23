@@ -354,12 +354,11 @@ function opensection(sectionTab, menu = true){
   for(sectionName of sectionNames){
     sectionName.classList.remove('active-section');
   }
-  
   document.getElementById(sectionTab).classList.add("active-section");
-  // onLoadDisplay();
-  if (menu){
-    menuToggle()
-  }
+  
+  setTimeout(() => {if (menu) menuToggle(); }, 2400);  
+  onLoadDisplay();
+  
 }
 
 var home_element = document.querySelector(".home");
@@ -490,43 +489,34 @@ function showProject(category, value, menu = false){
     sectionName.classList.remove('active-section');
   }
   createGalleryElements(category, value);
-  document.getElementById("gallery").classList.add("active-section");
-  
-  if (menu) {
-    menuToggle()
-  }
+
+  setTimeout(() => {if (menu) menuToggle(); }, 2400);  
+  setTimeout(() => {document.getElementById("gallery").classList.add("active-section"); }, 2000);  
+  onLoadDisplay();
 }
 
 function onLoadDisplay() {
-  var logo_img = document.getElementById('logo'); 
-  var logo_title = document.getElementsByClassName('logo_title');  
   var loading_page = document.getElementById("onLoadDisplay");
+  // var logo_wrapper = loading_page.getElementsByClassName('wrapper')[0]; 
+  // var logo_img = loading_page.getElementsByClassName('logo_image')[0]; 
+  // var logo_title = loading_page.getElementsByClassName('logo_title')[0];  
   
-  loading_page.classList.remove("onLoadDisplay_deactive");
-  loading_page.classList.remove("onLoadDisplay_active");
-  logo_img.classList.remove("logo_image_active");
-  logo_title[0].classList.remove("logo_title_active");
-  
-  setTimeout(() => {
-    logo_img.classList.add("logo_image_active");
-    // for (i=0; i < logo_title.length; i++) {
-    logo_title[0].classList.add("logo_title_active");
-    // }
-  }, 2500); 
-
-  setTimeout(() => {
-    loading_page.classList.add("onLoadDisplay_active");
-  }, 3000); 
-
-  setTimeout(() => {
-    loading_page.classList.add("onLoadDisplay_deactive");
-  }, 4000); 
+  loading_page.classList.add("display");
+  setTimeout(()=>{
+    loading_page.classList.add("opacity");
+  }, 50);
+  setTimeout(()=>{
+    loading_page.classList.remove("opacity");
+  }, 2500);
+  setTimeout(()=>{
+    loading_page.classList.remove("display");
+  }, 3500);
 }
 
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry);
+    // console.log(entry);
     if (entry.isIntersecting) {
       entry.target.querySelector('.content').classList.add('active');
       entry.target.classList.add('active');
