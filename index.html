@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/interior.css">
     <script defer src="script.js"></script>
-
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
 </head>
 
 <body onload="onLoadDisplay()">
@@ -26,12 +27,12 @@
 
                 <div class="onLoadDisplay" id="onLoadDisplay">
                     <div class="wrapper">
-                        <div class="logo_image"><img src="images\logo_1.png"></div>
+                        <div class="logo_image"><img src="images\logo_white.png"></div>
                         <div class="logo_title">Jain Dhir <br>Archi&#x2022;terior <br>Designs </div>
                     </div>
                 </div>
 
-                <img class="logo_image" id="logo" src="images\logo_1.png" onclick="opensection('home', false)">
+                <img class="logo_image" id="logo" src="images\logo_white.png" onclick="opensection('home', false)">
 
 
                 <label class='menu-button-container' onclick="menuToggle()">
@@ -43,36 +44,36 @@
                         <ul class="menu-items" id="menu-items-one">
                             <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
                             <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
-                            <li class="menu-item" onclick="toggle_menu_two(1)"><a href="#">PROJECTS <span>&rarr;</span></a></li>
+                            <li class="menu-item" onclick="toggle_menu_two(1)"><a href="#">PORTFOLIO <span>&rarr;</span></a></li>
                             <li class="menu-item"><a href="#" onclick="opensection('contact')">CONTACT</a></li>
                         </ul>
                     </div>
                 
                     <div class="menu-list menu-list-two hide">
                         <div class="menu-back one" onclick="toggle_menu_two(0)">&#10094; Back</div>
-                
                         <ul class="menu-items" id="menu-items-two">
-                
-                            <li class="menu-item"><a href="#" onclick="opensection('academic_projects')">ACADEMIC </a><span onclick="toggle_menu_three(1)">&rarr;</span></li>
-                            <li class="menu-item"><a href="#" onclick="opensection('professional_projects')">PROFESSIONAL </a><span onclick="toggle_menu_three(2)">&rarr;</span></li>
+                            <li class="menu-item" onclick="toggle_menu_three(1)"><a href="#">ARCHITECTURE <span>&rarr;</span></a></li>
+                            <li class="menu-item" onclick="toggle_menu_three(2)"><a href="#">INTERIOR <span>&rarr;</span></a></li>
                         </ul>
                     </div>
 
-                    <div class="menu-list menu-list-three hide" id="academic-menu">
+                    <div class="menu-list menu-list-three hide" id="architecture-menu">
                         <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
-                
                         <ul class="menu-items" id="menu-items-three"> 
-                            <li class="menu-item"><a href="#" onclick="showProject('academic', 0, true)">IIM Karjat</a></li>
-                            <li class="menu-item"><a href="#" onclick="showProject('academic', 1, true)">Nesting Neighbors</a></li>
-                            <li class="menu-item"><a href="#" onclick="showProject('academic', 2, true)">Maritime Museum Views</a></li>
+                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 0, true)">IIM Karjat</a></li>
+                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 1, true)">Nesting Neighbors</a></li>
+                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 2, true)">Maritime Museum Views</a></li>
+                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 3, true)">Dhanuari Wetlands</a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('architecture_projects')">All Projects</a></li>
                         </ul>
                     </div>
 
-                    <div class="menu-list menu-list-three hide" id="professional-menu">
+                    <div class="menu-list menu-list-three hide" id="interior-menu">
                         <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
-                
                         <ul class="menu-items" id="menu-items-three"> 
-                            <li class="menu-item"><a href="#" onclick="showProject('professional', 0, true)">Dhanuari Wetlands</a></li>
+                            <li class="menu-item"><a href="#" onclick="showInterior('interior', 0, true)">Cafe</a></li>
+                            <li class="menu-item"><a href="#" onclick="showInterior('interior', 1, true)">House</a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('interior_projects')">All Projects</a></li>
                         </ul>
                     </div>
                 </div>
@@ -104,6 +105,18 @@
                     </div>
                     <div class="item">
                         <img src="../images/project_2/2.png">
+                        <div class="content">
+                            Chasing dreams and making memories.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/project_5/7.png">
+                        <div class="content">
+                            Chasing dreams and making memories.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/project_6/3.jpg">
                         <div class="content">
                             Chasing dreams and making memories.
                         </div>
@@ -163,46 +176,46 @@
         </section>
 
 
-        <section class="section projects" id="academic_projects">
-            <div class="title" id="project-page-title">ACADEMIC PROJECTS</div>
-            <div class="container">
-                <div class="content" onclick="showProject('academic', 0)">
-                    <div class="content-overlay"></div>
-                    <img src="images/project_3/2.jpg" alt="project1">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">IIM Karjat</h3>
-                        <p class="content-text">Indian Institute of Management Studies in the state of Maharashtra</p>
+        <section class="section projects" id="architecture_projects">
+            <div class="wrapper">
+                <div class="title">Projects</div>
+                <div class="container">
+                    <div class="card active" style="background-image: url('images/project_3/2.jpg');"
+                        onclick="showProject('architecture', 0)">
+                        <div class="overlay"></div>
+                        <div class="project-title">IIM Karjat</div>
                     </div>
-                </div>
-                <div class="content" onclick="showProject('academic', 1)">
-                    <div class="content-overlay"></div>
-                    <img src="images/project_2/1.png" alt="project1">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Nesting Neighbors</h3>
-                        <p class="content-text">A Mixed-use Mass Housing Complex in the suburbs of Mumbai</p>
+                    <div class="card" style="background-image: url('images/project_2/1.png');"
+                        onclick="showProject('architecture', 1)">
+                        <div class="overlay"></div>
+                        <div class="project-title">Nesting Neighbors</div>
                     </div>
-                </div>
-                <div class="content" onclick="showProject('academic', 2)">
-                    <div class="content-overlay"></div>
-                    <img src="images/project_4/1.png" alt="project1">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Maritime Museum Views</h3>
-                        <p class="content-text"></p>
+                    <div class="card" style="background-image: url('images/project_4/1.png');"
+                        onclick="showProject('architecture', 2)">
+                        <div class="overlay"></div>
+                        <div class="project-title">Maritime Museum</div>
+                    </div>
+                    <div class="card" style="background-image: url('images/project_1/2.png');"
+                        onclick="showProject('architecture', 3)">
+                        <div class="overlay"></div>
+                        <div class="project-title">Dhanuari Wetlands</div>
                     </div>
                 </div>
             </div>
         </section>
 
 
-        <section class="section projects" id="professional_projects">
-            <div class="title" id="project-page-title">PROFESSIONAL PROJECTS</div>
-            <div class="container">
-                <div class="content" onclick="showProject('professional', 0)">
-                    <div class="content-overlay"></div>
-                    <img src="images/project_1/2.png" alt="project1">
-                    <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">Dhanuari Wetlands</h3>
-                        <p class="content-text">Conservation and Restoration of its Multifarious Ecology</p>
+        <section class="section projects" id="interior_projects">
+            <div class="wrapper">
+                <div class="title">PROJECTS</div>
+                <div class="container">
+                    <div class="card active" style="background-image: url('images/project_5/2.png');" onclick="showInterior('interior', 0)">
+                        <div class="overlay"></div>
+                        <div class="project-title">Cafe</div>
+                    </div>
+                    <div class="card" style="background-image: url('images/project_6/1.jpg');" onclick="showInterior('interior', 1)">
+                        <div class="overlay"></div>
+                        <div class="project-title">House</div>
                     </div>
                 </div>
             </div>
@@ -218,6 +231,11 @@
             </div>
         </section>
 
+        <section class="section interior_gallery" id="interior_gallery">
+            <div class="container">
+
+            </div>
+        </section>
 
         <section class="section contact" id="contact">
             <div class="content">
@@ -241,12 +259,12 @@
                                 <b>Reach out to us</b>
                             </div>
                             <div class="icons phone">
-                                <img src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone-icon" /> +91
-                                8850628979
+                                <img src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone-icon" />
+                                <span> +91 8850628979</span>
                             </div>
                             <div class="icons email">
                                 <img src="https://img.icons8.com/ios/50/gmail-new.png" alt="gmail-new" />
-                                dhirjain@gmail.com
+                                <span>dhirjain@gmail.com</span>
                             </div>
                         </div>
 
@@ -256,15 +274,15 @@
                             </div>
                             <div class="icons fb">
                                 <img src="https://img.icons8.com/ios/50/facebook-new.png" alt="facebook-icon" />
-                                Facebook
+                                <span>Facebook</span>
                             </div>
                             <div class="icons ig">
                                 <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-icon" />
-                                Instagram
+                                <span>Instagram</span>
                             </div>
                             <div class="icons li">
                                 <img src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin-icon" />
-                                LinkedIn
+                                <span>LinkedIn</span>
                             </div>
                         </div>
                     </div>

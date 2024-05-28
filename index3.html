@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practical Card Animations Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- IMPORTANT: 
+
+For simplicity sake, I have uploaded all the related resources of this project, like ( .js files, .css files etc. ) to the BASE location mentioned below. Please visit this URL and then SAVE all these files, to your local folder ( i.e. to the folder containing this html file ) and then REMOVE this BASE tag, for complete LOCAL hosting purposes. 
+
+-->
+
+    <base href="https://cdn.jsdelivr.net/gh/linuxguist/animation@main/">
+    </base>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/stylesheet.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <style>
+        [data-aos] {
+            visibility: hidden;
+        }
+
+        [data-aos].animated {
+            visibility: visible;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: "Verdana", sans-serif
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        .w3-tag,
+        .fa {
+            cursor: pointer
+        }
+
+        .w3-tag {
+            height: 15px;
+            width: 15px;
+            padding: 0;
+            margin-top: 6px
+        }
+
+        html,
+        body {
+            background-color: #e7d16c !important;
+        }
+
+        .bd {
+            border: 1px solid #303030 !important;
+        }
+
+        .w3-ul li {
+            border-top: 1px solid #303030 !important;
+            border-left: 1px solid #303030 !important;
+            border-right: 1px solid #303030 !important;
+            border-bottom: 1px dotted #303030 !important;
+        }
+
+        html {
+            scroll-padding-top: 100px;
+            /* height of sticky header */
+        }
+
+        .w3-container h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+
+    <link rel="stylesheet" href="./navbar_ii.css">
+
+    <ul class="navLinks" data-aos='rubberBand'>
+        <li class="active">
+            <div class='wrapper'><a class="nav-link" href="#"><i class="fa fa-university fa-fw"
+                        style="font-size:20px;color:black;"></i>&nbsp;Home</a></div>
+        </li>
+        <li>
+            <div class='wrapper'><a class="nav-link" href="#who_we_are"><i class="fa fa-address-card fa-fw"
+                        style="font-size:20px;color:black;"></i>&nbsp;Who We Are</a></div>
+        </li>
+        <li>
+            <div class='wrapper'><a class="nav-link" href="#slideshow"><i class="fa fa-picture-o fa-fw"
+                        style="font-size:20px;color:black;"></i>&nbsp;Slide Show</a></div>
+        </li>
+        <li>
+            <div class='wrapper'><a class="nav-link" href="#what_we_offer"><i class="fa fa-shopping-basket fa-fw"
+                        style="font-size:20px;color:black;"></i>&nbsp;What We Offer</a></div>
+        </li>
+        <li>
+            <div class='wrapper'><a class="nav-link" href="#pricing_plans"><i class="fa fa-money fa-fw"
+                        style="font-size:20px;color:black;"></i>&nbsp;Pricing Plans</a></div>
+        </li>
+
+        <!-- 
+  
+Begin Section For a Dropdown Menu and its items 
+
+  <li class="dropdown">
+    <div class='wrapper'><a href="javascript:void(0)" class="dropbtn"><i class="fa fa-book fa-fw" style="font-size:20px;color:black;"></i>&nbsp;Blogs&nbsp;<i class="fa fa-caret-down" style="font-size:22px;color:black;vertical-align:bottom;"></i></a></div>
+    <div class="dropdown-content">
+      <a href="./Blogs/blog.html"><i class="fa fa-book fa-fw" style="font-size:20px;color:black;"></i>&nbsp;Dec 7, 2017 Title description</a>
+      <br>
+      <a href="./Blogs/blog.html"><i class="fa fa-book fa-fw" style="font-size:20px;color:black;"></i>&nbsp;Dec 7, 2017 Title description</a>
+    </div>
+  </li>
+
+End Section For a Dropdown Menu and its items 
+  
+-->
+
+        <li>
+            <div class='wrapper'><a class="nav-link" href="#animations_list" target="_self"><i
+                        class="fa fa-list-ul fa-fw" style="font-size:20px;color:black;"></i>&nbsp;Animations List</a>
+            </div>
+        </li>
+
+    </ul>
+
+    <!-- Edit and Copy the Lines Between these Markers to Each HTML File, that you Design ( Paste Them Before the </head> tag in there ). Repeat this after each change here. Also remove/add string : class="active"  
+to the current page, being edited. -->
+
+
+
+
+    <!-- Content -->
+    <div class="w3-content" style="max-width:1100px;margin-top:20px;margin-bottom:20px">
+
+        <div id="zoom_wrapper" class="w3-animate-zoom">
+
+            <div class="w3-panel" data-aos='fadeInUp'>
+                <center>
+                    <h1><b>Practical Card Animations Website</b></h1>
+                </center>
+                <p style="margin-bottom:-18px;"></p>
+            </div>
+
+
+            <!-- Grid -->
+            <div id="who_we_are"></div>
+            <div class="w3-row-padding">
+                <div class="w3-center w3-padding-8" data-aos='fadeInUp'>
+                    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-8">Who We Are</span>
+                </div>
+
+                <br>
+
+                <div class="w3-third w3-margin-bottom w3-hover-shadow" data-aos='fadeInLeft'>
+                    <div class="w3-card-4">
+                        <img src="https://i.imgur.com/kNn26Nf.jpg" alt="John" style="width:100%;height:400px;">
+                        <div class="w3-container">
+                            <h3>Arnold Schwarzenegger</h3>
+                            <p class="w3-opacity">Founder</p>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                            <p><button class="w3-button w3-dark-grey w3-block">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third w3-margin-bottom w3-hover-shadow" data-aos='fadeInUp'>
+                    <div class="w3-card-4">
+                        <img src="https://i.imgur.com/1gZokzN.jpg" alt="Mike" style="width:100%;height:400px;">
+                        <div class="w3-container">
+                            <h3>Angelina Jolie</h3>
+                            <p class="w3-opacity">Director</p>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                            <p><button class="w3-button w3-dark-grey w3-block">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-third w3-margin-bottom w3-hover-shadow" data-aos='fadeInRight'>
+                    <div class="w3-card-4">
+                        <img src="https://i.imgur.com/ngFvxJL.jpg" alt="Jane" style="width:100%;height:400px;">
+                        <div class="w3-container">
+                            <h3>Shirley Temple</h3>
+                            <p class="w3-opacity">Designer</p>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                            <p><button class="w3-button w3-dark-grey w3-block">Contact</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-row-padding" id="slideshow">
+                <div class="w3-center w3-padding-8" data-aos='fadeInUp'>
+                    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-8">Slide Show</span>
+                </div>
+
+                <br>
+
+                <!-- Slideshow -->
+                <div class="w3-container w3-hover-shadow" data-aos='fadeInLeft'>
+                    <div class="w3-display-container mySlides">
+                        <img src="https://i.imgur.com/dO3g4hl.jpg" style="width:100%;height:600px;">
+                        <div class="w3-display-topleft w3-container w3-padding-32">
+                            <span class="w3-white w3-padding-large w3-animate-bottom">Lorem ipsum</span>
+                        </div>
+                    </div>
+                    <div class="w3-display-container mySlides">
+                        <img src="https://i.imgur.com/jK4CmjU.jpg" style="width:100%;height:600px;">
+                        <div class="w3-display-middle w3-container w3-padding-32">
+                            <span class="w3-white w3-padding-large w3-animate-bottom">Klorim tipsum</span>
+                        </div>
+                    </div>
+                    <div class="w3-display-container mySlides">
+                        <img src="https://i.imgur.com/70QsinB.jpg" style="width:100%;height:600px;">
+                        <div class="w3-display-topright w3-container w3-padding-32">
+                            <span class="w3-white w3-padding-large w3-animate-bottom">Blorum pipsum</span>
+                        </div>
+                    </div>
+
+                    <!-- Slideshow next/previous buttons -->
+                    <div class="w3-container w3-dark-grey w3-padding w3-xlarge">
+                        <div class="w3-left" onclick="plusDivs(-1)"><i
+                                class="fa fa-arrow-circle-left w3-hover-text-teal"></i></div>
+                        <div class="w3-right" onclick="plusDivs(1)"><i
+                                class="fa fa-arrow-circle-right w3-hover-text-teal"></i></div>
+
+                        <div class="w3-center">
+                            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white"
+                                onclick="currentDiv(1)"></span>
+                            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white"
+                                onclick="currentDiv(2)"></span>
+                            <span class="w3-tag demodots w3-border w3-transparent w3-hover-white"
+                                onclick="currentDiv(3)"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <!-- Grid -->
+                <div class="w3-row w3-container">
+
+                    <div class="w3-row-padding" id="what_we_offer">
+                        <div class="w3-center w3-padding-8" data-aos='fadeInUp'>
+                            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-8">What We Offer</span>
+                        </div>
+
+                        <br>
+
+                        <div class="w3-col l3 m6 w3-light-grey w3-container w3-padding-16 w3-hover-shadow"
+                            data-aos='fadeInLeft'>
+                            <h3>Design</h3>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                        </div>
+
+                        <div class="w3-col l3 m6 w3-grey w3-container w3-padding-16 w3-hover-shadow"
+                            data-aos='fadeInUp'>
+                            <h3>Branding</h3>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                        </div>
+
+                        <div class="w3-col l3 m6 w3-dark-grey w3-container w3-padding-16 w3-hover-shadow"
+                            data-aos='fadeInDown'>
+                            <h3>Consultation</h3>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                        </div>
+
+                        <div class="w3-col l3 m6 w3-black w3-container w3-padding-16 w3-hover-shadow"
+                            data-aos='fadeInRight'>
+                            <h3>Promises</h3>
+                            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+                                elementum.</p>
+                        </div>
+                    </div>
+
+
+                    <br>
+
+                    <!-- Grid -->
+                    <div class="w3-row w3-container">
+
+                        <div class="w3-row-padding" id="pricing_plans">
+                            <div class="w3-center w3-padding-8" data-aos='fadeInUp'>
+                                <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-8">Pricing
+                                    Plans</span>
+                                <p>Choose a pricing plan that fits your needs.</p>
+                            </div>
+
+                            <br>
+
+
+                            <!-- Grid -->
+
+                            <div class="w3-third w3-margin-bottom w3-hover-shadow" data-aos='fadeInLeft'>
+                                <ul class="w3-ul w3-border bd w3-center w3-hover-shadow">
+                                    <li class="w3-blue w3-xlarge w3-padding-32">Basic</li>
+                                    <li class="w3-padding-16"><b>10GB</b> Storage</li>
+                                    <li class="w3-padding-16"><b>10</b> Emails</li>
+                                    <li class="w3-padding-16"><b>10</b> Domains</li>
+                                    <li class="w3-padding-16"><b>Endless</b> Support</li>
+                                    <li class="w3-padding-16">
+                                        <h2 class="w3-wide">$ 10</h2>
+                                        <span class="w3-opacity">per month</span>
+                                    </li>
+                                    <li class="w3-light-grey w3-padding-24">
+                                        <button class="w3-button w3-lime w3-padding-large">Sign Up</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="w3-third w3-margin-bottom w3-hover-shadow" data-aos='fadeInUp'>
+                                <ul class="w3-ul w3-border bd w3-center w3-hover-shadow">
+                                    <li class="w3-amber w3-xlarge w3-padding-32">Pro</li>
+                                    <li class="w3-padding-16"><b>25GB</b> Storage</li>
+                                    <li class="w3-padding-16"><b>25</b> Emails</li>
+                                    <li class="w3-padding-16"><b>25</b> Domains</li>
+                                    <li class="w3-padding-16"><b>Endless</b> Support</li>
+                                    <li class="w3-padding-16">
+                                        <h2 class="w3-wide">$ 25</h2>
+                                        <span class="w3-opacity">per month</span>
+                                    </li>
+                                    <li class="w3-light-grey w3-padding-24">
+                                        <button class="w3-button w3-lime w3-padding-large">Sign Up</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="w3-third w3-margin-bottom w3-hover-shadow" data-aos='fadeInRight'>
+                                <ul class="w3-ul w3-border bd w3-center w3-hover-shadow">
+                                    <li class="w3-khaki w3-xlarge w3-padding-32">Premium</li>
+                                    <li class="w3-padding-16"><b>50GB</b> Storage</li>
+                                    <li class="w3-padding-16"><b>50</b> Emails</li>
+                                    <li class="w3-padding-16"><b>50</b> Domains</li>
+                                    <li class="w3-padding-16"><b>Endless</b> Support</li>
+                                    <li class="w3-padding-16">
+                                        <h2 class="w3-wide">$ 50</h2>
+                                        <span class="w3-opacity">per month</span>
+                                    </li>
+                                    <li class="w3-light-grey w3-padding-24">
+                                        <button class="w3-button w3-lime w3-padding-large">Sign Up</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            // Slideshow
+                            var slideIndex = 1;
+                            showDivs(slideIndex);
+
+                            function plusDivs(n) {
+                                showDivs(slideIndex += n);
+                            }
+
+                            function currentDiv(n) {
+                                showDivs(slideIndex = n);
+                            }
+
+                            function showDivs(n) {
+                                var i;
+                                var x = document.getElementsByClassName("mySlides");
+                                var dots = document.getElementsByClassName("demodots");
+                                if (n > x.length) { slideIndex = 1 }
+                                if (n < 1) { slideIndex = x.length };
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                                }
+                                x[slideIndex - 1].style.display = "block";
+                                dots[slideIndex - 1].className += " w3-white";
+                            }
+                        </script>
+
+                        <script type="text/javascript">
+                            document.querySelectorAll('.navLinks li').forEach(el => {
+                                el.onclick = () => {
+                                    document.querySelectorAll('.navLinks li').forEach(el => el.classList.remove('active'));
+                                    el.classList.add('active');
+                                }
+                            })
+                        </script>
+
+                        <!--
+<script src="./wow.min.js"></script>
+
+<script type="text/javascript">
+new WOW().init();  
+</script>
+-->
+
+                        <script src="https://cdn.jsdelivr.net/gh/linuxguist/animation@main/aos.js"></script>
+                        <script>
+                            if (!window.Cypress) AOS.init({
+                                useClassNames: true,
+                                initClassName: false,
+                                animatedClassName: 'animated',
+                                duration: 3000, // values from 0 to 3000, with step 50ms
+                            });
+                        </script>
+
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<title>Animations List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/styles.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/linuxguist/faqa@main/stylesheet.css">
+
+<body>
+
+    <div class="w3-container">
+
+        <div class="w3-center w3-padding-16" data-aos='fadeInUp'>
+            <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-8" id="animations_list">Animations
+                List</span>
+        </div>
+
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+
+            <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+            <link rel="stylesheet" href="./style.css">
+
+        </head>
+
+        <body>
+
+            <div class="nav">
+                <center><span><a href="">Hover mouse over a box below to trigger a three second example of the
+                            animation.</a></span></center>
+            </div>
+
+            <div class="container static">
+                <div class="sectionHeader">Attention Seekers</div>
+                <div class="modal" data-ani="bounce"><span>Bounce</span>
+                    <div>animated bounce</div>
+                </div>
+                <div class="modal" data-ani="flash"><span>Flash</span>
+                    <div>animated flash</div>
+                </div>
+                <div class="modal" data-ani="pulse"><span>Pulse</span>
+                    <div>animated pulse</div>
+                </div>
+                <div class="modal" data-ani="rubberBand"><span>Rubber Band</span>
+                    <div>animated rubberBand</div>
+                </div>
+                <div class="modal" data-ani="shake"><span>Shake</span>
+                    <div>animated shake</div>
+                </div>
+                <div class="modal" data-ani="swing"><span>Swing</span>
+                    <div>animated swing</div>
+                </div>
+                <div class="modal" data-ani="tada"><span>Tada</span>
+                    <div>animated tada</div>
+                </div>
+                <div class="modal" data-ani="wobble"><span>Wobble</span>
+                    <div>animated wobble</div>
+                </div>
+                <div class="modal" data-ani="jello"><span>Jello</span>
+                    <div>animated jello</div>
+                </div>
+
+            </div>
+
+            <div class="container bounce">
+                <div class="sectionHeader">Bouncing Entrances</div>
+                <div class="modal" data-ani="bounceIn"><span>Bounce In</span>
+                    <div>animated bounceIn</div>
+                </div>
+                <div class="modal" data-ani="bounceInDown"><span>Bounce In Down</span>
+                    <div>animated bounceInDown</div>
+                </div>
+                <div class="modal" data-ani="bounceInUp"><span>Bounce In Up</span>
+                    <div>animated bounceInUp</div>
+                </div>
+                <div class="modal" data-ani="bounceInLeft"><span>Bounce In Left</span>
+                    <div>animated bounceInLeft</div>
+                </div>
+                <div class="modal" data-ani="bounceInRight"><span>Bounce In Right</span>
+                    <div>animated bounceInRight</div>
+                </div>
+
+            </div>
+
+            <div class="container bounce">
+                <div class="sectionHeader">Bouncing Exits</div>
+                <div class="modal" data-ani="bounceOut"><span>Bounce Out</span>
+                    <div>animated bounceOut</div>
+                </div>
+                <div class="modal" data-ani="bounceOutDown"><span>Bounce Out Down</span>
+                    <div>animated bounceOutDown</div>
+                </div>
+                <div class="modal" data-ani="bounceOutUp"><span>Bounce Out Up</span>
+                    <div>animated bounceOutUp</div>
+                </div>
+                <div class="modal" data-ani="bounceOutLeft"><span>Bounce Out Left</span>
+                    <div>animated bounceOutLeft</div>
+                </div>
+                <div class="modal" data-ani="bounceOutRight"><span>Bounce Out Right</span>
+                    <div>animated bounceOutRight</div>
+                </div>
+
+            </div>
+
+            <div class="container fade">
+                <div class="sectionHeader">Fading Entrances</div>
+                <div class="modal" data-ani="fadeIn"><span>Fade In</span>
+                    <div>animated fadeIn</div>
+                </div>
+                <div class="modal" data-ani="fadeInDown"><span>Fade In Down</span>
+                    <div>animated fadeInDown</div>
+                </div>
+                <div class="modal" data-ani="fadeInDownBig"><span>Fade In Down Big</span>
+                    <div>animated fadeInDownBig</div>
+                </div>
+                <div class="modal" data-ani="fadeInUp"><span>Fade In Up</span>
+                    <div>animated fadeInUp</div>
+                </div>
+                <div class="modal" data-ani="fadeInUpBig"><span>Fade In Up Big</span>
+                    <div>animated fadeInUpBig</div>
+                </div>
+                <div class="modal" data-ani="fadeInLeft"><span>Fade In Left</span>
+                    <div>animated fadeInLeft</div>
+                </div>
+                <div class="modal" data-ani="fadeInLeftBig"><span>Fade In Left Big</span>
+                    <div>animated fadeInLeftBig</div>
+                </div>
+                <div class="modal" data-ani="fadeInRight"><span>Fade In Right</span>
+                    <div>animated fadeInRight</div>
+                </div>
+                <div class="modal" data-ani="fadeInRightBig"><span>Fade In Right Big</span>
+                    <div>animated fadeInRightBig</div>
+                </div>
+
+            </div>
+
+            <div class="container fade">
+                <div class="sectionHeader">Fading Exits</div>
+                <div class="modal" data-ani="fadeIn"><span>Fade Out</span>
+                    <div>animated fadeIn</div>
+                </div>
+                <div class="modal" data-ani="fadeOutDown"><span>Fade Out Down</span>
+                    <div>animated fadeOutDown</div>
+                </div>
+                <div class="modal" data-ani="fadeOutDownBig"><span>Fade Out Down Big</span>
+                    <div>animated fadeOutDownBig</div>
+                </div>
+                <div class="modal" data-ani="fadeOutUp"><span>Fade Out Up</span>
+                    <div>animated fadeOutUp</div>
+                </div>
+                <div class="modal" data-ani="fadeOutUpBig"><span>Fade Out Up Big</span>
+                    <div>animated fadeOutUpBig</div>
+                </div>
+                <div class="modal" data-ani="fadeOutLeft"><span>Fade Out Left</span>
+                    <div>animated fadeOutLeft</div>
+                </div>
+                <div class="modal" data-ani="fadeOutLeftBig"><span>Fade Out Left Big</span>
+                    <div>animated fadeOutLeftBig</div>
+                </div>
+                <div class="modal" data-ani="fadeOutRight"><span>Fade Out Right</span>
+                    <div>animated fadeOutRight</div>
+                </div>
+                <div class="modal" data-ani="fadeOutRightBig"><span>Fade Out Right Big</span>
+                    <div>animated fadeOutRightBig</div>
+                </div>
+
+            </div>
+
+            <div class="container flip">
+                <div class="sectionHeader">Flippers</div>
+                <div class="modal" data-ani="flip"><span>Flip</span>
+                    <div>animated flip</div>
+                </div>
+                <div class="modal" data-ani="flipInX"><span>Flip In X</span>
+                    <div>animated flipInX</div>
+                </div>
+                <div class="modal" data-ani="flipInY"><span>Flip In Y</span>
+                    <div>animated flipInY</div>
+                </div>
+                <div class="modal" data-ani="flipOutX"><span>Flip Out X</span>
+                    <div>animated flipOutX</div>
+                </div>
+                <div class="modal" data-ani="flipOutY"><span>Flip Out Y</span>
+                    <div>animated flipOutY</div>
+                </div>
+            </div>
+
+            <div class="container lightspeed">
+                <div class="sectionHeader">Light Speed</div>
+                <div class="modal" data-ani="lightSpeedIn"><span>Light Speed In</span>
+                    <div>animated lightSpeedIn</div>
+                </div>
+                <div class="modal" data-ani="lightSpeedOut"><span>Light Speed Out</span>
+                    <div>animated lightSpeedOut</div>
+                </div>
+            </div>
+
+            <div class="container rotate">
+                <div class="sectionHeader">Rotate Entrances</div>
+                <div class="modal" data-ani="rotateIn"><span>Rotate In</span>
+                    <div>animated rotateIn</div>
+                </div>
+                <div class="modal" data-ani="rotateInDownLeft"><span>Rotate In Down Left</span>
+                    <div>animated rotateInDownLeft</div>
+                </div>
+                <div class="modal" data-ani="rotateInDownRight"><span>Rotate In Down Right</span>
+                    <div>animated rotateInDownRight</div>
+                </div>
+                <div class="modal" data-ani="rotateInUpLeft"><span>Rotate In Up Left</span>
+                    <div>animated rotateInUpLeft</div>
+                </div>
+                <div class="modal" data-ani="rotateInUpRight"><span>Rotate In Up Right</span>
+                    <div>animated rotateInUpRight</div>
+                </div>
+            </div>
+
+            <div class="container rotate">
+                <div class="sectionHeader">Rotate Exits</div>
+                <div class="modal" data-ani="rotateOut"><span>Rotate Out</span>
+                    <div>animated rotateOut</div>
+                </div>
+                <div class="modal" data-ani="rotateOutDownLeft"><span>Rotate Out Down Left</span>
+                    <div>animated rotateOutDownLeft</div>
+                </div>
+                <div class="modal" data-ani="rotateOutDownRight"><span>Rotate Out Down Right</span>
+                    <div>animated rotateOutDownRight</div>
+                </div>
+                <div class="modal" data-ani="rotateOutUpLeft"><span>Rotate Out Up Left</span>
+                    <div>animated rotateOutUpLeft</div>
+                </div>
+                <div class="modal" data-ani="rotateOutUpRight"><span>Rotate Out Up Right</span>
+                    <div>animated rotateOutUpRight</div>
+                </div>
+            </div>
+
+            <div class="container slide">
+                <div class="sectionHeader">Slide Entrances</div>
+                <div class="modal" data-ani="slideInUp"><span>Slide In Up</span>
+                    <div>animated slideInUp</div>
+                </div>
+                <div class="modal" data-ani="slideInDown"><span>Slide In Down</span>
+                    <div>animated slideInDown</div>
+                </div>
+                <div class="modal" data-ani="slideInLeft"><span>Slide In Left</span>
+                    <div>animated slideInLeft</div>
+                </div>
+                <div class="modal" data-ani="slideInRight"><span>Slide In Right</span>
+                    <div>animated slideInRight</div>
+                </div>
+
+            </div>
+
+            <div class="container slide">
+                <div class="sectionHeader">Slide Exits</div>
+                <div class="modal" data-ani="slideOutUp"><span>Slide Out Up</span>
+                    <div>animated slideOutUp</div>
+                </div>
+                <div class="modal" data-ani="slideOutDown"><span>Slide Out Down</span>
+                    <div>animated slideOutDown</div>
+                </div>
+                <div class="modal" data-ani="slideOutLeft"><span>Slide Out Left</span>
+                    <div>animated slideOutLeft</div>
+                </div>
+                <div class="modal" data-ani="slideOutRight"><span>Slide Out Right</span>
+                    <div>animated slideOutRight</div>
+                </div>
+
+            </div>
+
+            <div class="container zoom">
+                <div class="sectionHeader">Zoom Entrances</div>
+                <div class="modal" data-ani="zoomIn"><span>Zoom In</span>
+                    <div>animated zoomIn</div>
+                </div>
+                <div class="modal" data-ani="zoomInUp"><span>Zoom In Up</span>
+                    <div>animated zoomInUp</div>
+                </div>
+                <div class="modal" data-ani="zoomInDown"><span>Zoom In Down</span>
+                    <div>animated zoomInDown</div>
+                </div>
+                <div class="modal" data-ani="zoomInLeft"><span>Zoom In Left</span>
+                    <div>animated zoomIpLeft</div>
+                </div>
+                <div class="modal" data-ani="zoomInRight"><span>Zoom In Right</span>
+                    <div>animated zoomInRight</div>
+                </div>
+            </div>
+
+            <div class="container zoom">
+                <div class="sectionHeader">Zoom Exits</div>
+                <div class="modal" data-ani="zoomOut"><span>Zoom Out</span>
+                    <div>animated zoomOut</div>
+                </div>
+                <div class="modal" data-ani="zoomOutUp"><span>Zoom Out Up</span>
+                    <div>animated zoomOutUp</div>
+                </div>
+                <div class="modal" data-ani="zoomOutDown"><span>Zoom Out Down</span>
+                    <div>animated zoomOutDown</div>
+                </div>
+                <div class="modal" data-ani="zoomOutLeft"><span>Zoom Out Left</span>
+                    <div>animated zoomOutLeft</div>
+                </div>
+                <div class="modal" data-ani="zoomOutRight"><span>Zoom Out Right</span>
+                    <div>animated zoomOutRight</div>
+                </div>
+            </div>
+
+            <div class="container special">
+                <div class="sectionHeader">Specials</div>
+                <div class="modal" data-ani="hinge"><span>Hinge</span>
+                    <div>animated hinge</div>
+                </div>
+                <div class="modal" data-ani="rollIn"><span>Roll In</span>
+                    <div>animated rollIn</div>
+                </div>
+                <div class="modal" data-ani="rollOut"><span>Roll Out</span>
+                    <div>animated rollOut</div>
+                </div>
+            </div>
+
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+            <script src="./script.js"></script>
+
+        </body>
+
+        </html>
+
+
+
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the current URL, removing any fragment
+            var documentUrl = document.location.href.replace(/#.*$/, '')
+
+            // Iterate through all links
+            var linkEls = document.getElementsByTagName('A')
+            for (var linkIndex = 0; linkIndex < linkEls.length; linkIndex++) {
+                var linkEl = linkEls[linkIndex]
+
+                // Ignore links that don't begin with #
+                if (!linkEl.getAttribute('href').match(/^#/)) {
+                    continue;
+                }
+
+                // Convert to an absolute URL
+                linkEl.setAttribute('href', documentUrl + linkEl.getAttribute('href'))
+            }
+        })    
+    </script>
+
+
+</body>
+
+</html>

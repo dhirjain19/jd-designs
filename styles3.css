@@ -1,0 +1,22 @@
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    height: 300vh; /* Make the page tall enough to scroll */
+}
+
+.spacer {
+    height: 100vh; /* Spacer to provide scrolling space */
+}
+
+.scroll-image {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+} */

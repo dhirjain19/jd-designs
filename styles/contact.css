@@ -1,6 +1,8 @@
 .contact .content {
   display: flex;
   flex-direction: row;
+  background-color: black;
+  color: white;
 }
 
 .contact .contact_image {
@@ -39,6 +41,7 @@
   margin-bottom: 40px;
   padding: 0px 20px;
   font-size: 18px;
+  text-align: center;
 }
 
 .contact .contact_info {
@@ -49,6 +52,7 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 0px 20px;
+  text-align: center;
 }
 
 .contact .contact_info .head{
@@ -60,7 +64,18 @@
   height: 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
+}
+
+.contact .contact_info .left .icons span {
+  width: 160px;
+  text-align: left;
+}
+
+.contact .contact_info .right .icons span {
+  width: 160px;
+  text-align: left;
 }
 
 .contact .contact_info .icons img {
@@ -88,7 +103,7 @@
     gap: 15px;
   }
   .contact .contact_info .head{
-    margin-bottom: 0px;
+    margin-bottom: 7px;
     text-align: center;
     font-size: 15px;
   }
@@ -99,5 +114,12 @@
   .contact .contact_info .icons img{
     width: 25px;
     height: 25px;
+  }
+  .contact .contact_info .left .icons span {
+    width: 120px;
+  }
+  
+  .contact .contact_info .right .icons span {
+    width: 120px;
   }
 }

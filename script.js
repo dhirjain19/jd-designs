@@ -35,7 +35,7 @@ let site = `{
   ],
   "projects": [
     {
-      "academic": [
+      "architecture": [
         {
           "name": "IIM Karjat",
           "caption": "Indian Institute of Management Studies in the state of Maharashtra",
@@ -122,9 +122,7 @@ let site = `{
               "image": "../images/project_4/4.png"
             }
           ]
-        }
-      ],
-      "professional": [
+        },
         {
           "name": "Dhanuari Wetlands: Conservation and Restoration of its Multifarious Ecology",
           "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
@@ -152,24 +150,36 @@ let site = `{
             }
           ]
         }
+      ],
+      "interior": [
+        {
+          "content": "<div class='title_image'><img src='./images/project_5/2.png'></div><div class='title'>Cafe</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_5/1.png'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_5/3.png'></div><div class='description'>Entrance</div></div><div class='image-section'><div class='image'><img src='./images/project_5/4.png'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_5/5.png'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_5/6.png'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_5/7.png'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_5/8.png'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_5/9.png'></div><div class='description'>Image 8</div></div><div class='image-section'><div class='image'><img src='./images/project_5/10.png'></div><div class='description'>Image 9</div></div><div class='image-section'><div class='image'><img src='./images/project_5/11.png'></div><div class='description'>Image 10</div></div><div class='image-section'><div class='image'><img src='./images/project_5/12.png'></div><div class='description'>Image 11</div></div><div class='image-section'><div class='image'><img src='./images/project_5/13.png'></div><div class='description'>Image 12</div></div><div class='image-section'><div class='image'><img src='./images/project_5/14.png'></div><div class='description'>Image 13</div></div><div class='image-section'><div class='image'><img src='./images/project_5/15.png'></div><div class='description'>Image 14</div></div><div class='image-section'><div class='image'><img src='./images/project_5/16.png'></div><div class='description'>Image 15</div></div></div>"
+        },
+        {
+          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/4.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/5.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div></div>"
+        }        
       ]
     }
   ]
 }`;
 
-site = JSON.parse(site)
+site = JSON.parse(site);
 
 var menu_count = 0;
 
 function menuToggle() {
   var menu_page = document.getElementById("menu-page");
-  var menu_items = document.getElementById("menu-items-one").getElementsByClassName("menu-item");
+  var menu_items = document
+    .getElementById("menu-items-one")
+    .getElementsByClassName("menu-item");
 
   if (menu_count == 0) {
-    document.getElementById("menu-toggle").classList.toggle("menu-button-clicked");
+    document
+      .getElementById("menu-toggle")
+      .classList.toggle("menu-button-clicked");
 
     menu_page.classList.toggle("active");
-    
+
     setTimeout(() => {
       menu_page.classList.toggle("show");
     }, 100);
@@ -181,44 +191,46 @@ function menuToggle() {
     }, 200);
 
     menu_count = 1;
-  } 
-  else {
-    document.getElementById("menu-toggle").classList.toggle("menu-button-clicked");
-    
+  } else {
+    document
+      .getElementById("menu-toggle")
+      .classList.toggle("menu-button-clicked");
+
     for (let i = 0; i < menu_items.length; i++) {
       menu_items[i].classList.toggle("active");
     }
-    
+
     setTimeout(() => {
-      menu_page.classList.toggle("show");      
+      menu_page.classList.toggle("show");
     }, 100);
 
     setTimeout(() => {
-      menu_page.classList.toggle("active");      
+      menu_page.classList.toggle("active");
     }, 500);
 
     menu_count = 0;
-    
-    var menu_lists = document.getElementsByClassName('menu-list');
-    console.log(menu_lists);
-    if(menu_lists[0].classList.contains('hide')){
+
+    var menu_lists = document.getElementsByClassName("menu-list");
+    if (menu_lists[0].classList.contains("hide")) {
       menu_lists[0].classList.remove("hide");
       menu_lists[1].classList.add("hide");
       menu_lists[2].classList.add("hide");
       menu_lists[3].classList.add("hide");
-      for(menu_item of document.getElementsByClassName('menu-item')){
-        menu_item.classList.remove('active');
-        menu_item.classList.remove('hide');
+      for (menu_item of document.getElementsByClassName("menu-item")) {
+        menu_item.classList.remove("active");
+        menu_item.classList.remove("hide");
       }
     }
   }
 }
 
-
 function toggle_menu_two(val) {
-
-  var menu_items_one = document.getElementById("menu-items-one").getElementsByClassName("menu-item");
-  var menu_items_two = document.getElementById("menu-items-two").getElementsByClassName("menu-item");
+  var menu_items_one = document
+    .getElementById("menu-items-one")
+    .getElementsByClassName("menu-item");
+  var menu_items_two = document
+    .getElementById("menu-items-two")
+    .getElementsByClassName("menu-item");
 
   if (val == 0) {
     for (let i = 0; i < menu_items_two.length; i++) {
@@ -226,11 +238,15 @@ function toggle_menu_two(val) {
     }
 
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-two')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-two")[0]
+        .classList.toggle("hide");
     }, 300);
 
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-one')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-one")[0]
+        .classList.toggle("hide");
     }, 300);
 
     setTimeout(() => {
@@ -238,21 +254,23 @@ function toggle_menu_two(val) {
         menu_items_one[i].classList.toggle("hide");
       }
     }, 325);
-  }  
-
-  else {
+  } else {
     for (let i = 0; i < menu_items_one.length; i++) {
       menu_items_one[i].classList.toggle("hide");
     }
-    
+
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-one')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-one")[0]
+        .classList.toggle("hide");
     }, 300);
-  
+
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-two')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-two")[0]
+        .classList.toggle("hide");
     }, 300);
-  
+
     setTimeout(() => {
       for (let i = 0; i < menu_items_two.length; i++) {
         menu_items_two[i].classList.toggle("active");
@@ -261,63 +279,76 @@ function toggle_menu_two(val) {
   }
 }
 
-
 function toggle_menu_three(val) {
-  var menu_items_two = document.getElementById("menu-items-two").getElementsByClassName("menu-item");
-  var academic_list = document.getElementById("academic-menu").getElementsByClassName("menu-item");
-  var professional_list = document.getElementById("professional-menu").getElementsByClassName("menu-item");
+  var menu_items_two = document
+    .getElementById("menu-items-two")
+    .getElementsByClassName("menu-item");
+  var architecture_list = document
+    .getElementById("architecture-menu")
+    .getElementsByClassName("menu-item");
+  var interior_list = document
+    .getElementById("interior-menu")
+    .getElementsByClassName("menu-item");
 
   if (val == 1) {
     for (let i = 0; i < menu_items_two.length; i++) {
       menu_items_two[i].classList.toggle("hide");
     }
-    
+
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-two')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-two")[0]
+        .classList.toggle("hide");
     }, 300);
-  
+
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-three')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-three")[0]
+        .classList.toggle("hide");
     }, 300);
-  
+
     setTimeout(() => {
-      for (let i = 0; i < academic_list.length; i++) {
-        academic_list[i].classList.toggle("active");
+      for (let i = 0; i < architecture_list.length; i++) {
+        architecture_list[i].classList.toggle("active");
       }
     }, 325);
-  }
-
-  else if (val == 2) {
+  } else if (val == 2) {
     for (let i = 0; i < menu_items_two.length; i++) {
       menu_items_two[i].classList.toggle("hide");
     }
-    
+
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-two')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-two")[0]
+        .classList.toggle("hide");
     }, 300);
-  
+
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-three')[1].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-three")[1]
+        .classList.toggle("hide");
     }, 300);
-  
+
     setTimeout(() => {
-      for (let i = 0; i < professional_list.length; i++) {
-        professional_list[i].classList.toggle("active");
+      for (let i = 0; i < interior_list.length; i++) {
+        interior_list[i].classList.toggle("active");
       }
     }, 325);
-  }
-
-  else if (val == 3){
-    for (let i = 0; i < academic_list.length; i++) {
-      academic_list[i].classList.toggle("active");
+  } else if (val == 3) {
+    for (let i = 0; i < architecture_list.length; i++) {
+      architecture_list[i].classList.toggle("active");
     }
 
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-three')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-three")[0]
+        .classList.toggle("hide");
     }, 300);
 
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-two')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-two")[0]
+        .classList.toggle("hide");
     }, 300);
 
     setTimeout(() => {
@@ -325,19 +356,21 @@ function toggle_menu_three(val) {
         menu_items_two[i].classList.toggle("hide");
       }
     }, 325);
-  }
-
-  else {
-    for (let i = 0; i < professional_list.length; i++) {
-      professional_list[i].classList.toggle("active");
+  } else {
+    for (let i = 0; i < interior_list.length; i++) {
+      interior_list[i].classList.toggle("active");
     }
 
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-three')[1].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-three")[1]
+        .classList.toggle("hide");
     }, 300);
 
     setTimeout(() => {
-      document.getElementsByClassName('menu-list-two')[0].classList.toggle("hide");
+      document
+        .getElementsByClassName("menu-list-two")[0]
+        .classList.toggle("hide");
     }, 300);
 
     setTimeout(() => {
@@ -350,34 +383,43 @@ function toggle_menu_three(val) {
 
 var sectionNames = document.getElementsByClassName("section");
 
-function opensection(sectionTab, menu = true){
-  for(sectionName of sectionNames){
-    sectionName.classList.remove('active-section');
+function opensection(sectionTab, menu = true) {
+  for (sectionName of sectionNames) {
+    sectionName.classList.remove("active-section");
   }
   document.getElementById(sectionTab).classList.add("active-section");
-  
-  setTimeout(() => {if (menu) menuToggle(); }, 2400);  
+
+  if (sectionTab == 'architecture_projects') {
+    const cards = document.getElementById("architecture_projects").querySelectorAll(".card");
+    cards.forEach((card) => observer.observe(card));
+  }
+  if (sectionTab == 'interior_projects') {
+    const cards = document.getElementById("interior_projects").querySelectorAll(".card");
+    cards.forEach((card) => observer.observe(card));
+  }
+  setTimeout(() => {
+    if (menu) menuToggle();
+  }, 2400);
   onLoadDisplay();
-  
 }
 
 var home_element = document.querySelector(".home");
 var home_container = home_element.querySelector(".container");
 
-function createHomeSlideElements(image, quote){
+function createHomeSlideElements(image, quote) {
   parallax_images = document.createElement("div");
-  parallax_images.className = 'parallax_images';
+  parallax_images.className = "parallax_images";
   parallax_images.style.backgroundImage = `url(${image})`;
   caption = document.createElement("div");
-  caption.className = 'caption';
+  caption.className = "caption";
   caption.innerHTML = quote;
   parallax_images.appendChild(caption);
   home_container.appendChild(parallax_images);
 }
 
-function createHomeElements(){
-  for(var i = 0; i < site.home.length; i++){
-    createHomeSlideElements(site.home[i].image, site.home[i].quote)
+function createHomeElements() {
+  for (var i = 0; i < site.home.length; i++) {
+    createHomeSlideElements(site.home[i].image, site.home[i].quote);
   }
 }
 
@@ -387,19 +429,19 @@ var gallery_element = document.querySelector(".gallery");
 var gallery_container = gallery_element.querySelector(".container");
 var gallery_slideshow = gallery_container.querySelector(".slideshow");
 
-function addImageElement(source){
+function addImageElement(source) {
   image = document.createElement("img");
   image.src = source;
   return image;
 }
 
-function createGallerySlideElement(gallery_images, source){
+function createGallerySlideElement(gallery_images, source) {
   image_slideshow = document.createElement("div");
-  image_slideshow.className = 'image_slideshow';
+  image_slideshow.className = "image_slideshow";
 
   project_images = document.createElement("div");
-  project_images.className = 'project_images';
-  
+  project_images.className = "project_images";
+
   image_slideshow.appendChild(addImageElement(source));
   project_images.appendChild(addImageElement(source));
 
@@ -407,12 +449,12 @@ function createGallerySlideElement(gallery_images, source){
   gallery_slideshow.appendChild(image_slideshow);
 }
 
-function createGalleryTextElement(title, detail){
+function createGalleryTextElement(title, detail) {
   project_title = document.createElement("div");
-  project_title.className = 'project_title';
+  project_title.className = "project_title";
 
   project_detail = document.createElement("div");
-  project_detail.className = 'project_detail';
+  project_detail.className = "project_detail";
 
   project_title.innerHTML = title;
   project_detail.innerHTML = detail;
@@ -431,7 +473,7 @@ function removeSingleElement(parentClass, elementId) {
 
 function removeMultipleElements(parentClass, elementId) {
   var elements = parentClass.getElementsByClassName(elementId);
-  
+
   if (elements.length > 0) {
     for (i = elements.length - 1; i > -1; i--) {
       elements[i].remove();
@@ -442,90 +484,126 @@ function removeMultipleElements(parentClass, elementId) {
 var slideIndex = 1;
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  showDivs((slideIndex += n));
 }
 
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("image_slideshow");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  if (n > x.length) {
+    slideIndex = 1;
   }
-  x[slideIndex-1].style.display = "block";  
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex - 1].style.display = "block";
   // setTimeout(() => {showDivs(slideIndex += 1)}, 2000);
 }
 
-function createGalleryElements(category, value){
-  
-  removeMultipleElements(gallery_slideshow, "image_slideshow")
-  removeSingleElement(gallery_container, "project_title")
-  removeSingleElement(gallery_container, "project_detail")
-  removeSingleElement(gallery_container, "gallery_title")
-  removeSingleElement(gallery_container, "project_gallery")
+function createGalleryElements(category, value) {
+  removeMultipleElements(gallery_slideshow, "image_slideshow");
+  removeSingleElement(gallery_container, "project_title");
+  removeSingleElement(gallery_container, "project_detail");
+  removeSingleElement(gallery_container, "gallery_title");
+  removeSingleElement(gallery_container, "project_gallery");
 
   var gallery_images = document.createElement("div");
   gallery_images.className = "project_gallery";
 
   gallery_title = document.createElement("div");
-  gallery_title.className = 'gallery_title';
+  gallery_title.className = "gallery_title";
   gallery_title.innerHTML = "Gallery";
 
-  for(var i = 0; i < site.projects[0][category][value].images.length; i++){
-    createGallerySlideElement(gallery_images, site.projects[0][category][value].images[i].image);
+  for (var i = 0; i < site.projects[0][category][value].images.length; i++) {
+    createGallerySlideElement(
+      gallery_images,
+      site.projects[0][category][value].images[i].image
+    );
   }
 
-  createGalleryTextElement(site.projects[0][category][value].name, site.projects[0][category][value].description);
-  
-  gallery_container.appendChild(gallery_title);
-  gallery_container.appendChild(gallery_images);  
+  createGalleryTextElement(
+    site.projects[0][category][value].name,
+    site.projects[0][category][value].description
+  );
 
-  showDivs(slideIndex = 1);
+  gallery_container.appendChild(gallery_title);
+  gallery_container.appendChild(gallery_images);
+
+  showDivs((slideIndex = 1));
 }
 
-function showProject(category, value, menu = false){
-  for(sectionName of sectionNames){
-    sectionName.classList.remove('active-section');
+function showProject(category, value, menu = false) {
+  for (sectionName of sectionNames) {
+    sectionName.classList.remove("active-section");
   }
   createGalleryElements(category, value);
 
-  setTimeout(() => {if (menu) menuToggle(); }, 2400);  
-  setTimeout(() => {document.getElementById("gallery").classList.add("active-section"); }, 2000);  
+  setTimeout(() => {
+    if (menu) menuToggle();
+  }, 2400);
+
+  setTimeout(() => {
+    document.getElementById("gallery").classList.add("active-section");
+  }, 2000);
+
+  onLoadDisplay();
+}
+
+var interior_gallery_element = document.querySelector(".interior_gallery");
+var interior_gallery_container = interior_gallery_element.querySelector(".container");
+
+function showInterior(category, value, menu = false) {
+  
+  for (sectionName of sectionNames) {
+    sectionName.classList.remove("active-section");
+  }
+
+  if (interior_gallery_container.length > 0) {
+    interior_gallery_container.remove();
+  }
+
+  interior_gallery_container.innerHTML = site.projects[0][category][value].content;
+
+  setTimeout(() => {
+    if (menu) menuToggle();
+  }, 2400);
+
+  setTimeout(() => {
+    document.getElementById("interior_gallery").classList.add("active-section");
+  }, 2000);
+  
   onLoadDisplay();
 }
 
 function onLoadDisplay() {
   var loading_page = document.getElementById("onLoadDisplay");
-  // var logo_wrapper = loading_page.getElementsByClassName('wrapper')[0]; 
-  // var logo_img = loading_page.getElementsByClassName('logo_image')[0]; 
-  // var logo_title = loading_page.getElementsByClassName('logo_title')[0];  
-  
+
   loading_page.classList.add("display");
-  setTimeout(()=>{
+  setTimeout(() => {
     loading_page.classList.add("opacity");
   }, 50);
-  setTimeout(()=>{
+  setTimeout(() => {
     loading_page.classList.remove("opacity");
   }, 2500);
-  setTimeout(()=>{
+  setTimeout(() => {
     loading_page.classList.remove("display");
   }, 3500);
 }
 
+const cards = document.getElementById("architecture_projects").querySelectorAll(".card");
+console.log(cards);
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("active", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 1,
+    // rootMargin: '50px'
+  }
+);
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    // console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.querySelector('.content').classList.add('active');
-      entry.target.classList.add('active');
-    } else  {
-      entry.target.classList.remove('active');
-      entry.target.querySelector('.content').classList.remove('active');
-    }
-  });
-});
-
-const homeElements = document.getElementById('home').querySelectorAll('.item');
-homeElements.forEach((el) => observer.observe(el));
