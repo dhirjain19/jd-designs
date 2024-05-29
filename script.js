@@ -101,6 +101,12 @@ let site = `{
             },
             {
               "image": "../images/project_2/7.png"
+            },
+            {
+              "image": "../images/project_2/8.png"
+            },
+            {
+              "image": "../images/project_2/9.png"
             }
           ]
         },
@@ -147,6 +153,18 @@ let site = `{
             },
             {
               "image": "../images/project_1/7.png"
+            },
+            {
+              "image": "../images/project_1/8.png"
+            },
+            {
+              "image": "../images/project_1/9.png"
+            },
+            {
+              "image": "../images/project_1/10.png"
+            },
+            {
+              "image": "../images/project_1/11.png"
             }
           ]
         }
@@ -156,7 +174,7 @@ let site = `{
           "content": "<div class='title_image'><img src='./images/project_5/2.png'></div><div class='title'>Cafe</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_5/1.png'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_5/3.png'></div><div class='description'>Entrance</div></div><div class='image-section'><div class='image'><img src='./images/project_5/4.png'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_5/5.png'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_5/6.png'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_5/7.png'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_5/8.png'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_5/9.png'></div><div class='description'>Image 8</div></div><div class='image-section'><div class='image'><img src='./images/project_5/10.png'></div><div class='description'>Image 9</div></div><div class='image-section'><div class='image'><img src='./images/project_5/11.png'></div><div class='description'>Image 10</div></div><div class='image-section'><div class='image'><img src='./images/project_5/12.png'></div><div class='description'>Image 11</div></div><div class='image-section'><div class='image'><img src='./images/project_5/13.png'></div><div class='description'>Image 12</div></div><div class='image-section'><div class='image'><img src='./images/project_5/14.png'></div><div class='description'>Image 13</div></div><div class='image-section'><div class='image'><img src='./images/project_5/15.png'></div><div class='description'>Image 14</div></div><div class='image-section'><div class='image'><img src='./images/project_5/16.png'></div><div class='description'>Image 15</div></div></div>"
         },
         {
-          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/4.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/5.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div></div>"
+          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/4.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/5.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_6/7.jpg'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_6/8.jpg'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_6/9.jpg'></div><div class='description'>Image 8</div></div></div>"
         }        
       ]
     }
@@ -594,7 +612,6 @@ function onLoadDisplay() {
 }
 
 const cards = document.getElementById("architecture_projects").querySelectorAll(".card");
-console.log(cards);
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -607,3 +624,15 @@ const observer = new IntersectionObserver(
   }
 );
 
+window.addEventListener('scroll', setScrollVar)
+window.addEventListener('resize', setScrollVar)
+
+function setScrollVar() {
+  const htmlElement = document.documentElement
+  document.querySelectorAll('.image-section')?.forEach(element => {
+    const percentOfScreenHeightScrolled = (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight
+    element.style.setProperty("--scroll", Math.max( -100, Math.min( percentOfScreenHeightScrolled * 100, 0 ) ) )
+  })  
+}
+
+setScrollVar()
