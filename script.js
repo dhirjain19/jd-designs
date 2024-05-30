@@ -407,12 +407,16 @@ function opensection(sectionTab, menu = true) {
   }
   document.getElementById(sectionTab).classList.add("active-section");
 
-  if (sectionTab == 'architecture_projects') {
-    const cards = document.getElementById("architecture_projects").querySelectorAll(".card");
+  if (sectionTab == "architecture_projects") {
+    const cards = document
+      .getElementById("architecture_projects")
+      .querySelectorAll(".card");
     cards.forEach((card) => observer.observe(card));
   }
-  if (sectionTab == 'interior_projects') {
-    const cards = document.getElementById("interior_projects").querySelectorAll(".card");
+  if (sectionTab == "interior_projects") {
+    const cards = document
+      .getElementById("interior_projects")
+      .querySelectorAll(".card");
     cards.forEach((card) => observer.observe(card));
   }
   setTimeout(() => {
@@ -421,25 +425,25 @@ function opensection(sectionTab, menu = true) {
   onLoadDisplay();
 }
 
-var home_element = document.querySelector(".home");
-var home_container = home_element.querySelector(".container");
+// var home_element = document.querySelector(".home");
+// var home_container = home_element.querySelector(".container");
 
-function createHomeSlideElements(image, quote) {
-  parallax_images = document.createElement("div");
-  parallax_images.className = "parallax_images";
-  parallax_images.style.backgroundImage = `url(${image})`;
-  caption = document.createElement("div");
-  caption.className = "caption";
-  caption.innerHTML = quote;
-  parallax_images.appendChild(caption);
-  home_container.appendChild(parallax_images);
-}
+// function createHomeSlideElements(image, quote) {
+//   parallax_images = document.createElement("div");
+//   parallax_images.className = "parallax_images";
+//   parallax_images.style.backgroundImage = `url(${image})`;
+//   caption = document.createElement("div");
+//   caption.className = "caption";
+//   caption.innerHTML = quote;
+//   parallax_images.appendChild(caption);
+//   home_container.appendChild(parallax_images);
+// }
 
-function createHomeElements() {
-  for (var i = 0; i < site.home.length; i++) {
-    createHomeSlideElements(site.home[i].image, site.home[i].quote);
-  }
-}
+// function createHomeElements() {
+//   for (var i = 0; i < site.home.length; i++) {
+//     createHomeSlideElements(site.home[i].image, site.home[i].quote);
+//   }
+// }
 
 // createHomeElements();
 
@@ -571,10 +575,10 @@ function showProject(category, value, menu = false) {
 }
 
 var interior_gallery_element = document.querySelector(".interior_gallery");
-var interior_gallery_container = interior_gallery_element.querySelector(".container");
+var interior_gallery_container =
+  interior_gallery_element.querySelector(".container");
 
 function showInterior(category, value, menu = false) {
-  
   for (sectionName of sectionNames) {
     sectionName.classList.remove("active-section");
   }
@@ -583,7 +587,8 @@ function showInterior(category, value, menu = false) {
     interior_gallery_container.remove();
   }
 
-  interior_gallery_container.innerHTML = site.projects[0][category][value].content;
+  interior_gallery_container.innerHTML =
+    site.projects[0][category][value].content;
 
   setTimeout(() => {
     if (menu) menuToggle();
@@ -592,7 +597,7 @@ function showInterior(category, value, menu = false) {
   setTimeout(() => {
     document.getElementById("interior_gallery").classList.add("active-section");
   }, 2000);
-  
+
   onLoadDisplay();
 }
 
@@ -611,7 +616,9 @@ function onLoadDisplay() {
   }, 3500);
 }
 
-const cards = document.getElementById("architecture_projects").querySelectorAll(".card");
+const cards = document
+  .getElementById("architecture_projects")
+  .querySelectorAll(".card");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -624,15 +631,31 @@ const observer = new IntersectionObserver(
   }
 );
 
-window.addEventListener('scroll', setScrollVar)
-window.addEventListener('resize', setScrollVar)
+document
+  .querySelector("#home")
+  .querySelectorAll(".item")
+  .forEach((item) => observer.observe(item));
+
+window.addEventListener("scroll", setScrollVar);
+window.addEventListener("resize", setScrollVar);
 
 function setScrollVar() {
-  const htmlElement = document.documentElement
-  document.querySelectorAll('.image-section')?.forEach(element => {
-    const percentOfScreenHeightScrolled = (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight
-    element.style.setProperty("--scroll", Math.max( -100, Math.min( percentOfScreenHeightScrolled * 100, 0 ) ) )
-  })  
+  const htmlElement = document.documentElement;
+  // console.log((htmlElement.scrollTop / htmlElement.clientHeight) * 100)
+  // document.querySelector('#home').querySelectorAll('.item').forEach(element => {
+  //   const percentOfScreenHeightScrolled = (htmlElement.scrollTop - element.offsetTop) / element.offsetHeight
+  //   // element.style.setProperty("--scroll", Math.max( -96, Math.min( percentOfScreenHeightScrolled * 100, 92 ) ) )
+  //   element.style.setProperty("--scroll", Math.min( percentOfScreenHeightScrolled * 100, 102 ) )
+  // })
+
+  document?.querySelectorAll(".image-section").forEach((element) => {
+    const percentOfScreenHeightScrolled =
+      (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight;
+    element.style.setProperty(
+      "--scroll",
+      Math.max(-100, Math.min(percentOfScreenHeightScrolled * 100, 0))
+    );
+  });
 }
 
-setScrollVar()
+setScrollVar();
