@@ -18,7 +18,7 @@
     <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');</style>
 </head>
 
-<body onload="onLoadDisplay()">
+<body onload="onLoadDisplay(true)">
 <body>
     <div class="main">
 
@@ -35,9 +35,9 @@
                 <img class="logo_image" id="logo" src="images\logo_white.png" onclick="opensection('home', false)">
 
 
-                <label class='menu-button-container' onclick="menuToggle()">
+                <div class='menu-button-container' onclick="menuToggle()">
                     <div class='menu-button' id="menu-toggle"></div>
-                </label>
+                </div>
 
                 <div class="menu-page" id="menu-page">
                     <div class="menu-list menu-list-one">
@@ -60,10 +60,10 @@
                     <div class="menu-list menu-list-three hide" id="architecture-menu">
                         <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
                         <ul class="menu-items" id="menu-items-three"> 
-                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 0, true)">IIM Karjat</a></li>
-                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 1, true)">Nesting Neighbors</a></li>
-                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 2, true)">Maritime Museum Views</a></li>
-                            <li class="menu-item"><a href="#" onclick="showProject('architecture', 3, true)">Dhanuari Wetlands</a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('iim_karjat')">IIM Karjat</a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('nesting_neighbors')">Nesting Neighbors</a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('maritime_museum_views')">Maritime Museum Views</a></li>
+                            <li class="menu-item"><a href="#" onclick="opensection('dhanauri_wetlands')">Dhanuari Wetlands</a></li>
                             <li class="menu-item"><a href="#" onclick="opensection('architecture_projects')">All Projects</a></li>
                         </ul>
                     </div>
@@ -82,7 +82,7 @@
         </section>
 
 
-        <section class="section home active-section" id="home">
+        <section class="section home" id="home">
             <div class="container"> 
                 <div class="list">
                     <div class="item">
@@ -92,25 +92,25 @@
                         </div>
                     </div>
                     <div class="item">
-                        <img src="./images/project_1/6.jpg">
+                        <img src="./images/dhanauri_wetlands/6.jpg">
                         <div class="content">
                             Adventure awaits around every corner.
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../images/project_2/4.png">
+                        <img src="../images/nesting_neighbors/4.png">
                         <div class="content">
                             Finding beauty in the simple things.
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../images/project_3/6.png">
+                        <img src="../images/iim_karjat/6.png">
                         <div class="content">
                             Chasing dreams and making memories.
                         </div>
                     </div>
                     <div class="item">
-                        <img src="../images/project_4/3.png">
+                        <img src="../images/maritime_museum_views/3.png">
                         <div class="content">
                             Chasing dreams and making memories.
                         </div>
@@ -186,23 +186,23 @@
             <div class="wrapper">
                 <div class="title">Projects</div>
                 <div class="container">
-                    <div class="card active" style="background-image: url('images/project_3/2.jpg');"
-                        onclick="showProject('architecture', 0)">
+                    <div class="card active" style="background-image: url('images/iim_karjat/2.jpg');"
+                        onclick="opensection('iim_karjat', false)">
                         <div class="overlay"></div>
                         <div class="project-title">IIM Karjat</div>
                     </div>
-                    <div class="card" style="background-image: url('images/project_2/1.png');"
-                        onclick="showProject('architecture', 1)">
+                    <div class="card" style="background-image: url('images/nesting_neighbors/1.png');"
+                        onclick="opensection('nesting_neighbors', false)">
                         <div class="overlay"></div>
                         <div class="project-title">Nesting Neighbors</div>
                     </div>
-                    <div class="card" style="background-image: url('images/project_4/1.png');"
-                        onclick="showProject('architecture', 2)">
+                    <div class="card" style="background-image: url('images/maritime_museum_views/1.png');"
+                        onclick="opensection('maritime_museum_views', false)">
                         <div class="overlay"></div>
                         <div class="project-title">Maritime Museum</div>
                     </div>
-                    <div class="card" style="background-image: url('images/project_1/2.png');"
-                        onclick="showProject('architecture', 3)">
+                    <div class="card" style="background-image: url('images/dhanauri_wetlands/2.png');"
+                        onclick="opensection('dhanauri_wetlands', false)">
                         <div class="overlay"></div>
                         <div class="project-title">Dhanuari Wetlands</div>
                     </div>
@@ -228,11 +228,377 @@
         </section>
 
 
-        <section class="section gallery" id="gallery">
+        <section class="section project_info" id="iim_karjat">
             <div class="container">
                 <div class="slideshow">
-                <button class="slide-button slide-button-left" onclick="plusDivs(-1)">&#10094;</button>
-                <button class="slide-button slide-button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    <div class="slides"><img src="../images/iim_karjat/5.jpg"></div>
+                    <div class="slides"><img src="../images/iim_karjat/4.jpg"></div>
+                    <div class="slides"><img src="../images/iim_karjat/3.jpg"></div>
+                    <div class="slides"><img src="../images/iim_karjat/4.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/5.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/6.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/7.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/8.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/9.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/10.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/11.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/6.jpg"></div>
+                    <div class="slides"><img src="../images/iim_karjat/7.jpg"></div>
+                    <div class="slides"><img src="../images/iim_karjat/8.jpg"></div>
+                    <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+                <div class="title">IIM Karjat</div>
+                <div class="content">
+                    <div class="info-cards design-philosophy">
+                        <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Philosophy</div>
+                            <div class="text">
+                                The aim is to protect, manage, conserve and eventually restore the Dhanauri
+                                wetlands U.P. The purpose
+                                in achieving these points is through having a research centre and generating awareness among the
+                                masses
+                                about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to
+                                rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate
+                                various
+                                experience to attract tourist with the help of interactive design spaces.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards design-objectives">
+                        <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Objectives</div>
+                            <div clsss="text">
+                                To study the rich flora and fauna of the region. To implement ways to
+                                preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore
+                                the wetlands back
+                                to
+                                its original glory. Create awareness among the masses through eco-tourism, eventually generate
+                                socio-economic values
+                                over the area. To create interactive design spaces keeping wetlands in background.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards floor-plan">
+                        <div class="content-wrapper ground">
+                            <div class="image"><img src="../images/dhanauri_wetlands/11.png"></div>
+                            <div class="heading">Ground Floor Plan</div>
+                        </div>
+                        <div class="content-wrapper first">
+                            <div class="image"><img alt="first floor plan"></div>
+                            <div class="heading">First Floor Plan</div>
+                        </div>
+                    </div>
+                    <div class="info-cards site-plan">
+                        <div class="image"><img src="../images/dhanauri_wetlands/9.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Site Plan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery_title">Gallery</div>
+                <div class="gallery">
+                    <div class="images"><img src="../images/iim_karjat/5.jpg"></div>
+                    <div class="images"><img src="../images/iim_karjat/4.jpg"></div>
+                    <div class="images"><img src="../images/iim_karjat/3.jpg"></div>
+                    <div class="images"><img src="../images/iim_karjat/4.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/5.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/6.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/7.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/8.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/9.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/10.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/11.png"></div>
+                    <div class="images"><img src="../images/iim_karjat/6.jpg"></div>
+                    <div class="images"><img src="../images/iim_karjat/7.jpg"></div>
+                    <div class="images"><img src="../images/iim_karjat/8.jpg"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section project_info" id="nesting_neighbors">
+            <div class="container">
+                <div class="slideshow">
+                    <div class="slides"><img src="../images/nesting_neighbors/1.png"></div>
+                    <div class="slides"><img src="../images/nesting_neighbors/2.png"></div>
+                    <div class="slides"><img src="../images/nesting_neighbors/3.png"></div>
+                    <div class="slides"><img src="../images/nesting_neighbors/4.png"></div>
+                    <div class="slides"><img src="../images/nesting_neighbors/5.png"></div>
+                    <div class="slides"><img src="../images/nesting_neighbors/6.png"></div>
+                    <div class="slides"><img src="../images/nesting_neighbors/7.png"></div>
+                    <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+                <div class="title">Nesting Neighbors</div>
+                <div class="content">
+                    <div class="info-cards design-brief">
+                        <div class="image-wrapper">
+                            <div class="text">
+                                Vertically mixed used developments is a system of decentralisation of amenities,
+                                such that uses and facilities are available in smaller and localised areas. Activation of street
+                                edge
+                                through ground floor retail and commercial . upper story residential for improved privacy,
+                                access to
+                                views, adequate light and ventilation, increased demand of local needs, easy access to local
+                                employment
+                                opportunities Multiple stakeholders in one building to use resources like energy, trash
+                                disposal, sewage
+                                more efficiently. Mixed use highrise building is a more unified mixed and architectural
+                                solution,
+                                certain different paradigm rather than earmarking separate buildings for diff land uses.
+                            </div>
+                            <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Brief</div>
+                            <div class="text">
+                                Population explosion globally has directly resulted in urban sprawl of the respective metro
+                                cities to
+                                accommodate the ever-increasing masses mainly resulting in unsustainable living solutions.
+                                Scarcity of
+                                available land for development and an increase in real estate prices has led to the trend of
+                                utilizing
+                                mixed-use developments to solve the multitude of issues currently presented in twenty-first
+                                century
+                                cities. This invites an exploration of the potential and the opportunities that these types of
+                                developments can provide in relation to their placed context. This project therefore, will
+                                investigate
+                                the process of typology analysis in the context of the city as first principle aid for the
+                                production of
+                                mixed-use architecture.
+                                <br><br>
+                                The notion of having vertical cities helps save energy resources and
+                                supports the ever-increasing population and preserves the further eradication of farmlands.,
+                                nature and
+                                recreation in the fringe area. The design problem of high rise buildings examines the use of
+                                hybrid
+                                typology and its contribution towards sustainability. To protect the city against this sort of
+                                expansion
+                                which eventually would reach a saturation point, a high rise as a building typology is a
+                                possible
+                                solution by conquering vertical space through agglomeration and intensification.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards design-philosophy">
+                        <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Philosophy</div>
+                            <div class="text">
+                                <ul>
+                                    <li>
+                                        To design a mixed-use skyscraper which contributes towards sustainable environment along
+                                        with
+                                        well-organized different sectors of the living needs.
+                                    </li>
+                                    <li>
+                                        To configure spaces which improve the social and visual collaboration and decrease
+                                        disengagement.
+                                    </li>
+                                    <li>
+                                        To design a structurally full proof building to cater to the context and need optimally.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards design-objectives">
+                        <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Objectives</div>
+                            <div class="text">
+                                To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich
+                                ecology
+                                of wetlands. To implement scientific interventions to restore the wetlands back to its original
+                                glory.
+                                Create awareness among the masses through eco-tourism, eventually generate socio-economic values
+                                over
+                                the area. To create interactive design spaces keeping wetlands in background.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards floor-plan">
+                        <div class="content-wrapper ground">
+                            <div class="image"><img src="../images/dhanauri_wetlands/11.png"></div>
+                            <div class="heading">Ground Floor Plan</div>
+                        </div>
+                        <div class="content-wrapper first">
+                            <div class="image"><img alt="first floor plan"></div>
+                            <div class="heading">First Floor Plan</div>
+                        </div>
+                    </div>
+                    <div class="info-cards site-plan">
+                        <div class="image"><img src="../images/dhanauri_wetlands/9.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Site Plan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery_title">Gallery</div>
+                <div class="gallery">
+                    <div class="images"><img src="../images/nesting_neighbors/1.png"></div>
+                    <div class="images"><img src="../images/nesting_neighbors/2.png"></div>
+                    <div class="images"><img src="../images/nesting_neighbors/3.png"></div>
+                    <div class="images"><img src="../images/nesting_neighbors/4.png"></div>
+                    <div class="images"><img src="../images/nesting_neighbors/5.png"></div>
+                    <div class="images"><img src="../images/nesting_neighbors/6.png"></div>
+                    <div class="images"><img src="../images/nesting_neighbors/7.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section project_info" id="maritime_museum_views">
+            <div class="container">
+                <div class="slideshow">
+                    <div class="slides"><img src="../images/maritime_museum_views/1.png"></div>
+                    <div class="slides"><img src="../images/maritime_museum_views/2.png"></div>
+                    <div class="slides"><img src="../images/maritime_museum_views/3.png"></div>
+                    <div class="slides"><img src="../images/maritime_museum_views/4.png"></div>
+                    <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+                <div class="title">Maritime Museum Views</div>
+                <div class="content">
+                    <div class="info-cards design-philosophy">
+                        <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Philosophy</div>
+                            <div class="text">
+                                The aim is to create a world-class Maritime museum of fame to showcase this aspect of history and
+                                there is no national monument to bring a visionary transformation of the Mumbai Port area into a
+                                tourism hub. As structure has to respond to the evolving urban fabric &amp; serve as a benchmark,
+                                both permanent and temporal.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards design-objectives">
+                        <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Objectives</div>
+                            <div class="text">
+                                <ul>
+                                    <li>
+                                        To engage with historical, theoretical, and practical methods of display and viewership.
+                                    </li>
+                                    <li>
+                                        To explore and understand the relationship between exhibition and architectural design.
+                                    </li>
+                                    <li>
+                                        To understand user movement, space requirement, accessibility, and standard practices for museum
+                                        design &amp; public spaces.
+                                    </li>
+                                    <li>
+                                        Understanding space requirements for various activities for small and large groups of people
+                                        along with indoor and outdoor spaces created by built forms.
+                                    </li>
+                                    <li>
+                                        Design of spaces suitable for the intended activity.
+                                    </li>
+                                    <li>
+                                        Design of spaces as per the behavioural needs of individuals and groups.
+                                    </li>
+                                    <li>
+                                        Design and detailing of the built form and required infrastructure regarding methods of
+                                        construction and materials.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards floor-plan">
+                        <div class="content-wrapper ground">
+                            <div class="image"><img src="../images/dhanauri_wetlands/11.png"></div>
+                            <div class="heading">Ground Floor Plan</div>
+                        </div>
+                        <div class="content-wrapper first">
+                            <div class="image"><img alt="first floor plan"></div>
+                            <div class="heading">First Floor Plan</div>
+                        </div>
+                    </div>
+                    <div class="info-cards site-plan">
+                        <div class="image"><img src="../images/dhanauri_wetlands/9.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Site Plan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery_title">Gallery</div>
+                <div class="gallery">
+                    <div class="images"><img src="../images/maritime_museum_views/1.png"></div>
+                    <div class="images"><img src="../images/maritime_museum_views/2.png"></div>
+                    <div class="images"><img src="../images/maritime_museum_views/3.png"></div>
+                    <div class="images"><img src="../images/maritime_museum_views/4.png"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section project_info" id="dhanauri_wetlands">
+            <div class="container">
+                <div class="slideshow">
+                    <div class="slides"><img src="../images/dhanauri_wetlands/1.png"></div>
+                    <div class="slides"><img src="../images/dhanauri_wetlands/2.png"></div>
+                    <div class="slides"><img src="../images/dhanauri_wetlands/3.png"></div>
+                    <div class="slides"><img src="../images/dhanauri_wetlands/4.jpg"></div>
+                    <div class="slides"><img src="../images/dhanauri_wetlands/5.jpg"></div>
+                    <div class="slides"><img src="../images/dhanauri_wetlands/6.jpg"></div>
+                    <div class="slides"><img src="../images/dhanauri_wetlands/7.png"></div>
+                </div>
+                <div class="title">Dhanuari Wetlands: Conservation and Restoration of its Multifarious Ecology</div>
+                <div class="content">
+                    <div class="info-cards design-philosophy">
+                        <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Philosophy</div>
+                            <div class="text">
+                                The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose
+                                in achieving these points is through having a research centre and generating awareness among the
+                                masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented
+                                to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate
+                                various experience to attract tourist with the help of interactive design spaces.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards design-objectives">
+                        <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Design Objectives</div>
+                            <div class="text">
+                                To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich
+                                ecology of wetlands. To implement scientific interventions to restore the wetlands back to its
+                                original glory. Create awareness among the masses through eco-tourism, eventually generate
+                                socio-economic values over the area. To create interactive design spaces keeping wetlands in
+                                background.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-cards floor-plan">
+                        <div class="content-wrapper ground">
+                            <div class="image"><img src="../images/dhanauri_wetlands/11.png"></div>
+                            <div class="heading">Ground Floor Plan</div>
+                        </div>
+                        <div class="content-wrapper first">
+                            <div class="image"><img alt="first floor plan"></div>
+                            <div class="heading">First Floor Plan</div>
+                        </div>
+                    </div>
+                    <div class="info-cards site-plan">
+                        <div class="image"><img src="../images/dhanauri_wetlands/9.png"></div>
+                        <div class="content-wrapper">
+                            <div class="heading">Site Plan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery_title">Gallery</div>
+                <div class="gallery">
+                    <div class="images"><img src="../images/dhanauri_wetlands/1.png"></div>
+                    <div class="images"><img src="../images/dhanauri_wetlands/2.png"></div>
+                    <div class="images"><img src="../images/dhanauri_wetlands/3.png"></div>
+                    <div class="images"><img src="../images/dhanauri_wetlands/4.jpg"></div>
+                    <div class="images"><img src="../images/dhanauri_wetlands/5.jpg"></div>
+                    <div class="images"><img src="../images/dhanauri_wetlands/6.jpg"></div>
+                    <div class="images"><img src="../images/dhanauri_wetlands/7.png"></div>
                 </div>
             </div>
         </section>

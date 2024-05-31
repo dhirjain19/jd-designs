@@ -1,32 +1,37 @@
-.gallery {
+.project_info {
   /* background: #000000; */
-  background: rgb(155 161 187);
+  background: rgb(0, 0, 0);
   color: #fff;
   height: 100%;
 }
 
-.gallery .container .slideshow {
-  height: 100vh;
+.project_info .slideshow {
   position: relative;
+  overflow: hidden;
 }
 
-.gallery .container .title_image {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.gallery .container .image_slideshow {
+.project_info .slides {
   text-align: center;
-}
-
-.gallery .container .image_slideshow img {
-  width: 100%;
   height: 100vh;
-  /* position: relative; */
-  object-fit: cover;
 }
 
-.gallery .container .slide-button {
+.project_info .slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom-in-effect 18s cubic-bezier(0.28, -0.03, 0, 0.99) forwards;
+}
+
+@keyframes zoom-in-effect {
+  from {
+    scale: 1 1;
+  }
+  to {
+    scale: 1.15 1.15;
+  }
+}
+
+.project_info .slideshow .button {
   margin: -45px 15px;
   height: 90px;
   font-size: 60px;
@@ -36,46 +41,36 @@
   position: absolute;
   top: 50%;
   z-index: 1;
-  
 }
 
-.gallery .container .slide-button-left {
+.project_info .slideshow .button-left {
   left: 0%;
 }
 
-.gallery .container .slide-button-right {
+.project_info .slideshow .button-right {
   right: 0%;
 }
 
-.gallery .container .project_title {
+.project_info .title, .gallery_title {
   width: 100%;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   margin: 0;
   padding: 12px 0;
+  text-transform: uppercase;
+}
+
+.project_info .title {
   background-color: white;
   color: black;
-  text-transform: uppercase;
 }
 
-.gallery .container .project_detail {
-  width: 90%;
-  text-align: center;
-  margin: 0px auto;
-}
-.gallery .container .gallery_title {
-  width: 100%;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 12px 0;
-  /* background-color: white; */
+.project_info .gallery_title {
   color: #fff;
-  text-transform: uppercase;
 }
 
-.gallery .container .project_gallery {
+.project_info .gallery {
   display: grid;
   width: 90%;
   margin: 0 auto;
@@ -84,257 +79,240 @@
   gap: 10px;
 }
 
-.project_images img {
-  border: 3px #fff solid;
-}
-
-.design-brief {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  background-color: #fff;
-  margin: 20px 0;
-  padding: 40px 30px;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  color: black;
-  gap: 30px;
-}
-
-.design-brief .image-2 {
-  background-color: white;
-  flex: 4;
-}
-
-.design-brief .description {
-  color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px 20px 20px;
-  text-align: left;
-  flex: 3;
-  /* min-width: 500px; */
-  border-right: 4px dotted rgb(80, 80, 100);
-}
-
-.design-philosophy {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #fff;
-  margin: 20px 0;
-  padding: 40px 30px;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  color: black;
-  gap: 30px;
-}
-
-.design-philosophy .image-1 {
-  background-color: white;
-  flex: 4;
-}
-
-.design-philosophy .image-1 img {
+.project_info .content {
   width: 90%;
-  height: auto;
+  /* text-align: center; */
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.design-philosophy .description {
-  color: rgb(0, 0, 0);
+.info-cards {
+  display: flex;
+  gap: 30px;
+  padding: 40px 0px;
+  border-radius: 35px;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-cards .content-wrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 10px 20px 20px;
+  gap: 50px;
+  padding: 20px;
   text-align: left;
-  flex: 3;
-  border-left: 4px dotted rgb(80, 80, 100);
 }
 
-.project_detail .description .heading {
-  margin-bottom: 50px;
+.info-cards .image {
+  background-color: #ffffff;
+}
+
+.info-cards .heading {
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.project_detail .description p {
+.info-cards .text {
   font-size: 18px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.design-brief {
+  flex-direction: row-reverse;
+  background-color: #000000;
+}
+
+.design-brief .image-wrapper {
+  flex: 4;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.design-brief .content-wrapper {
+  flex: 3;
+  border-right: 4px dotted rgb(160, 0, 0);
+}
+
+.design-philosophy {
+  flex-direction: row;
+  background-color: #fff;
+  color: black;
+  gap: 0;
+}
+
+.design-philosophy .image {
+  flex: 4;
+  text-align: center;
+}
+
+.design-philosophy .image img {
+  width: 90%;
+  height: auto;
+}
+
+.design-philosophy .content-wrapper {
+  color: rgb(0, 0, 0);
+  padding-left: 30px;
+  flex: 3;
+  border-left: 4px dotted rgb(80, 80, 100);
 }
 
 .design-objectives {
-  display: flex;
   flex-direction: row-reverse;
-  flex-wrap: wrap;
-  
-  background-color: #fff;
-  margin: 20px 0;
-  padding: 40px 30px;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  color: black;
-  gap: 30px;
+  background-color: #000000;
 }
 
-.design-objectives .image-2 {
-  background-color: white;
+.design-objectives .image {
   flex: 4;
+  border-radius: 35px;
 }
 
-.design-objectives .description {
-  color: rgb(0, 0, 0);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px 20px 20px;
-  text-align: left;
+.design-objectives .content-wrapper {
   flex: 3;
-  /* min-width: 500px; */
-  border-right: 4px dotted rgb(80, 80, 100);
+  border-right: 4px dotted rgb(160, 0, 0);
 }
 
 .floor-plan {
-  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  /* height: 90vh; */
-
   background-color: #fff;
-  margin: 20px 0;
   padding: 20px 30px;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
   color: black;
-  /* gap: 30px; */
+  gap: 0;
+  text-align: center;  
 }
 
-.floor-plan .ground {
+.floor-plan > .ground, .first {
   flex: 1;
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  border-right: 4px dotted rgb(80, 80, 100);
   gap: 15px;
 }
 
-.floor-plan .ground .image-1 {
-  /* height: 90%; */
+.floor-plan .ground {
+  border-right: 4px dotted rgb(80, 80, 100);
 }
 
-.floor-plan .ground .image-1 img {
-  /* width: 100%;
-  height: auto; */
-}
-
-.floor-plan .ground .heading {
-  color: black;
+.floor-plan .image {
   width: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  /* height: 10%; */
-}
-
-.floor-plan .first {
-  flex: 1;
-  /* min-width: 500px; */
-}
-
-.site-plan {
-  display: flex;
-  flex-direction: row;
-  max-height: 90vh;
-  background-color: #fff;
-  margin: 20px 0;
-  padding: 40px 30px;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  color: black;
-  gap: 30px;
-}
-
-.site-plan .image-3 {
-  flex: 6;
-}
-
-.site-plan .image-3 img {
   height: 100%;
 }
 
-.site-plan .description {
-  color: rgb(0, 0, 0);
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0px 20px;
-  flex: 1;
-  border-left: 4px dotted rgb(80, 80, 100);
-
+.floor-plan .first .image {
+  border: 1px solid black;
 }
 
+.floor-plan .image img {
+  width: 100%;
+  height: 100%;
+}
 
-/* #interior_gallery {
-  display: none;
-} */
+.floor-plan .heading {
+  color: black;
+  /* width: 100%; */
+  font-size: 18px;
+}
+
+.site-plan {
+  flex-direction: row;
+  max-height: 90vh;
+  background-color: #fff;
+  color: black;
+}
+
+.site-plan .image {
+  flex: 6;
+}
+
+.site-plan .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.site-plan .content-wrapper {
+  color: rgb(0, 0, 0);
+  flex: 1;
+  border-left: 4px dotted rgb(80, 80, 100);
+  text-align: center;
+}
 
 @media (max-width: 500px) {
-  .gallery .container .project_title {
+  .project_info .slides {
+    height: 100%;
+  }
+
+  .project_info .title, .gallery_title {
     font-size: 18px;
   }
   
-  .gallery .container .project_gallery {
+  .project_info .gallery {
     grid-template-columns: auto;
   }
-  .design-brief, .design-philosophy, .design-objectives, .site-plan, .floor-plan {
-    flex-direction: column;
+
+  .project_info .content {
+    margin: 20px auto;
+    gap: 20px;
   }
 
-  .design-brief .image-2,.design-philosophy .image-1, .design-objectives .image-2, .site-plan .image-3, .floor-plan .ground, .floor-plan .first {
-    min-width: unset;
+  .info-cards {
+    flex-direction: column;
+    gap: 0;
   }
-  .design-brief .description, .design-philosophy .description, .design-objectives .description, .site-plan .description, .floor-plan .ground, .floor-plan .first {
-    min-width: unset;
-    border-left: unset;
-    border-right: unset;
-    padding: unset;
+
+  .info-cards .content-wrapper {
+    border: unset;
+    gap: 15px;
   }
-  .design-brief, .design-philosophy, .design-objectives, .site-plan {
-    gap: unset;
-  }
-  .design-brief .image-2, .design-philosophy .image-1, .design-objectives .image-2 {
-    padding: unset;
-  }
-  .project_detail .description .heading {
+
+  .info-cards .heading {
     font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
     text-align: center;
+  }
+
+  .design-brief .heading, .design-philosophy .heading, .design-objectives .heading {
     border-bottom: 3px solid rgb(80, 80, 100);
   }
-  .project_detail .description p {
+
+  .info-cards .text{
     font-size: 15px;
   }
 
   .site-plan, .floor-plan {
     padding: 20px;
   }
-  .site-plan .description {
-    font-size: 18px;
-  }
-  .site-plan .image-3 img {
+
+  .site-plan .image img {
     height: auto;
     width: 100%;
   }
 
-  .gallery .container .gallery_title {
-    font-size: 18px;
+  .design-brief {
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .design-brief .image-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .design-brief .image-wrapper .text {
+    padding: 0;
+  }
+
+  .design-brief .content-wrapper {
+    padding: 0;
   }
 }

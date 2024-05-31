@@ -1,40 +1,92 @@
 {
-  "home": [
-    {
-      "image": "../images/project_1/1.png",
-      "quote": "Chasing dreams and making memories."
-    },
-    {
-      "image": "../images/project_1/2.png",
-      "quote": "Adventure awaits around every corner."
-    },
-    {
-      "image": "../images/project_1/3.png",
-      "quote": "Finding beauty in the simple things."
-    }
-  ],
   "projects": [
     {
-      "academic": [
+      "architecture": [
         {
           "name": "IIM Karjat",
           "caption": "Indian Institute of Management Studies in the state of Maharashtra",
-          "description": "",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
+          "description1": [
+            {
+              "design-philosophy": [
+                {
+                  "heading": "Design Philosophy",
+                  "image": "../images/project_1/10.png",
+                  "text": "The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces."
+                }
+              ]
+            },
+            {
+              "design-objectives": [
+                {
+                  "heading": "Design Objectives",
+                  "image": "../images/project_1/8.png",
+                  "text": "To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background."
+                }
+              ]
+            },
+            {
+              "floor-plan": [
+                {
+                  "ground": [
+                    {
+                      "heading": "Ground Floor Plan",
+                      "image": "../images/project_1/11.png"
+                    }
+                  ]
+                },
+                {
+                  "first": [
+                    {
+                      "heading": "First Floor Plan",
+                      "image": "../images/project_1/11.png"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "site-plan": [
+                {
+                  "heading": "Site Plan",
+                  "image": "../images/project_1/9.png"
+                }
+              ]
+            }
+          ],
           "images": [
             {
-              "image": "../images/project_3/1.jpg"
-            },
-            {
-              "image": "../images/project_3/2.jpg"
-            },
-            {
-              "image": "../images/project_3/3.jpg"
+              "image": "../images/project_3/5.jpg"
             },
             {
               "image": "../images/project_3/4.jpg"
             },
             {
-              "image": "../images/project_3/5.jpg"
+              "image": "../images/project_3/3.jpg"
+            },
+            {
+              "image": "../images/project_3/4.png"
+            },
+            {
+              "image": "../images/project_3/5.png"
+            },
+            {
+              "image": "../images/project_3/6.png"
+            },
+            {
+              "image": "../images/project_3/7.png"
+            },
+            {
+              "image": "../images/project_3/8.png"
+            },
+            {
+              "image": "../images/project_3/9.png"
+            },
+            {
+              "image": "../images/project_3/10.png"
+            },
+            {
+              "image": "../images/project_3/11.png"
             },
             {
               "image": "../images/project_3/6.jpg"
@@ -44,130 +96,92 @@
             },
             {
               "image": "../images/project_3/8.jpg"
-            },
-            {
-              "image": "../images/project_3/9.jpg"
-            },
-            {
-              "image": "../images/project_3/10.jpg"
             }
           ]
         },
         {
           "name": "Nesting Neighbors",
           "caption": "A Mixed-use Mass Housing Complex in the suburbs of Mumbai",
-          "description": "",
+          "description": "<div class='design-brief'><div class='image_section'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'>Vertically mixed used developments is a system of decentralisation of amenities, such that uses and facilities are available in smaller and localised areas. Activation of street edge through ground floor retail and commercial . upper story residential for improved privacy, access to views, adequate light and ventilation, increased demand of local needs, easy access to local employment opportunities Multiple stakeholders in one building to use resources like energy, trash disposal, sewage more efficiently. Mixed use highrise building is a more unified mixed and architectural solution, certain different paradigm rather than earmarking separate buildings for diff land uses.</div></div><div class = 'description'><div class='heading'>Design Brief</div><p>Population explosion globally has directly resulted in urban sprawl of the respective metro cities to accommodate the ever-increasing masses mainly resulting in unsustainable living solutions. Scarcity of available land for development and an increase in real estate prices has led to the trend of utilizing mixed-use developments to solve the multitude of issues currently presented in twenty-first century cities. This invites an exploration of the potential and the opportunities that these types of developments can provide in relation to their placed context. This project therefore, will investigate the process of typology analysis in the context of the city as first principle aid for the production of mixed-use architecture<br><br>The notion of having vertical cities helps save energy resources and supports the ever-increasing population and preserves the further eradication of farmlands., nature and recreation in the fringe area. The design problem of high rise buildings examines the use of hybrid typology and its contribution towards sustainability. To protect the city against this sort of expansion which eventually would reach a saturation point, a high rise as a building typology is a possible solution by conquering vertical space through agglomeration and intensification.</p></div></div>          <div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p><ul><li>To design a mixed-use skyscraper which contributes towards sustainable environment along with  well-organized different sectors of the living needs.</li><li>To configure spaces which improve the social and visual collaboration and decrease disengagement.</li><li>To design a structurally full proof building to cater to the context and need optimally.</li></ul></p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
-              "image": "../images/project_3/1.jpg"
+              "image": "../images/project_2/1.png"
             },
             {
-              "image": "../images/project_3/2.jpg"
+              "image": "../images/project_2/2.png"
             },
             {
-              "image": "../images/project_3/3.jpg"
+              "image": "../images/project_2/3.png"
             },
             {
-              "image": "../images/project_3/4.jpg"
+              "image": "../images/project_2/4.png"
             },
             {
-              "image": "../images/project_3/5.jpg"
+              "image": "../images/project_2/5.png"
             },
             {
-              "image": "../images/project_3/6.jpg"
+              "image": "../images/project_2/6.png"
             },
             {
-              "image": "../images/project_3/7.jpg"
-            },
-            {
-              "image": "../images/project_3/8.jpg"
-            },
-            {
-              "image": "../images/project_3/9.jpg"
-            },
-            {
-              "image": "../images/project_3/10.jpg"
+              "image": "../images/project_2/7.png"
             }
           ]
         },
         {
-          "name": "Eco-Resort",
+          "name": "Maritime Museum Views",
           "caption": "Landscape Design in an Eco-Resort in the district of Jodhpur",
-          "description": "",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to create a world-class Maritime museum of fame to showcase this aspect of history and there is no national monument to bring a visionary transformation of the Mumbai Port area into a tourism hub. As structure has to respond to the evolving urban fabric & serve as a benchmark, both permanent and temporal.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p><ul><li>To engage with historical, theoretical, and practical methods of display and viewership.</li> <li>To explore and understand the relationship between exhibition and architectural design.</li> <li>To understand user movement, space requirement, accessibility, and standard practices for museum design & public spaces.</li> <li>Understanding space requirements for various activities for small and large groups of people along with indoor and outdoor spaces created by built forms.</li> <li>Design of spaces suitable for the intended activity.</li> <li>Design of spaces as per the behavioural needs of individuals and groups.</li> <li>Design and detailing of the built form and required infrastructure regarding methods of construction and materials.</li></ul></p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
-              "image": "../images/project_3/1.jpg"
+              "image": "../images/project_4/1.png"
             },
             {
-              "image": "../images/project_3/2.jpg"
+              "image": "../images/project_4/2.png"
             },
             {
-              "image": "../images/project_3/3.jpg"
+              "image": "../images/project_4/3.png"
             },
             {
-              "image": "../images/project_3/4.jpg"
+              "image": "../images/project_4/4.png"
+            }
+          ]
+        },
+        {
+          "name": "Dhanuari Wetlands: Conservation and Restoration of its Multifarious Ecology",
+          "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
+          "images": [
+            {
+              "image": "../images/project_1/1.png"
             },
             {
-              "image": "../images/project_3/5.jpg"
+              "image": "../images/project_1/2.png"
             },
             {
-              "image": "../images/project_3/6.jpg"
+              "image": "../images/project_1/3.png"
             },
             {
-              "image": "../images/project_3/7.jpg"
+              "image": "../images/project_1/4.jpg"
             },
             {
-              "image": "../images/project_3/8.jpg"
+              "image": "../images/project_1/5.jpg"
             },
             {
-              "image": "../images/project_3/9.jpg"
+              "image": "../images/project_1/6.jpg"
             },
             {
-              "image": "../images/project_3/10.jpg"
+              "image": "../images/project_1/7.png"
             }
           ]
         }
       ],
-      "professional": [
+      "interior": [
         {
-          "name": "Dhanuari Wetlands Thesis",
-          "caption": "Conservation and Restoration of its Multifarious Ecology",
-          "description": "",
-          "images": [
-            {
-              "image": "../images/project_2/1.jpg"
-            },
-            {
-              "image": "../images/project_2/2.jpg"
-            },
-            {
-              "image": "../images/project_2/3.jpg"
-            },
-            {
-              "image": "../images/project_2/4.jpg"
-            },
-            {
-              "image": "../images/project_2/5.jpg"
-            },
-            {
-              "image": "../images/project_2/6.jpg"
-            },
-            {
-              "image": "../images/project_2/7.jpg"
-            },
-            {
-              "image": "../images/project_2/8.jpg"
-            },
-            {
-              "image": "../images/project_2/9.jpg"
-            },
-            {
-              "image": "../images/project_2/10.jpg"
-            }
-          ]
+          "content": "<div class='title_image'><img src='./images/project_5/2.png'></div><div class='title'>Cafe</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_5/1.png'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_5/3.png'></div><div class='description'>Entrance</div></div><div class='image-section'><div class='image'><img src='./images/project_5/4.png'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_5/5.png'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_5/6.png'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_5/7.png'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_5/8.png'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_5/9.png'></div><div class='description'>Image 8</div></div><div class='image-section'><div class='image'><img src='./images/project_5/10.png'></div><div class='description'>Image 9</div></div><div class='image-section'><div class='image'><img src='./images/project_5/11.png'></div><div class='description'>Image 10</div></div><div class='image-section'><div class='image'><img src='./images/project_5/12.png'></div><div class='description'>Image 11</div></div><div class='image-section'><div class='image'><img src='./images/project_5/13.png'></div><div class='description'>Image 12</div></div><div class='image-section'><div class='image'><img src='./images/project_5/14.png'></div><div class='description'>Image 13</div></div><div class='image-section'><div class='image'><img src='./images/project_5/15.png'></div><div class='description'>Image 14</div></div><div class='image-section'><div class='image'><img src='./images/project_5/16.png'></div><div class='description'>Image 15</div></div></div>"
+        },
+        {
+          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/10.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/11.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_6/7.jpg'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_6/8.jpg'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_6/9.jpg'></div><div class='description'>Image 8</div></div></div>"
         }
       ]
     }
-  ],
-  "contact": ""
+  ]
 }

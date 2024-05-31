@@ -1,38 +1,4 @@
 let site = `{
-  "home": [
-    {
-      "image": "../images/project_1/5.jpg",
-      "quote": "Chasing dreams and making memories."
-    },
-    {
-      "image": "../images/project_1/6.jpg",
-      "quote": "Adventure awaits around every corner."
-    },
-    {
-      "image": "../images/project_2/1.png",
-      "quote": "Finding beauty in the simple things."
-    },
-    {
-      "image": "../images/project_2/2.png",
-      "quote": "Chasing dreams and making memories."
-    },
-    {
-      "image": "../images/project_4/1.png",
-      "quote": "Adventure awaits around every corner."
-    },
-    {
-      "image": "../images/project_4/2.png",
-      "quote": "Finding beauty in the simple things."
-    },
-    {
-      "image": "../images/project_3/1.jpg",
-      "quote": "Chasing dreams and making memories."
-    },
-    {
-      "image": "../images/project_3/2.jpg",
-      "quote": "Adventure awaits around every corner."
-    }
-  ],
   "projects": [
     {
       "architecture": [
@@ -42,10 +8,10 @@ let site = `{
           "description": "<div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p>The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands U.P. The purpose in achieving these points is through having a research centre and generating awareness among the masses about the importance of wetlands and its vast biodiversity. Scientific ways to be implemented to rejuvenate the wetlands back to its original state over a period. Finally showcase and elaborate various experience to attract tourist with the help of interactive design spaces.</p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
-              "image": "../images/project_3/1.jpg"
+              "image": "../images/project_3/5.jpg"
             },
             {
-              "image": "../images/project_3/2.jpg"
+              "image": "../images/project_3/4.jpg"
             },
             {
               "image": "../images/project_3/3.jpg"
@@ -73,13 +39,22 @@ let site = `{
             },
             {
               "image": "../images/project_3/11.png"
+            },
+            {
+              "image": "../images/project_3/6.jpg"
+            },
+            {
+              "image": "../images/project_3/7.jpg"
+            },
+            {
+              "image": "../images/project_3/8.jpg"
             }
           ]
         },
         {
           "name": "Nesting Neighbors",
           "caption": "A Mixed-use Mass Housing Complex in the suburbs of Mumbai",
-          "description": "<div class='design-brief'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Brief</div><p>Population explosion globally has directly resulted in urban sprawl of the respective metro cities to accommodate the ever-increasing masses mainly resulting in unsustainable living solutions. Scarcity of available land for development and an increase in real estate prices has led to the trend of utilizing mixed-use developments to solve the multitude of issues currently presented in twenty-first century cities. This invites an exploration of the potential and the opportunities that these types of developments can provide in relation to their placed context. This project therefore, will investigate the process of typology analysis in the context of the city as first principle aid for the production of mixed-use architecture<br><br>The notion of having vertical cities helps save energy resources and supports the ever-increasing population and preserves the further eradication of farmlands., nature and recreation in the fringe area. The design problem of high rise buildings examines the use of hybrid typology and its contribution towards sustainability. To protect the city against this sort of expansion which eventually would reach a saturation point, a high rise as a building typology is a possible solution by conquering vertical space through agglomeration and intensification.<br><br>Vertically mixed used developments is a system of decentralisation of amenities, such that uses and facilities are available in smaller and localised areas. Activation of street edge through ground floor retail and commercial . upper story residential for improved privacy, access to views, adequate light and ventilation, increased demand of local needs, easy access to local employment opportunities Multiple stakeholders in one building to use resources like energy, trash disposal, sewage more efficiently. Mixed use highrise building is a more unified mixed and architectural solution, certain different paradigm rather than earmarking separate buildings for diff land uses.</p></div></div>          <div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p><ul><li>To design a mixed-use skyscraper which contributes towards sustainable environment along with  well-organized different sectors of the living needs.</li><li>To configure spaces which improve the social and visual collaboration and decrease disengagement.</li><li>To design a structurally full proof building to cater to the context and need optimally.</li></ul></p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
+          "description": "<div class='design-brief'><div class='image_section'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'>Vertically mixed used developments is a system of decentralisation of amenities, such that uses and facilities are available in smaller and localised areas. Activation of street edge through ground floor retail and commercial . upper story residential for improved privacy, access to views, adequate light and ventilation, increased demand of local needs, easy access to local employment opportunities Multiple stakeholders in one building to use resources like energy, trash disposal, sewage more efficiently. Mixed use highrise building is a more unified mixed and architectural solution, certain different paradigm rather than earmarking separate buildings for diff land uses.</div></div><div class = 'description'><div class='heading'>Design Brief</div><p>Population explosion globally has directly resulted in urban sprawl of the respective metro cities to accommodate the ever-increasing masses mainly resulting in unsustainable living solutions. Scarcity of available land for development and an increase in real estate prices has led to the trend of utilizing mixed-use developments to solve the multitude of issues currently presented in twenty-first century cities. This invites an exploration of the potential and the opportunities that these types of developments can provide in relation to their placed context. This project therefore, will investigate the process of typology analysis in the context of the city as first principle aid for the production of mixed-use architecture<br><br>The notion of having vertical cities helps save energy resources and supports the ever-increasing population and preserves the further eradication of farmlands., nature and recreation in the fringe area. The design problem of high rise buildings examines the use of hybrid typology and its contribution towards sustainability. To protect the city against this sort of expansion which eventually would reach a saturation point, a high rise as a building typology is a possible solution by conquering vertical space through agglomeration and intensification.</p></div></div>          <div class='design-philosophy'><div class='image-1'><img src = '../images/project_1/10.png'></div><div class = 'description'><div class= 'heading'>Design Philosophy</div><p><ul><li>To design a mixed-use skyscraper which contributes towards sustainable environment along with  well-organized different sectors of the living needs.</li><li>To configure spaces which improve the social and visual collaboration and decrease disengagement.</li><li>To design a structurally full proof building to cater to the context and need optimally.</li></ul></p></div></div><div class='design-objectives'><div class = 'image-2'><img src = '../images/project_1/8.png'></div><div class = 'description'><div class='heading'>Design Objectives</div><p>To study the rich flora and fauna of the region. To implement ways to preserve/conserve the rich ecology of wetlands. To implement scientific interventions to restore the wetlands back to its original glory. Create awareness among the masses through eco-tourism, eventually generate socio-economic values over the area. To create interactive design spaces keeping wetlands in background.</p></div></div><div class = 'floor-plan'><div class = 'ground'><div class = 'image-1'><img src = '../images/project_1/11.png'></div><div class = 'heading'>Ground Floor Plan</div></div><div class = 'first'></div></div><div class='site-plan'><div class = 'image-3'><img src = '../images/project_1/9.png'></div><div class = 'description'>Site Plan</div></div>",
           "images": [
             {
               "image": "../images/project_2/1.png"
@@ -101,12 +76,6 @@ let site = `{
             },
             {
               "image": "../images/project_2/7.png"
-            },
-            {
-              "image": "../images/project_2/8.png"
-            },
-            {
-              "image": "../images/project_2/9.png"
             }
           ]
         },
@@ -153,18 +122,6 @@ let site = `{
             },
             {
               "image": "../images/project_1/7.png"
-            },
-            {
-              "image": "../images/project_1/8.png"
-            },
-            {
-              "image": "../images/project_1/9.png"
-            },
-            {
-              "image": "../images/project_1/10.png"
-            },
-            {
-              "image": "../images/project_1/11.png"
             }
           ]
         }
@@ -174,7 +131,7 @@ let site = `{
           "content": "<div class='title_image'><img src='./images/project_5/2.png'></div><div class='title'>Cafe</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_5/1.png'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_5/3.png'></div><div class='description'>Entrance</div></div><div class='image-section'><div class='image'><img src='./images/project_5/4.png'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_5/5.png'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_5/6.png'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_5/7.png'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_5/8.png'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_5/9.png'></div><div class='description'>Image 8</div></div><div class='image-section'><div class='image'><img src='./images/project_5/10.png'></div><div class='description'>Image 9</div></div><div class='image-section'><div class='image'><img src='./images/project_5/11.png'></div><div class='description'>Image 10</div></div><div class='image-section'><div class='image'><img src='./images/project_5/12.png'></div><div class='description'>Image 11</div></div><div class='image-section'><div class='image'><img src='./images/project_5/13.png'></div><div class='description'>Image 12</div></div><div class='image-section'><div class='image'><img src='./images/project_5/14.png'></div><div class='description'>Image 13</div></div><div class='image-section'><div class='image'><img src='./images/project_5/15.png'></div><div class='description'>Image 14</div></div><div class='image-section'><div class='image'><img src='./images/project_5/16.png'></div><div class='description'>Image 15</div></div></div>"
         },
         {
-          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/4.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/5.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_6/7.jpg'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_6/8.jpg'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_6/9.jpg'></div><div class='description'>Image 8</div></div></div>"
+          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/10.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/11.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_6/7.jpg'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_6/8.jpg'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_6/9.jpg'></div><div class='description'>Image 8</div></div></div>"
         }        
       ]
     }
@@ -184,6 +141,7 @@ let site = `{
 site = JSON.parse(site);
 
 var menu_count = 0;
+var active_section;
 
 function menuToggle() {
   var menu_page = document.getElementById("menu-page");
@@ -408,16 +366,16 @@ function opensection(sectionTab, menu = true) {
   document.getElementById(sectionTab).classList.add("active-section");
 
   if (sectionTab == "architecture_projects") {
-    const cards = document
+    document
       .getElementById("architecture_projects")
-      .querySelectorAll(".card");
-    cards.forEach((card) => observer.observe(card));
+      .querySelectorAll(".card")
+      .forEach((element) => observer.observe(element));
   }
   if (sectionTab == "interior_projects") {
-    const cards = document
+    document
       .getElementById("interior_projects")
-      .querySelectorAll(".card");
-    cards.forEach((card) => observer.observe(card));
+      .querySelectorAll(".card")
+      .forEach((element) => observer.observe(element));
   }
   setTimeout(() => {
     if (menu) menuToggle();
@@ -425,83 +383,62 @@ function opensection(sectionTab, menu = true) {
   onLoadDisplay();
 }
 
-// var home_element = document.querySelector(".home");
-// var home_container = home_element.querySelector(".container");
+// var gallery_element = document.querySelector(".gallery");
+// var gallery_container = gallery_element.querySelector(".container");
+// var gallery_slideshow = gallery_container.querySelector(".slideshow");
 
-// function createHomeSlideElements(image, quote) {
-//   parallax_images = document.createElement("div");
-//   parallax_images.className = "parallax_images";
-//   parallax_images.style.backgroundImage = `url(${image})`;
-//   caption = document.createElement("div");
-//   caption.className = "caption";
-//   caption.innerHTML = quote;
-//   parallax_images.appendChild(caption);
-//   home_container.appendChild(parallax_images);
+// function addImageElement(source) {
+//   image = document.createElement("img");
+//   image.src = source;
+//   return image;
 // }
 
-// function createHomeElements() {
-//   for (var i = 0; i < site.home.length; i++) {
-//     createHomeSlideElements(site.home[i].image, site.home[i].quote);
+// function createGallerySlideElement(gallery_images, source) {
+//   image_slideshow = document.createElement("div");
+//   image_slideshow.className = "image_slideshow";
+
+//   project_images = document.createElement("div");
+//   project_images.className = "project_images";
+
+//   image_slideshow.appendChild(addImageElement(source));
+//   project_images.appendChild(addImageElement(source));
+
+//   gallery_images.appendChild(project_images);
+//   gallery_slideshow.appendChild(image_slideshow);
+// }
+
+// function createGalleryTextElement(title, detail) {
+//   project_title = document.createElement("div");
+//   project_title.className = "project_title";
+
+//   project_detail = document.createElement("div");
+//   project_detail.className = "project_detail";
+
+//   project_title.innerHTML = title;
+//   project_detail.innerHTML = detail;
+
+//   gallery_container.appendChild(project_title);
+//   gallery_container.appendChild(project_detail);
+// }
+
+// function removeSingleElement(parentClass, elementId) {
+//   var element = parentClass.getElementsByClassName(elementId);
+
+//   if (element.length > 0) {
+//     element[0].remove();
 //   }
 // }
 
-// createHomeElements();
+// function removeMultipleElements(parentClass, elementId) {
+//   var elements = parentClass.getElementsByClassName(elementId);
 
-var gallery_element = document.querySelector(".gallery");
-var gallery_container = gallery_element.querySelector(".container");
-var gallery_slideshow = gallery_container.querySelector(".slideshow");
-
-function addImageElement(source) {
-  image = document.createElement("img");
-  image.src = source;
-  return image;
-}
-
-function createGallerySlideElement(gallery_images, source) {
-  image_slideshow = document.createElement("div");
-  image_slideshow.className = "image_slideshow";
-
-  project_images = document.createElement("div");
-  project_images.className = "project_images";
-
-  image_slideshow.appendChild(addImageElement(source));
-  project_images.appendChild(addImageElement(source));
-
-  gallery_images.appendChild(project_images);
-  gallery_slideshow.appendChild(image_slideshow);
-}
-
-function createGalleryTextElement(title, detail) {
-  project_title = document.createElement("div");
-  project_title.className = "project_title";
-
-  project_detail = document.createElement("div");
-  project_detail.className = "project_detail";
-
-  project_title.innerHTML = title;
-  project_detail.innerHTML = detail;
-
-  gallery_container.appendChild(project_title);
-  gallery_container.appendChild(project_detail);
-}
-
-function removeSingleElement(parentClass, elementId) {
-  var element = parentClass.getElementsByClassName(elementId);
-
-  if (element.length > 0) {
-    element[0].remove();
-  }
-}
-
-function removeMultipleElements(parentClass, elementId) {
-  var elements = parentClass.getElementsByClassName(elementId);
-
-  if (elements.length > 0) {
-    for (i = elements.length - 1; i > -1; i--) {
-      elements[i].remove();
-    }
-  }
-}
+//   if (elements.length > 0) {
+//     for (i = elements.length - 1; i > -1; i--) {
+//       elements[i].remove();
+//     }
+//   }
+// }
+// var active_section = document.querySelector(".section.active-section");
 
 var slideIndex = 1;
 
@@ -511,7 +448,7 @@ function plusDivs(n) {
 
 function showDivs(n) {
   var i;
-  var x = document.getElementsByClassName("image_slideshow");
+  var x = active_section?.getElementsByClassName("slides");
   if (n > x.length) {
     slideIndex = 1;
   }
@@ -525,54 +462,54 @@ function showDivs(n) {
   // setTimeout(() => {showDivs(slideIndex += 1)}, 2000);
 }
 
-function createGalleryElements(category, value) {
-  removeMultipleElements(gallery_slideshow, "image_slideshow");
-  removeSingleElement(gallery_container, "project_title");
-  removeSingleElement(gallery_container, "project_detail");
-  removeSingleElement(gallery_container, "gallery_title");
-  removeSingleElement(gallery_container, "project_gallery");
+// function createGalleryElements(category, value) {
+//   removeMultipleElements(gallery_slideshow, "image_slideshow");
+//   removeSingleElement(gallery_container, "project_title");
+//   removeSingleElement(gallery_container, "project_detail");
+//   removeSingleElement(gallery_container, "gallery_title");
+//   removeSingleElement(gallery_container, "project_gallery");
 
-  var gallery_images = document.createElement("div");
-  gallery_images.className = "project_gallery";
+//   var gallery_images = document.createElement("div");
+//   gallery_images.className = "project_gallery";
 
-  gallery_title = document.createElement("div");
-  gallery_title.className = "gallery_title";
-  gallery_title.innerHTML = "Gallery";
+//   gallery_title = document.createElement("div");
+//   gallery_title.className = "gallery_title";
+//   gallery_title.innerHTML = "Gallery";
 
-  for (var i = 0; i < site.projects[0][category][value].images.length; i++) {
-    createGallerySlideElement(
-      gallery_images,
-      site.projects[0][category][value].images[i].image
-    );
-  }
+//   for (var i = 0; i < site.projects[0][category][value].images.length; i++) {
+//     createGallerySlideElement(
+//       gallery_images,
+//       site.projects[0][category][value].images[i].image
+//     );
+//   }
 
-  createGalleryTextElement(
-    site.projects[0][category][value].name,
-    site.projects[0][category][value].description
-  );
+//   createGalleryTextElement(
+//     site.projects[0][category][value].name,
+//     site.projects[0][category][value].description
+//   );
 
-  gallery_container.appendChild(gallery_title);
-  gallery_container.appendChild(gallery_images);
+//   gallery_container.appendChild(gallery_title);
+//   gallery_container.appendChild(gallery_images);
 
-  showDivs((slideIndex = 1));
-}
+//   showDivs((slideIndex = 1));
+// }
 
-function showProject(category, value, menu = false) {
-  for (sectionName of sectionNames) {
-    sectionName.classList.remove("active-section");
-  }
-  createGalleryElements(category, value);
+// function showProject(category, value, menu = false) {
+//   for (sectionName of sectionNames) {
+//     sectionName.classList.remove("active-section");
+//   }
+//   createGalleryElements(category, value);
 
-  setTimeout(() => {
-    if (menu) menuToggle();
-  }, 2400);
+//   setTimeout(() => {
+//     if (menu) menuToggle();
+//   }, 2400);
 
-  setTimeout(() => {
-    document.getElementById("gallery").classList.add("active-section");
-  }, 2000);
+//   setTimeout(() => {
+//     document.getElementById("gallery").classList.add("active-section");
+//   }, 2000);
 
-  onLoadDisplay();
-}
+//   onLoadDisplay();
+// }
 
 var interior_gallery_element = document.querySelector(".interior_gallery");
 var interior_gallery_container =
@@ -601,7 +538,7 @@ function showInterior(category, value, menu = false) {
   onLoadDisplay();
 }
 
-function onLoadDisplay() {
+function onLoadDisplay(reload = false) {
   var loading_page = document.getElementById("onLoadDisplay");
 
   loading_page.classList.add("display");
@@ -614,11 +551,20 @@ function onLoadDisplay() {
   setTimeout(() => {
     loading_page.classList.remove("display");
   }, 3500);
+
+  if (reload) {
+    setTimeout(() => {
+      document.getElementById("home").classList.add("active-section");
+    }, 2000);
+  }
+  active_section = document.querySelector(".section.active-section");
+  if (active_section?.classList.contains('project_info')) showDivs(1);
 }
 
 const cards = document
   .getElementById("architecture_projects")
   .querySelectorAll(".card");
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
