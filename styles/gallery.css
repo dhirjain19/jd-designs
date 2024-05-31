@@ -258,9 +258,11 @@
   
   .project_info .gallery {
     grid-template-columns: auto;
+    width: 95%;
   }
 
   .project_info .content {
+    width: 95%;
     margin: 20px auto;
     gap: 20px;
   }
@@ -309,10 +311,14 @@
   }
 
   .design-brief .image-wrapper .text {
-    padding: 0;
+    padding: 0 20px;
   }
 
   .design-brief .content-wrapper {
-    padding: 0;
+    padding: 0 20px;
+  }
+
+  .design-philosophy .content-wrapper {
+    padding: 20px;
   }
 }
