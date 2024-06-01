@@ -1,19 +1,30 @@
-let site = `{
-  "projects": [
-    {
-      "interior": [
-        {
-          "content": "<div class='title_image'><img src='./images/project_5/2.png'></div><div class='title'>Cafe</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_5/1.png'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_5/3.png'></div><div class='description'>Entrance</div></div><div class='image-section'><div class='image'><img src='./images/project_5/4.png'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_5/5.png'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_5/6.png'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_5/7.png'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_5/8.png'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_5/9.png'></div><div class='description'>Image 8</div></div><div class='image-section'><div class='image'><img src='./images/project_5/10.png'></div><div class='description'>Image 9</div></div><div class='image-section'><div class='image'><img src='./images/project_5/11.png'></div><div class='description'>Image 10</div></div><div class='image-section'><div class='image'><img src='./images/project_5/12.png'></div><div class='description'>Image 11</div></div><div class='image-section'><div class='image'><img src='./images/project_5/13.png'></div><div class='description'>Image 12</div></div><div class='image-section'><div class='image'><img src='./images/project_5/14.png'></div><div class='description'>Image 13</div></div><div class='image-section'><div class='image'><img src='./images/project_5/15.png'></div><div class='description'>Image 14</div></div><div class='image-section'><div class='image'><img src='./images/project_5/16.png'></div><div class='description'>Image 15</div></div></div>"
-        },
-        {
-          "content": "<div class='title_image'><img src='./images/project_6/1.jpg'></div><div class='title'>House</div><div class='images'><div class='image-section'><div class='image'><img src='./images/project_6/2.jpg'></div><div class='description'>Image 1</div></div><div class='image-section'><div class='image'><img src='./images/project_6/3.jpg'></div><div class='description'>Image 2</div></div><div class='image-section'><div class='image'><img src='./images/project_6/10.jpg'></div><div class='description'>Image 3</div></div><div class='image-section'><div class='image'><img src='./images/project_6/11.jpg'></div><div class='description'>Image 4</div></div><div class='image-section'><div class='image'><img src='./images/project_6/6.jpg'></div><div class='description'>Image 5</div></div><div class='image-section'><div class='image'><img src='./images/project_6/7.jpg'></div><div class='description'>Image 6</div></div><div class='image-section'><div class='image'><img src='./images/project_6/8.jpg'></div><div class='description'>Image 7</div></div><div class='image-section'><div class='image'><img src='./images/project_6/9.jpg'></div><div class='description'>Image 8</div></div></div>"
-        }        
-      ]
-    }
-  ]
-}`;
+// ---------------------------------------------------- LOADING PAGE ----------------------------------------------------
+var loading_page;
 
-site = JSON.parse(site);
+function onLoadDisplay(reload = false) {
+  loading_page = document.getElementById("onLoadDisplay");
+
+  loading_page.classList.add("display");
+  setTimeout(() => {
+    loading_page.classList.add("opacity");
+  }, 50);
+  setTimeout(() => {
+    loading_page.classList.remove("opacity");
+  }, 2500);
+  setTimeout(() => {
+    loading_page.classList.remove("display");
+  }, 3500);
+
+  if (reload) {
+    setTimeout(() => {
+      document.getElementById("home").classList.add("active-section");
+      document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
+      active_section = document.querySelector(".section.active-section");
+    }, 2000);
+  }
+}
+
+// ---------------------------------------------------- MENU PAGE ----------------------------------------------------
 
 var menu_count = 0;
 var active_section;
@@ -232,20 +243,25 @@ function toggle_menu_three(val) {
   }
 }
 
-var sectionNames = document.getElementsByClassName("section");
+// ---------------------------------------------------- OPEN SECTION ----------------------------------------------------
+
+var sectionNames;
 
 function opensection(sectionTab, menu = true) {
-  for (sectionName of sectionNames) {
-    sectionName.classList.remove("active-section");
-  }
+  sectionNames = document.querySelectorAll("section");
+
+  sectionNames.forEach((section) => {
+    section.classList.remove("active-section");
+  });
 
   onLoadDisplay();
 
-  // document.getElementById(sectionTab).classList.add("active-section");
   setTimeout(() => {
     document.getElementById(sectionTab).classList.add("active-section");
     active_section = document.querySelector(".section.active-section");
-    if (active_section?.classList.contains('project_info')) showDivs(1);
+    if (active_section?.classList.contains("archi_project_info")) {
+      showDivs(1);
+    }
   }, 1500);
 
   if (sectionTab == "architecture_projects") {
@@ -265,137 +281,40 @@ function opensection(sectionTab, menu = true) {
   }, 2400);
 }
 
-// var gallery_element = document.querySelector(".gallery");
-// var gallery_container = gallery_element.querySelector(".container");
-// var gallery_slideshow = gallery_container.querySelector(".slideshow");
+// ---------------------------------------------------- SLIDES FUNCTION ----------------------------------------------------
 
-// function addImageElement(source) {
-//   image = document.createElement("img");
-//   image.src = source;
-//   return image;
-// }
-
-// function createGallerySlideElement(gallery_images, source) {
-//   image_slideshow = document.createElement("div");
-//   image_slideshow.className = "image_slideshow";
-
-//   project_images = document.createElement("div");
-//   project_images.className = "project_images";
-
-//   image_slideshow.appendChild(addImageElement(source));
-//   project_images.appendChild(addImageElement(source));
-
-//   gallery_images.appendChild(project_images);
-//   gallery_slideshow.appendChild(image_slideshow);
-// }
-
-// function createGalleryTextElement(title, detail) {
-//   project_title = document.createElement("div");
-//   project_title.className = "project_title";
-
-//   project_detail = document.createElement("div");
-//   project_detail.className = "project_detail";
-
-//   project_title.innerHTML = title;
-//   project_detail.innerHTML = detail;
-
-//   gallery_container.appendChild(project_title);
-//   gallery_container.appendChild(project_detail);
-// }
-
-// function removeSingleElement(parentClass, elementId) {
-//   var element = parentClass.getElementsByClassName(elementId);
-
-//   if (element.length > 0) {
-//     element[0].remove();
-//   }
-// }
-
-// function removeMultipleElements(parentClass, elementId) {
-//   var elements = parentClass.getElementsByClassName(elementId);
-
-//   if (elements.length > 0) {
-//     for (i = elements.length - 1; i > -1; i--) {
-//       elements[i].remove();
-//     }
-//   }
-// }
-// var active_section = document.querySelector(".section.active-section");
-
-var slideIndex = 1;
+var slideIndex;
 
 function plusDivs(n) {
   showDivs((slideIndex += n));
 }
 
+function showSlide(n) {
+  var slideshow = active_section.querySelector(".slideshow");
+  slideshow.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest"});
+  showDivs(n);
+}
+
 function showDivs(n) {
-  var i;
-  var x = active_section.getElementsByClassName("slides");
-  if (n > x.length) {
+  // var i;
+  var slides = active_section.querySelectorAll(".slides");
+  if (n > (slides.length)) {
     slideIndex = 1;
   }
-  if (n < 1) {
-    slideIndex = x.length;
+  else if (n < 1) {
+    slideIndex = slides.length;
   }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
+  else {
+    slideIndex = n;
   }
-  x[slideIndex - 1].style.display = "block";
+  slides.forEach( slide => {
+    slide.classList.remove("active");
+  })
+
+  slides[slideIndex-1].classList.add("active");
 }
 
-
-var interior_gallery_element = document.querySelector(".interior_gallery");
-var interior_gallery_container =
-  interior_gallery_element.querySelector(".container");
-
-function showInterior(category, value, menu = false) {
-  for (sectionName of sectionNames) {
-    sectionName.classList.remove("active-section");
-  }
-
-  if (interior_gallery_container.length > 0) {
-    interior_gallery_container.remove();
-  }
-
-  interior_gallery_container.innerHTML =
-    site.projects[0][category][value].content;
-
-  setTimeout(() => {
-    if (menu) menuToggle();
-  }, 2400);
-
-  setTimeout(() => {
-    document.getElementById("interior_gallery").classList.add("active-section");
-  }, 2000);
-
-  onLoadDisplay();
-}
-
-function onLoadDisplay(reload = false) {
-  var loading_page = document.getElementById("onLoadDisplay");
-
-  loading_page.classList.add("display");
-  setTimeout(() => {
-    loading_page.classList.add("opacity");
-  }, 50);
-  setTimeout(() => {
-    loading_page.classList.remove("opacity");
-  }, 2500);
-  setTimeout(() => {
-    loading_page.classList.remove("display");
-  }, 3500);
-
-  if (reload) {
-    setTimeout(() => {
-      document.getElementById("home").classList.add("active-section");
-      active_section = document.querySelector(".section.active-section");
-    }, 2000);
-  }
-}
-
-const cards = document
-  .getElementById("architecture_projects")
-  .querySelectorAll(".card");
+// ---------------------------------------------------- INTERSECTION OBSERVER ----------------------------------------------------
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -409,24 +328,15 @@ const observer = new IntersectionObserver(
   }
 );
 
-document
-  .querySelector("#home")
-  .querySelectorAll(".item")
-  .forEach((item) => observer.observe(item));
+
+// ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
 
 window.addEventListener("scroll", setScrollVar);
 window.addEventListener("resize", setScrollVar);
 
 function setScrollVar() {
   const htmlElement = document.documentElement;
-  // console.log((htmlElement.scrollTop / htmlElement.clientHeight) * 100)
-  // document.querySelector('#home').querySelectorAll('.item').forEach(element => {
-  //   const percentOfScreenHeightScrolled = (htmlElement.scrollTop - element.offsetTop) / element.offsetHeight
-  //   // element.style.setProperty("--scroll", Math.max( -96, Math.min( percentOfScreenHeightScrolled * 100, 92 ) ) )
-  //   element.style.setProperty("--scroll", Math.min( percentOfScreenHeightScrolled * 100, 102 ) )
-  // })
-
-  document?.querySelectorAll(".image-section").forEach((element) => {
+  document.querySelector(".int_project_info.active-section")?.querySelectorAll(".content-wrapper").forEach((element) => {
     const percentOfScreenHeightScrolled =
       (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight;
     element.style.setProperty(

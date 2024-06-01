@@ -1,21 +1,26 @@
-.project_info {
+.archi_project_info {
   /* background: #000000; */
   background: rgb(0, 0, 0);
   color: #fff;
   height: 100%;
 }
 
-.project_info .slideshow {
+.archi_project_info .slideshow {
   position: relative;
   overflow: hidden;
 }
 
-.project_info .slides {
+.archi_project_info .slides {
   text-align: center;
   height: 100vh;
+  display: none;
 }
 
-.project_info .slides img {
+.archi_project_info .slides.active {
+  display: block;
+}
+
+.archi_project_info .slides img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -31,7 +36,7 @@
   }
 }
 
-.project_info .slideshow .button {
+.archi_project_info .slideshow .button {
   margin: -45px 15px;
   height: 90px;
   font-size: 60px;
@@ -43,15 +48,15 @@
   z-index: 1;
 }
 
-.project_info .slideshow .button-left {
+.archi_project_info .slideshow .button-left {
   left: 0%;
 }
 
-.project_info .slideshow .button-right {
+.archi_project_info .slideshow .button-right {
   right: 0%;
 }
 
-.project_info .title, .gallery_title {
+.archi_project_info .title, .gallery_title {
   width: 100%;
   text-align: center;
   font-size: 24px;
@@ -61,16 +66,16 @@
   text-transform: uppercase;
 }
 
-.project_info .title {
+.archi_project_info .title {
   background-color: white;
   color: black;
 }
 
-.project_info .gallery_title {
+.archi_project_info .gallery_title {
   color: #fff;
 }
 
-.project_info .gallery {
+.archi_project_info .gallery {
   display: grid;
   width: 90%;
   margin: 0 auto;
@@ -79,7 +84,7 @@
   gap: 10px;
 }
 
-.project_info .content {
+.archi_project_info .content {
   width: 90%;
   /* text-align: center; */
   margin: 40px auto;
@@ -248,20 +253,20 @@
 }
 
 @media (max-width: 500px) {
-  .project_info .slides {
+  .archi_project_info .slides {
     height: 100%;
   }
 
-  .project_info .title, .gallery_title {
+  .archi_project_info .title, .gallery_title {
     font-size: 18px;
   }
   
-  .project_info .gallery {
+  .archi_project_info .gallery {
     grid-template-columns: auto;
     width: 95%;
   }
 
-  .project_info .content {
+  .archi_project_info .content {
     width: 95%;
     margin: 20px auto;
     gap: 20px;
