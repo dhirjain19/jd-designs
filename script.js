@@ -329,16 +329,16 @@ const observer = new IntersectionObserver(
 );
 
 function scrollAnimation() {
-  if (width > 500) {
+  // if (width > 500) {
     document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.observe(item));
     document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.observe(card));
     document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.observe(card));
-  }
-  else {
+  // }
+  // else {
     // document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.unobserve(item));
     // document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
     // document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
-  }
+  // }
 }
 
 
