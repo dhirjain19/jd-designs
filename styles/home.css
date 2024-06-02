@@ -44,7 +44,22 @@
   height: 100%;
   width: 100%;
   opacity: 0.65;
+  object-position: 50% 50%;
 }
+
+.home .container .list .item.active img {
+  animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes zoom-in-effect {
+  from {
+    object-position: 40% 50%;
+  }
+  to {
+    object-position: 60% 50%;
+  }
+}
+
 
 .home .container .list .item .content {
   position: absolute;
@@ -69,5 +84,11 @@
     word-spacing: 0px;
     width: 80%;
   }
-
+  .home .container .list .item {
+    height: 80vh;
+  }
+  
+  .home .container .list .item.active {
+    height: 80vh;
+  }
 }

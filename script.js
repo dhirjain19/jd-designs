@@ -1,3 +1,14 @@
+var width;
+var height;
+
+function setWindowDimentions() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+}
+
+// console.log(width);
+// console.log(height);
+ 
 // ---------------------------------------------------- LOADING PAGE ----------------------------------------------------
 var loading_page;
 
@@ -17,10 +28,11 @@ function onLoadDisplay(reload = false) {
 
   if (reload) {
     setTimeout(() => {
+      document.querySelector(".nav-bar").classList.remove("hide");
       document.getElementById("home").classList.add("active-section");
-      document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
+      if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
       active_section = document.querySelector(".section.active-section");
-    }, 2000);
+    }, 1800);
   }
 }
 
@@ -263,19 +275,9 @@ function opensection(sectionTab, menu = true) {
       showDivs(1);
     }
   }, 1500);
+  // if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
 
-  if (sectionTab == "architecture_projects") {
-    document
-      .getElementById("architecture_projects")
-      .querySelectorAll(".card")
-      .forEach((element) => observer.observe(element));
-  }
-  if (sectionTab == "interior_projects") {
-    document
-      .getElementById("interior_projects")
-      .querySelectorAll(".card")
-      .forEach((element) => observer.observe(element));
-  }
+
   setTimeout(() => {
     if (menu) menuToggle();
   }, 2400);
@@ -328,11 +330,22 @@ const observer = new IntersectionObserver(
   }
 );
 
+function scrollAnimation() {
+  if (width > 500) {
+    document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.observe(item));
+    document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.observe(card));
+    document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.observe(card));
+  }
+  else {
+    // document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.unobserve(item));
+    // document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
+    // document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
+  }
+}
+
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
 
-window.addEventListener("scroll", setScrollVar);
-window.addEventListener("resize", setScrollVar);
 
 function setScrollVar() {
   const htmlElement = document.documentElement;
@@ -346,4 +359,21 @@ function setScrollVar() {
   });
 }
 
-setScrollVar();
+// ---------------------------------------------------- CALLING FUNCTIONS ----------------------------------------------------
+
+
+window.addEventListener("scroll", () => {
+  setScrollVar();
+});
+
+window.addEventListener("resize", () => {
+  setWindowDimentions();
+  setScrollVar();
+  scrollAnimation();
+});
+
+window.addEventListener("load", () => {
+  setWindowDimentions();
+  setScrollVar();
+  scrollAnimation();
+});

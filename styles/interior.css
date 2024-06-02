@@ -30,6 +30,14 @@
     margin: 20px auto;
 }
 
+.int_project_info .description {
+    color: white;
+    padding: 0px 25px 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
 .int_project_info .gallery {
     display: flex;
     justify-content: center;
@@ -99,6 +107,10 @@
         font-size: 18px;
         width: 100%;
         margin: 10px auto;
+    }
+
+    .int_project_info .description {
+        font-size: 15px;
     }
 
     .int_project_info .gallery {
