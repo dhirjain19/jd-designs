@@ -47,7 +47,7 @@
   object-position: 50% 50%;
 }
 
-.home .container .list .item.active img {
+.home .container .list .item img {
   animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
