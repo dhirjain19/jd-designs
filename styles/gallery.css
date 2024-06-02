@@ -24,7 +24,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: zoom-in-effect 18s cubic-bezier(0.28, -0.03, 0, 0.99) forwards;
+  animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 @keyframes zoom-in-effect {
