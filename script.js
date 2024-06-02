@@ -13,7 +13,6 @@ function setWindowDimentions() {
 var loading_page;
 
 function onLoadDisplay(reload = false) {
-  loading_page = document.getElementById("onLoadDisplay");
 
   loading_page.classList.add("display");
   setTimeout(() => {
@@ -260,7 +259,6 @@ function toggle_menu_three(val) {
 var sectionNames;
 
 function opensection(sectionTab, menu = true) {
-  sectionNames = document.querySelectorAll("section");
 
   sectionNames.forEach((section) => {
     section.classList.remove("active-section");
@@ -376,4 +374,6 @@ window.addEventListener("load", () => {
   setWindowDimentions();
   setScrollVar();
   scrollAnimation();
+  loading_page = document.getElementById("onLoadDisplay");
+  sectionNames = document.querySelectorAll("section");
 });
