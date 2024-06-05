@@ -84,6 +84,10 @@
   gap: 10px;
 }
 
+.archi_project_info .gallery .images {
+  cursor: pointer;
+}
+
 .archi_project_info .content {
   width: 90%;
   /* text-align: center; */
@@ -237,7 +241,7 @@
   max-height: 90vh;
   background-color: #fff;
   color: black;
-  padding: 25px 10px;
+  padding: 0px 10px;
   gap: 10px;
 }
 
@@ -302,7 +306,7 @@
   }
 
   .site-plan, .floor-plan {
-    padding: 20px;
+    padding: 15px;
   }
 
   .site-plan .image img {
