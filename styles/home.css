@@ -25,70 +25,78 @@
 }
 
 .home .container .list .item {
-  height: 10vh;
-  /* height: calc( 1vh * (max(var(--scroll), -2) * (-86) / 102 + 96 )); */
-  /* height: 96vh; */
+  height: 96vh;
   width: 100%;
+  /* width: calc( 1% * ( ( max( ( var(--scroll) + 50), -100 )  ) + 100 ) ); */
   position: relative;
-  padding: 0px;
+  /* padding: 0px; */
+  padding: 0 calc(1%*min( -1 * ( var(--scroll) + 50), 25));
   overflow: hidden;
   transition: 1s cubic-bezier(0.28, -0.03, 0, 0.99) 100ms;
 }
 
-.home .container .list .item.active {
+/* .home .container .list .item.active {
   height: 88vh;
-}
+} */
 
 .home .container .list .item img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  opacity: 0.65;
+  opacity: 0.70;
   object-position: 50% 50%;
 }
 
 .home .container .list .item img {
-  animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards;
+  /* animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards; */
 }
 
-@keyframes zoom-in-effect {
+/* @keyframes zoom-in-effect {
   from {
     object-position: 40% 50%;
   }
   to {
     object-position: 60% 50%;
   }
-}
+} */
 
 
 .home .container .list .item .content {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 0%;
+  top: 0%;
   color: #fff;
   font-size: 25px;
   letter-spacing: 5px;
   word-spacing: 10px;
   text-align: center;
   text-transform: uppercase;
-  width: 60%;
+  width: 100%;
+  height: 100%;
+  padding: 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* transform: translate(0,50px); */
   /* transition: all 300ms 200ms; */
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 @media (max-width: 500px) {
+  .home .container .list .item {
+    height: 80vh;
+    padding: 0;
+  }
+  
+  /* .home .container .list .item.active {
+    height: 80vh;
+  } */
+
   .home .container .list .item .content {
     font-size: 15px;
     letter-spacing: 4px;
     word-spacing: 0px;
-    width: 80%;
-  }
-  .home .container .list .item {
-    height: 80vh;
-  }
-  
-  .home .container .list .item.active {
-    height: 80vh;
+    width: 100%;
+    padding: 0;
   }
 }

@@ -8,12 +8,11 @@ function setWindowDimentions() {
 
 // console.log(width);
 // console.log(height);
- 
+
 // ---------------------------------------------------- LOADING PAGE ----------------------------------------------------
 var loading_page;
 
 function onLoadDisplay(reload = false) {
-
   loading_page.classList.add("display");
   setTimeout(() => {
     loading_page.classList.add("opacity");
@@ -29,7 +28,11 @@ function onLoadDisplay(reload = false) {
     setTimeout(() => {
       document.querySelector(".nav-bar").classList.remove("hide");
       document.getElementById("home").classList.add("active-section");
-      if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
+      if (width > 500)
+        document
+          .getElementById("home")
+          .querySelectorAll(".item")
+          .forEach((item) => observer.observe(item));
       active_section = document.querySelector(".section.active-section");
     }, 1800);
   }
@@ -259,7 +262,6 @@ function toggle_menu_three(val) {
 var sectionNames;
 
 function opensection(sectionTab, menu = true) {
-
   sectionNames.forEach((section) => {
     section.classList.remove("active-section");
   });
@@ -274,7 +276,6 @@ function opensection(sectionTab, menu = true) {
     }
   }, 1500);
   // if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
-
 
   setTimeout(() => {
     if (menu) menuToggle();
@@ -291,27 +292,29 @@ function plusDivs(n) {
 
 function showSlide(n) {
   var slideshow = active_section.querySelector(".slideshow");
-  slideshow.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest"});
+  slideshow.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
   showDivs(n);
 }
 
 function showDivs(n) {
   // var i;
   var slides = active_section.querySelectorAll(".slides");
-  if (n > (slides.length)) {
+  if (n > slides.length) {
     slideIndex = 1;
-  }
-  else if (n < 1) {
+  } else if (n < 1) {
     slideIndex = slides.length;
-  }
-  else {
+  } else {
     slideIndex = n;
   }
-  slides.forEach( slide => {
+  slides.forEach((slide) => {
     slide.classList.remove("active");
-  })
+  });
 
-  slides[slideIndex-1].classList.add("active");
+  slides[slideIndex - 1].classList.add("active");
 }
 
 // ---------------------------------------------------- INTERSECTION OBSERVER ----------------------------------------------------
@@ -330,35 +333,58 @@ const observer = new IntersectionObserver(
 
 function scrollAnimation() {
   // if (width > 500) {
-    document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.observe(item));
-    document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.observe(card));
-    document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.observe(card));
+  // document
+  //   .querySelector("#home")
+  //   .querySelectorAll(".item")
+  //   .forEach((item) => observer.observe(item));
+  document
+    .querySelector("#architecture_projects")
+    .querySelectorAll(".card")
+    .forEach((card) => observer.observe(card));
+  document
+    .querySelector("#interior_projects")
+    .querySelectorAll(".card")
+    .forEach((card) => observer.observe(card));
   // }
   // else {
-    // document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.unobserve(item));
-    // document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
-    // document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
+  // document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.unobserve(item));
+  // document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
+  // document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
   // }
 }
-
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
 
-
 function setScrollVar() {
   const htmlElement = document.documentElement;
-  document.querySelector(".int_project_info.active-section")?.querySelectorAll(".content-wrapper").forEach((element) => {
-    const percentOfScreenHeightScrolled =
-      (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight;
-    element.style.setProperty(
-      "--scroll",
-      Math.max(-100, Math.min(percentOfScreenHeightScrolled * 100, 0))
-    );
-  });
+  console.log((htmlElement.scrollTop / htmlElement.clientHeight) * 100);
+
+  document
+    .querySelector(".home.active-section")
+    ?.querySelectorAll(".item")
+    .forEach((element) => {
+      const percentOfScreenHeightScrolled =
+        (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight;
+      element.style.setProperty(
+        "--scroll",
+        Math.min(Math.max(percentOfScreenHeightScrolled * 100, -100), -50)
+      );
+    });
+
+  document
+    .querySelector(".int_project_info.active-section")
+    ?.querySelectorAll(".content-wrapper")
+    .forEach((element) => {
+      const percentOfScreenHeightScrolled =
+        (htmlElement.scrollTop - element.offsetTop) / htmlElement.clientHeight;
+      element.style.setProperty(
+        "--scroll",
+        Math.max(-100, Math.min(percentOfScreenHeightScrolled * 100, 0))
+      );
+    });
 }
 
 // ---------------------------------------------------- CALLING FUNCTIONS ----------------------------------------------------
-
 
 window.addEventListener("scroll", () => {
   setScrollVar();
