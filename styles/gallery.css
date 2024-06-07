@@ -56,6 +56,25 @@
   right: 0%;
 }
 
+.archi_project_info .project-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.archi_project_info .project-button-wrapper div {
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.archi_project_info .project-button-wrapper div:hover {
+  scale: 1.05 1.05;
+  font-weight: bold;
+  color: rgb(200, 0, 0)
+}
+
 .archi_project_info .title, .gallery_title {
   width: 100%;
   text-align: center;
@@ -118,6 +137,7 @@
 
 .info-cards .image {
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 .info-cards .heading {
@@ -209,7 +229,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
-  gap: 15px;
+  gap: 10px;
 }
 
 .floor-plan .ground {
@@ -222,7 +242,7 @@
 }
 
 .floor-plan .first .image {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .floor-plan .image img {
@@ -243,6 +263,7 @@
   color: black;
   padding: 0px 10px;
   gap: 10px;
+  overflow: hidden;
 }
 
 .site-plan .image {
@@ -337,7 +358,11 @@
     padding: 20px;
   }
 
-  .floor-plan .ground {
+  .floor-plan {
+    gap: 15px;
+  }
+
+  .floor-plan > .ground, .floor-plan > .first {
     gap: 0;
     padding: 0;
   }
