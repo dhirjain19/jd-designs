@@ -63,6 +63,19 @@
 }
 
 .archi_project_info .project-button-wrapper div {
+
+}
+
+.archi_project_info .project-button-wrapper div:nth-child(1)::after {
+  content: " All Project";
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.archi_project_info .project-button-wrapper div:nth-child(2):before {
+  content: "Next Project ";
   font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -286,6 +299,25 @@
 @media (max-width: 500px) {
   .archi_project_info .slides {
     height: 100%;
+  }
+
+  .archi_project_info .project-button-wrapper {
+    padding: 5px 10px;
+  }
+  
+  .archi_project_info .project-button-wrapper div {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .archi_project_info .project-button-wrapper div:nth-child(1)::after {
+    content: " All";
+  }
+  
+  .archi_project_info .project-button-wrapper div:nth-child(2):before {
+    content: "Next ";
   }
 
   .archi_project_info .title, .gallery_title {
