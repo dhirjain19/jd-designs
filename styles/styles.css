@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -59,7 +59,6 @@ img {
   text-align: center;
 } */
 
-
 .onLoadDisplay .logo_image {
   height: 150px;
   margin-bottom: 10px;
@@ -82,7 +81,6 @@ img {
   animation: text-glow 1s ease-in-out infinite alternate;
 }
 
-
 /* @keyframes image-glow {
   from {
     box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fcfcfc;
@@ -97,7 +95,7 @@ img {
   from {
     text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fcfcfc;
   }
-  
+
   to {
     text-shadow: 0 0 2px #fff, 0 0 5px #eab169, 0 0 10px #d6ba7d;
   }
@@ -140,7 +138,6 @@ img {
   height: 60px;
 }
 
-
 /*--------------- MENU BUTTON ---------------*/
 
 .menu-button-container {
@@ -168,12 +165,12 @@ img {
 }
 
 .menu-button::before {
-  content: '';
+  content: "";
   margin-top: -8px;
 }
 
 .menu-button::after {
-  content: '';
+  content: "";
   margin-top: 8px;
 }
 
@@ -237,14 +234,12 @@ img {
   list-style-type: none;
 }
 
-
 .menu-items .menu-item {
   transition: all 300ms ease-in;
   transform: matrix(1, 0, 0, 1, 150, 0);
   opacity: 0;
   /* letter-spacing: 5px; */
 }
-
 
 .menu-items .menu-item.active {
   transform: matrix(1, 0, 0, 1, 0, 0);
@@ -260,7 +255,6 @@ img {
   opacity: 1;
 }
 
-
 .menu-page .menu-item a {
   text-decoration: none;
   cursor: pointer;
@@ -268,6 +262,11 @@ img {
   font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 6px;
+}
+
+.menu-items .menu-item.all a {
+  color: rgb(255, 0, 0);
+  font-weight: 500;
 }
 
 .menu-page .menu-item span {
@@ -281,6 +280,7 @@ img {
 .menu-back {
   color: rgb(255 0 0);
   font-size: 20px;
+  font-weight: 600;
   /* text-transform: uppercase; */
   position: fixed;
   top: 18%;
@@ -289,14 +289,12 @@ img {
   transition: all 250ms ease-in;
   opacity: 0.7;
   transform: matrix(1, 0, 0, 1, 0, 0);
-
 }
 
 .menu-back:hover {
   transform: matrix(1.15, 0, 0, 1.15, 0, 0);
   opacity: 1;
 }
-
 
 .section {
   display: none;
@@ -336,11 +334,11 @@ img {
     height: 2px;
     width: 30px;
   }
-  
+
   .menu-button-clicked::before {
     width: 35px;
   }
-  
+
   .menu-button-clicked::after {
     width: 35px;
   }
