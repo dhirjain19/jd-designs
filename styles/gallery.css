@@ -59,7 +59,7 @@
 .archi_project_info .project-button-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 10px 20px;
 }
 
 .archi_project_info .project-button-wrapper div {
@@ -67,7 +67,7 @@
 
 .archi_project_info .project-button-wrapper div:nth-child(1)::after {
   content: " All Project";
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.2s;
@@ -75,7 +75,7 @@
 
 .archi_project_info .project-button-wrapper div:nth-child(2):before {
   content: "Next Project ";
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.2s;
@@ -109,9 +109,9 @@
 
 .archi_project_info .gallery {
   display: grid;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding: 0 80px 30px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 10px;
 }
@@ -130,17 +130,16 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* color: rgb(200, 0, 0); */
-  color: #fff;
-  text-shadow: 1px 1.5px 6px rgb(200, 0, 0);
+  color: rgb(200, 200, 200);
   font-weight: bold;
   padding: 2px 0;
 }
 
 .archi_project_info .content {
-  width: 90%;
+  width: 100%;
   /* text-align: center; */
-  margin: 40px auto;
+  margin: 20px auto;
+  padding: 0 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,6 +168,8 @@
   background-color: #ffffff;
   overflow: hidden;
   max-height: 90vh;
+  border-radius: 35px;
+  overflow: hidden;
 }
 
 .info-cards .image img {
@@ -192,6 +193,7 @@
 .design-brief {
   flex-direction: row-reverse;
   background-color: #000000;
+  padding: 20px 0;
 }
 
 .design-brief .image-wrapper {
@@ -333,7 +335,7 @@
   }
 
   .archi_project_info .project-button-wrapper {
-    padding: 5px 10px;
+    padding: 5px 5%;
   }
 
   .archi_project_info .project-button-wrapper div {
@@ -359,17 +361,20 @@
   .archi_project_info .gallery {
     grid-template-columns: auto;
     width: 95%;
+    padding: 0;
   }
 
   .archi_project_info .content {
     width: 95%;
     margin: 20px auto;
+    padding: 0;
     gap: 20px;
   }
 
   .info-cards {
     flex-direction: column;
     gap: 0;
+    padding: 0;
   }
 
   .info-cards .content-wrapper {

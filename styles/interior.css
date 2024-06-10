@@ -1,173 +1,172 @@
 .int_project_info {
-    width: 100%;
-    background: rgb(36 36 36);
-    background-image: url(/images/thara_mandal.jpg);
-    /* background-repeat: repeat-y; */
-    background-position: left;
-    background-repeat: repeat;
-    background-size: 50% 100vh;
-    /* background-size: cover;  */
-    
+  width: 100%;
+  background: rgb(36 36 36);
+  background-image: url(/images/thara_mandal.jpg);
+  /* background-repeat: repeat-y; */
+  background-position: left;
+  background-repeat: repeat;
+  background-size: 50% 100vh;
+  /* background-size: cover;  */
 }
 
 .int_project_info .container {
-    overflow-x: hidden;
-    padding-bottom: 20px;
+  overflow-x: hidden;
+  padding-bottom: 20px;
 }
 
 .int_project_info .title_image {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .int_project_info .title_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* animation: zoom-in-effect 18s cubic-bezier(0.28, -0.03, 0, 0.99) forwards; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* animation: zoom-in-effect 18s cubic-bezier(0.28, -0.03, 0, 0.99) forwards; */
 }
 
 .int_project_info.active-section .title_image img {
-    animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation: zoom-in-effect 15s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 @keyframes zoom-in-effect {
-    from {
-      scale: 1 1;
-    }
-    to {
-      scale: 1.15 1.15;
-    }
+  from {
+    scale: 1 1;
   }
+  to {
+    scale: 1.15 1.15;
+  }
+}
 
 .int_project_info .title {
-    font-size: 24px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    margin: 20px auto;
+  font-size: 24px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .int_project_info .description {
-    color: white;
-    padding: 0px 25px 20px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-align: center;
+  color: white;
+  padding: 0px 25px 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .int_project_info .gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .int_project_info .content-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    /* background-color: rgb(36 36 36); */
-    padding: 4vh 15px;
-    color: black;
-    gap: 10px;
-    /* opacity: 0; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  /* background-color: rgb(36 36 36); */
+  padding: 4vh 15px;
+  color: black;
+  gap: 10px;
+  /* opacity: 0; */
 }
 
 .int_project_info .content-wrapper:nth-child(odd) {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .int_project_info .content-wrapper .image {
-    width: calc(1% * (var(--scroll) * 55 / 100 + 95));
+  width: calc(1% * (var(--scroll) * 55 / 100 + 95));
 }
 
 .int_project_info .content-wrapper .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: 100% 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 50%;
 }
 
 .int_project_info .content-wrapper .text {
-    color: rgb(255, 255, 255);
-    font-size: 32px;
-    /* font-weight: bold; */
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    position: absolute;
-    width: calc(90vh - 30px);
-    height: 40px;
-    top: calc(50% - 20px);
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  width: calc(90vh - 30px);
+  height: 40px;
+  top: calc(50% - 20px);
 }
 
 .int_project_info .content-wrapper:nth-child(odd) .text {
-    rotate: -90deg;
-    left: calc(-45vh + 50px);
+  rotate: -90deg;
+  left: calc(-45vh + 50px);
 }
 
 .int_project_info .content-wrapper:nth-child(even) .text {
-    rotate: 90deg;
-    right: calc(-45vh + 50px);
+  rotate: 90deg;
+  right: calc(-45vh + 50px);
 }
 
 @media (max-width: 500px) {
-    .int_project_info .title_image {
-        width: 100vw;
-        height: 100%;
-    }
+  .int_project_info .title_image {
+    width: 100vw;
+    height: 100%;
+  }
 
-    .int_project_info .title {
-        font-size: 18px;
-        width: 100%;
-        margin: 10px auto;
-    }
+  .int_project_info .title {
+    font-size: 18px;
+    width: 100%;
+    margin: 10px auto;
+  }
 
-    .int_project_info .description {
-        font-size: 15px;
-    }
+  .int_project_info .description {
+    font-size: 15px;
+  }
 
-    .int_project_info .gallery {
-        gap: 10px;
-    }
+  .int_project_info .gallery {
+    gap: 10px;
+  }
 
-    .int_project_info .content-wrapper {
-        height: auto;
-        padding: 0 10px;
-        flex-direction: column;
-        gap: 5px;
-    }
+  .int_project_info .content-wrapper {
+    height: auto;
+    padding: 0 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
 
-    .int_project_info .content-wrapper:nth-child(odd) {
-        flex-direction: column;
-    }
+  .int_project_info .content-wrapper:nth-child(odd) {
+    flex-direction: column;
+  }
 
-    .int_project_info .content-wrapper .image {
-        width: 100%;
-    }
+  .int_project_info .content-wrapper .image {
+    width: 100%;
+  }
 
-    .int_project_info .content-wrapper .text {
-        font-size: 18px;
-        letter-spacing: 4px;
-        position: static;
-        width: 100%;
-        height: 20px;
-    }
+  .int_project_info .content-wrapper .text {
+    font-size: 18px;
+    letter-spacing: 4px;
+    position: static;
+    width: 100%;
+    height: 20px;
+  }
 
-    .int_project_info .content-wrapper:nth-child(odd) .text {
-        rotate: 0deg;
-    }
+  .int_project_info .content-wrapper:nth-child(odd) .text {
+    rotate: 0deg;
+  }
 
-    .int_project_info .content-wrapper:nth-child(even) .text {
-        rotate: 0deg;
-    }
+  .int_project_info .content-wrapper:nth-child(even) .text {
+    rotate: 0deg;
+  }
 }
