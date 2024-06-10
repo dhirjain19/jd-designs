@@ -28,7 +28,7 @@
         <section class="nav-bar hide">
             <div class="container">
 
-                <div class="logo_image" id="logo" onclick="opensection('home', false)"><img
+                <div class="logo_image" id="logo" onclick="window.location.replace('./index.html');"><img
                         src="./images/logo_white.png">
                 </div>
 
@@ -39,11 +39,11 @@
                 <div class="menu-page" id="menu-page">
                     <div class="menu-list menu-list-one">
                         <ul class="menu-items" id="menu-items-one">
-                            <li class="menu-item"><a href="./index.html" onclick="opensection('home')">HOME</a></li>
+                            <li class="menu-item"><a href="./index.html">HOME</a></li>
                             <li class="menu-item"><a href="./about.html">ABOUT</a></li>
                             <li class="menu-item" onclick="toggle_menu_two(1)"><a
                                     href="#">PORTFOLIO<span>&rarr;</span></a></li>
-                            <li class="menu-item"><a href="./contact.html" onclick="opensection('contact')">CONTACT</a>
+                            <li class="menu-item"><a href="./contact.html">CONTACT</a>
                             </li>
                         </ul>
                     </div>
@@ -61,20 +61,15 @@
                     <div class="menu-list menu-list-three hide" id="architecture-menu">
                         <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
                         <ul class="menu-items" id="menu-items-three">
-                            <li class="menu-item"><a href="./architecture/iim_karjat.html"
-                                    onclick="opensection('iim_karjat')">IIM Karjat</a>
+                            <li class="menu-item"><a href="./architecture/iim_karjat.html">IIM Karjat</a>
                             </li>
-                            <li class="menu-item"><a href="./architecture/nesting_neighbors.html"
-                                    onclick="opensection('nesting_neighbors')">Nesting
+                            <li class="menu-item"><a href="./architecture/nesting_neighbors.html">Nesting
                                     Neighbors</a></li>
-                            <li class="menu-item"><a href="./architecture/maritime_museum.html"
-                                    onclick="opensection('maritime_museum')">Maritime
+                            <li class="menu-item"><a href="./architecture/maritime_museum.html">Maritime
                                     Museum</a></li>
-                            <li class="menu-item"><a href="./architecture/dhanuari_wetlands.html"
-                                    onclick="opensection('dhanauri_wetlands')">Dhanuari
+                            <li class="menu-item"><a href="./architecture/dhanuari_wetlands.html">Dhanuari
                                     Wetlands</a></li>
-                            <li class="menu-item all"><a href="./architecture.html"
-                                    onclick="opensection('architecture_projects')">All
+                            <li class="menu-item all"><a href="./architecture.html">All
                                     Projects</a></li>
                         </ul>
                     </div>
@@ -82,15 +77,12 @@
                     <div class="menu-list menu-list-three hide" id="interior-menu">
                         <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
                         <ul class="menu-items" id="menu-items-three">
-                            <li class="menu-item"><a href="./interior/cafe.html" onclick="opensection('cafe')">Cafe</a>
+                            <li class="menu-item"><a href="./interior/cafe.html">Cafe</a>
                             </li>
-                            <li class="menu-item"><a href="./interior/house.html"
-                                    onclick="opensection('house')">House</a></li>
-                            <li class="menu-item"><a href="./interior/living_room.html"
-                                    onclick="opensection('living_room')">Living Room</a>
+                            <li class="menu-item"><a href="./interior/house.html">House</a></li>
+                            <li class="menu-item"><a href="./interior/living_room.html">Living Room</a>
                             </li>
-                            <li class="menu-item all"><a href="./interior.html"
-                                    onclick="opensection('interior_projects')">All
+                            <li class="menu-item all"><a href="./interior.html">All
                                     Projects</a></li>
                         </ul>
                     </div>
