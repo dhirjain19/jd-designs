@@ -1,16 +1,4 @@
-var width;
-var height;
-
-function setWindowDimentions() {
-  width = window.innerWidth;
-  height = window.innerHeight;
-}
-
-// console.log(width);
-// console.log(height);
-
 // ---------------------------------------------------- LOADING PAGE ----------------------------------------------------
-var loading_page;
 
 function onLoadDisplay(reload = false) {
   loading_page.classList.add("display");
@@ -27,16 +15,58 @@ function onLoadDisplay(reload = false) {
   if (reload) {
     setTimeout(() => {
       document.querySelector(".nav-bar").classList.remove("hide");
-      document.getElementById("home").classList.add("active-section");
-      if (width > 500)
-        document
-          .getElementById("home")
-          .querySelectorAll(".item")
-          .forEach((item) => observer.observe(item));
-      active_section = document.querySelector(".section.active-section");
+      document.querySelector(".section").classList.add("active");
+      active_section = document.querySelector(".section.active");
     }, 1800);
   }
 }
+
+const createLoadingPage = () => {
+  const onLoadDisplay = document.createElement("div");
+  onLoadDisplay.className = "onLoadDisplay";
+  onLoadDisplay.id = "onLoadDisplay";
+
+  const loading_wrapper = document.createElement("div");
+  loading_wrapper.className = "wrapper";
+  onLoadDisplay.appendChild(loading_wrapper);
+
+  const logo_image = document.createElement("div");
+  logo_image.className = "logo_image";
+
+  const image = document.createElement("img");
+  image.src = "images\\logo_white.png";
+  logo_image.appendChild(image);
+
+  const logo_title = document.createElement("div");
+  logo_title.className = "logo_title";
+  logo_title.innerHTML = "Jain Dhir<br>Archi \u2022 terior<br>Designs";
+
+  loading_wrapper.appendChild(logo_image);
+  loading_wrapper.appendChild(logo_title);
+
+  // console.log(onLoadDisplay);
+  document.querySelector(".main").appendChild(onLoadDisplay);
+
+  return onLoadDisplay;  
+};
+
+var loading_page;
+
+
+// setTimeout(() => {
+//   onLoadDisplay(true);
+// }, 200);
+
+var width;
+var height;
+
+function setWindowDimentions() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+}
+
+// console.log(width);
+// console.log(height);
 
 // ---------------------------------------------------- MENU PAGE ----------------------------------------------------
 
@@ -261,30 +291,23 @@ function toggle_menu_three(val) {
 
 var sectionNames;
 
-function opensection(sectionTab, menu = true) {
-  sectionNames.forEach((section) => {
-    section.classList.remove("active-section");
-  });
+// function opensection(sectionTab, menu = true) {
+//   onLoadDisplay();
 
-  onLoadDisplay();
+//   setTimeout(() => {
+//     document.getElementById(sectionTab).classList.add("active");
+//     active_section = document.querySelector(".section.active");
+//     if (active_section?.classList.contains("archi_project_info")) {
+//       showDivs(1);
+//     }
+//   }, 1500);
+//   // if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
 
-  setTimeout(() => {
-    document.getElementById(sectionTab).classList.add("active-section");
-    active_section = document.querySelector(".section.active-section");
-    if (active_section?.classList.contains("archi_project_info")) {
-      showDivs(1);
-    }
-  }, 1500);
-  // if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
-
-  setTimeout(() => {
-    if (menu) menuToggle();
-  }, 2400);
-}
+// }
 
 // ---------------------------------------------------- SLIDES FUNCTION ----------------------------------------------------
 
-var slideIndex;
+var slideIndex = 1;
 
 function plusDivs(n) {
   showDivs((slideIndex += n));
@@ -339,11 +362,11 @@ function scrollAnimation() {
   //   .forEach((item) => observer.observe(item));
   document
     .querySelector("#architecture_projects")
-    .querySelectorAll(".card")
+    ?.querySelectorAll(".card")
     .forEach((card) => observer.observe(card));
   document
     .querySelector("#interior_projects")
-    .querySelectorAll(".card")
+    ?.querySelectorAll(".card")
     .forEach((card) => observer.observe(card));
   // }
   // else {
@@ -357,10 +380,10 @@ function scrollAnimation() {
 
 function setScrollVar() {
   const htmlElement = document.documentElement;
-  console.log((htmlElement.scrollTop / htmlElement.clientHeight) * 100);
+  // console.log((htmlElement.scrollTop / htmlElement.clientHeight) * 100);
 
   document
-    .querySelector(".home.active-section")
+    .querySelector(".home.active")
     ?.querySelectorAll(".item")
     .forEach((element) => {
       const percentOfScreenHeightScrolled =
@@ -372,7 +395,7 @@ function setScrollVar() {
     });
 
   document
-    .querySelector(".int_project_info.active-section")
+    .querySelector(".int_project_info.active")
     ?.querySelectorAll(".content-wrapper")
     .forEach((element) => {
       const percentOfScreenHeightScrolled =
@@ -397,9 +420,12 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("load", () => {
+  loading_page = document.getElementById("onLoadDisplay");
+  // loading_page = createLoadingPage();
+  onLoadDisplay(true);
+
   setWindowDimentions();
   setScrollVar();
   scrollAnimation();
-  loading_page = document.getElementById("onLoadDisplay");
   sectionNames = document.querySelectorAll("section");
 });

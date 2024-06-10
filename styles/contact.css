@@ -83,6 +83,12 @@
   /* text-align: center; */
 }
 
+.contact .info .items .text span a {
+  text-decoration: none;
+  color: white;
+}
+
+
 /* .contact .info .text img {
   width: 30px;
   height: 30px;

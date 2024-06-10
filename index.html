@@ -7,1199 +7,193 @@
     <title>
         JD archi-terior designs
     </title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/gallery.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/project.css">
-    <link rel="stylesheet" href="styles/interior.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <script src="./script.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
     </style>
 </head>
 
-<body onload="onLoadDisplay(true)">
+<body>
 
-    <body>
-        <div class="main">
-            <div class="onLoadDisplay" id="onLoadDisplay">
-                <div class="wrapper">
-                    <div class="logo_image"><img src="images\logo_white.png"></div>
-                    <div class="logo_title">Jain Dhir <br>Archi&#x2022;terior <br>Designs </div>
-                </div>
+    <div class="main">
+        <div class="onLoadDisplay" id="onLoadDisplay">
+            <div class="wrapper">
+                <div class="logo_image"><img src="./images/logo_white.png"></div>
+                <div class="logo_title">Jain Dhir <br>Archi&#x2022;terior <br>Designs </div>
             </div>
-
-            <section class="nav-bar hide">
-                <div class="container">
-
-                    <div class="logo_image" id="logo" onclick="opensection('home', false)"><img
-                            src="images\logo_white.png"></div>
-
-                    <div class='menu-button-container' onclick="menuToggle()">
-                        <div class='menu-button' id="menu-toggle"></div>
-                    </div>
-
-                    <div class="menu-page" id="menu-page">
-                        <div class="menu-list menu-list-one">
-                            <ul class="menu-items" id="menu-items-one">
-                                <li class="menu-item"><a href="#" onclick="opensection('home')">HOME</a></li>
-                                <li class="menu-item"><a href="#" onclick="opensection('about')">ABOUT</a></li>
-                                <li class="menu-item" onclick="toggle_menu_two(1)"><a href="#">PORTFOLIO
-                                        <span>&rarr;</span></a></li>
-                                <li class="menu-item"><a href="#" onclick="opensection('contact')">CONTACT</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-list menu-list-two hide">
-                            <div class="menu-back one" onclick="toggle_menu_two(0)">&#10094; Back</div>
-                            <ul class="menu-items" id="menu-items-two">
-                                <li class="menu-item" onclick="toggle_menu_three(1)"><a href="#">ARCHITECTURE
-                                        <span>&rarr;</span></a></li>
-                                <li class="menu-item" onclick="toggle_menu_three(2)"><a href="#">INTERIOR
-                                        <span>&rarr;</span></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-list menu-list-three hide" id="architecture-menu">
-                            <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
-                            <ul class="menu-items" id="menu-items-three">
-                                <li class="menu-item"><a href="#" onclick="opensection('iim_karjat')">IIM Karjat</a>
-                                </li>
-                                <li class="menu-item"><a href="#" onclick="opensection('nesting_neighbors')">Nesting
-                                        Neighbors</a></li>
-                                <li class="menu-item"><a href="#" onclick="opensection('maritime_museum')">Maritime
-                                        Museum</a></li>
-                                <li class="menu-item"><a href="#" onclick="opensection('dhanauri_wetlands')">Dhanuari
-                                        Wetlands</a></li>
-                                <li class="menu-item all"><a href="#" onclick="opensection('architecture_projects')">All
-                                        Projects</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="menu-list menu-list-three hide" id="interior-menu">
-                            <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
-                            <ul class="menu-items" id="menu-items-three">
-                                <li class="menu-item"><a href="#" onclick="opensection('cafe')">Cafe</a></li>
-                                <li class="menu-item"><a href="#" onclick="opensection('house')">House</a></li>
-                                <li class="menu-item"><a href="#" onclick="opensection('living_room')">Living Room</a>
-                                </li>
-                                <li class="menu-item all"><a href="#" onclick="opensection('interior_projects')">All
-                                        Projects</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-
-            <section class="section home" id="home">
-                <div class="container">
-                    <div class="list">
-                        <div class="item">
-                            <img src="./images/landing_image.jpg">
-                            <div class="content">
-                                “It is not the beauty of a building you should look at;<br>It's the construction of the
-                                foundation that will stand the test of time.” <span>- David Allan Coe </span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="./images/dhanauri_wetlands/14.png">
-                            <div class="content">
-                                My architecture is easy to understand and enjoy, I hope it also is hard to forget.
-                                <span>- Oscar Niemeyer</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/cafe/9.png">
-                            <div class="content">
-                                The difference between good and bad architecture is the time you spend on it. <span>-
-                                    David Chipperfield</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="./images/living_room/2.jpg">
-                            <div class="content">
-                                “Good design is obvious, great design is transparent.” <span>- Joe Sparano</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/nesting_neighbors/4.png">
-                            <div class="content">
-                                “Design is where science and art break even.” <span>- Mieke Gerritzen</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/iim_karjat/6.png">
-                            <div class="content">
-                                "Design adds value faster than it adds costs." <span>- Joel Spolsky</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="./images/dhanauri_wetlands/1.jpg">
-                            <div class="content">
-                                "Design creates culture. Culture shapes values. Values determine the future." <span>-
-                                    Robert L. Peters</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/house/16.jpg">
-                            <div class="content">
-                                "When we build, let us think that we build forever." <span>-John Ruskin</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/maritime_museum_views/4.png">
-                            <div class="content">
-                                "God is in the details." <span>- Ludwig Mies van der Rohe</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/iim_karjat/7.png">
-                            <div class="content">
-                                "Any architectural work that does not express serenity is an error." <span>- Luis
-                                    Barragán</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/house/7.jpg">
-                            <div class="content">
-                                "I don't build in order to have clients. I have clients in order to build." <span>- Ayn
-                                    Rand</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/cafe/16.png">
-                            <div class="content">
-                                "In pure architecture the smallest detail should have a meaning or serve a purpose."
-                                <span>- Augustus W. N. Pugin</span>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="../images/maritime_museum_views/8.png">
-                            <div class="content">
-                                Real comfort, visual and physical, is vital to every room. <span>- Mark Hampton</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section about" id="about">
-                <div class="container">
-                    <div class="about-container">
-                        <div class="description">
-                            <div class="title">ABOUT ME</div>
-                            <div class="text">
-                                Hello there! I'm Ar. Dhir Jain, a budding architect with a fervent dedication to
-                                crafting spaces
-                                that not only inspire but also enrich lives.
-                                <br><br>
-                                My approach to architecture is rooted in the belief that every design should be a
-                                reflection of
-                                its context, culture, and purpose. Whether it's a residential oasis, a commercial hub,
-                                or a
-                                public space, I strive to create environments that foster connection, innovation, and
-                                wellbeing.
-                                <br><br>
-                                As I embark on this exhilarating journey in the world of architecture, my vision is
-                                clear—to
-                                push boundaries, challenge conventions, and leave a meaningful mark on the built
-                                environment.
-                                Every project is an opportunity to explore new horizons, collaborate with like-minded
-                                individuals, and make a positive impact on communities.
-                            </div>
-                        </div>
-                        <div class="profile">
-                            <img src="images/profile.jpg" alt="Profile">
-                            <div class="name">Dhir Jain<br>Architect</div>
-                        </div>
-                    </div>
-                    <div class="skills-container">
-                        <div class="skills-title">Skills</div>
-                        <ul class="skills-list">
-                            <li class="skill">Design</li>
-                            <li class="skill">Creativity</li>
-                            <li class="skill">Innovation</li>
-                            <li class="skill">Technology</li>
-                            <li class="skill">Sustainability</li>
-                            <li class="skill">Visualization</li>
-                            <li class="skill">Management</li>
-                            <li class="skill">Collaboration</li>
-                            <li class="skill">Leadership</li>
-                            <li class="skill">Problem-solving</li>
-                            <li class="skill">Communication</li>
-                            <li class="skill">Detail-oriented</li>
-                        </ul>
-                    </div>
-                    <div class="connect-container">
-                        <div class="connect-title">Let's Connect</div>
-                        <div class="connect-text">Whether you're envisioning your dream home, revitalizing a commercial
-                            space, or embarking on a larger architectural endeavor, I'm here to turn your vision into
-                            reality. Let's embark on this creative journey together!</div>
-                        <div class="connect-button"><a href="#" onclick="opensection('contact', false)">Contact Me</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section projects" id="architecture_projects">
-                <div class="wrapper">
-                    <div class="title">Projects</div>
-                    <div class="container">
-                        <div class="card active" onclick="opensection('iim_karjat', false)">
-                            <div class="image"><img src="images/iim_karjat/4.jpg"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">IIM Karjat</div>
-                        </div>
-                        <div class="card" onclick="opensection('nesting_neighbors', false)">
-                            <div class="image"><img src="images/nesting_neighbors/1.png"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">Nesting Neighbors</div>
-                        </div>
-                        <div class="card" onclick="opensection('maritime_museum', false)">
-                            <div class="image"><img src="images/maritime_museum_views/1.png"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">Maritime Museum</div>
-                        </div>
-                        <div class="card" onclick="opensection('dhanauri_wetlands', false)">
-                            <div class="image"><img src="images/dhanauri_wetlands/2.png"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">Dhanuari Wetlands</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section projects" id="interior_projects">
-                <div class="wrapper">
-                    <div class="title">PROJECTS</div>
-                    <div class="container">
-                        <div class="card active" onclick="opensection('cafe', false)">
-                            <div class="image"><img src="images/cafe/2.png"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">Cafe</div>
-                        </div>
-                        <div class="card" onclick="opensection('house', false)">
-                            <div class="image"><img src="images/house/1.jpg"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">House</div>
-                        </div>
-                        <div class="card" onclick="opensection('living_room', false)">
-                            <div class="image"><img src="images/living_room/1.jpg"></div>
-                            <div class="overlay"></div>
-                            <div class="project-title">Living Room</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="section archi_project_info" id="iim_karjat">
-                <div class="container">
-                    <div class="slideshow">
-                        <div class="slides active"><img src="../images/iim_karjat/5.jpg"></div>
-                        <div class="slides"><img src="../images/iim_karjat/4.jpg"></div>
-                        <div class="slides"><img src="../images/iim_karjat/3.jpg"></div>
-                        <div class="slides"><img src="../images/iim_karjat/4.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/5.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/6.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/7.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/8.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/9.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/10.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/11.png"></div>
-                        <div class="slides"><img src="../images/iim_karjat/6.jpg"></div>
-                        <div class="slides"><img src="../images/iim_karjat/7.jpg"></div>
-                        <div class="slides"><img src="../images/iim_karjat/8.jpg"></div>
-                        <div class="slides"><img src="./images/iim_karjat/admin interior.png"></div>
-                        <div class="slides"><img src="./images/iim_karjat/admin intrioe 2.png"></div>
-                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
-                    </div>
-                    <div class="title">IIM Karjat</div>
-                    <div class="project-button-wrapper">
-                        <div class="all_projects-button" onclick="opensection('architecture_projects', false)">&#10094;
-                        </div>
-                        <div class="next_project-button" onclick="opensection('nesting_neighbors', false)">
-                            &#10095;
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="info-cards design-philosophy">
-                            <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Philosophy</div>
-                                <div class="text">
-                                    The aim is to protect, manage, conserve and eventually restore the Dhanauri
-                                    wetlands U.P. The purpose
-                                    in achieving these points is through having a research centre and generating
-                                    awareness among the
-                                    masses
-                                    about the importance of wetlands and its vast biodiversity. Scientific ways to be
-                                    implemented to
-                                    rejuvenate the wetlands back to its original state over a period. Finally showcase
-                                    and elaborate
-                                    various
-                                    experience to attract tourist with the help of interactive design spaces.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards design-objectives">
-                            <div class="image"><img src="./images/iim_karjat/zoning.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Objectives</div>
-                                <div clsss="text">
-                                    To study the rich flora and fauna of the region. To implement ways to
-                                    preserve/conserve the rich ecology of wetlands. To implement scientific
-                                    interventions to restore
-                                    the wetlands back
-                                    to
-                                    its original glory. Create awareness among the masses through eco-tourism,
-                                    eventually generate
-                                    socio-economic values
-                                    over the area. To create interactive design spaces keeping wetlands in background.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards floor-plan">
-                            <div class="content-wrapper ground">
-                                <div class="image"><img src="./images/iim_karjat/ground_floor.png"></div>
-                                <div class="heading">Ground Floor Plan</div>
-                            </div>
-                            <div class="content-wrapper first">
-                                <div class="image"><img src="./images/iim_karjat/first_floor.png"></div>
-                                <div class="heading">First Floor Plan</div>
-                            </div>
-                        </div>
-                        <div class="info-cards site-plan">
-                            <div class="image"><img src="./images/iim_karjat/site_plan.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Site Plan</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery_title">Gallery</div>
-                    <div class="gallery">
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(1)"><img src="../images/iim_karjat/5.jpg"></div>
-                            <div class="caption">Entrance pathway
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(2)"><img src="../images/iim_karjat/4.jpg"></div>
-                            <div class="caption">Main gate
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(3)"><img src="../images/iim_karjat/3.jpg"></div>
-                            <div class="caption">Canteen and library common junction</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(4)"><img src="../images/iim_karjat/4.png"></div>
-                            <div class="caption">College entrance
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(5)"><img src="../images/iim_karjat/5.png"></div>
-                            <div class="caption">College common area
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(6)"><img src="../images/iim_karjat/6.png"></div>
-                            <div class="caption">College common area</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(7)"><img src="../images/iim_karjat/7.png"></div>
-                            <div class="caption">College passageway
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(8)"><img src="../images/iim_karjat/8.png"></div>
-                            <div class="caption">Canteen</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(9)"><img src="../images/iim_karjat/9.png"></div>
-                            <div class="caption">Canteen</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(10)"><img src="../images/iim_karjat/10.png"></div>
-                            <div class="caption">Canteen
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(11)"><img src="../images/iim_karjat/11.png"></div>
-                            <div class="caption"> College entrance from canteen
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(12)"><img src="../images/iim_karjat/6.jpg"></div>
-                            <div class="caption">Hostel wing elevation
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(13)"><img src="../images/iim_karjat/7.jpg"></div>
-                            <div class="caption">Ground area
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(14)"><img src="../images/iim_karjat/8.jpg"></div>
-                            <div class="caption">Tennis court
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(15)"><img
-                                    src="./images/iim_karjat/admin interior.png">
-                                <div class="caption">Reception lobby </div>
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(16)"><img
-                                    src="./images/iim_karjat/admin intrioe 2.png">
-                                <div class="caption">Admin area</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section archi_project_info" id="nesting_neighbors">
-                <div class="container">
-                    <div class="slideshow">
-                        <div class="slides active"><img src="../images/nesting_neighbors/1.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/2.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/3.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/4.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/5.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/6.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/7.png"></div>
-                        <div class="slides"><img src="../images/nesting_neighbors/10.png"></div>
-                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
-                    </div>
-                    <div class="title">Nesting Neighbors</div>
-                    <div class="project-button-wrapper">
-                        <div class="all_projects-button" onclick="opensection('architecture_projects', false)">&#10094;
-                        </div>
-                        <div class="next_project-button" onclick="opensection('maritime_museum', false)">&#10095;
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="info-cards design-brief">
-                            <div class="image-wrapper">
-                                <div class="text">
-                                    Vertically mixed used developments is a system of decentralisation of amenities,
-                                    such that uses and facilities are available in smaller and localised areas.
-                                    Activation of street
-                                    edge
-                                    through ground floor retail and commercial . upper story residential for improved
-                                    privacy,
-                                    access to
-                                    views, adequate light and ventilation, increased demand of local needs, easy access
-                                    to local
-                                    employment
-                                    opportunities Multiple stakeholders in one building to use resources like energy,
-                                    trash
-                                    disposal, sewage
-                                    more efficiently. Mixed use highrise building is a more unified mixed and
-                                    architectural
-                                    solution,
-                                    certain different paradigm rather than earmarking separate buildings for diff land
-                                    uses.
-                                </div>
-                                <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
-                            </div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Brief</div>
-                                <div class="text">
-                                    Population explosion globally has directly resulted in urban sprawl of the
-                                    respective metro
-                                    cities to
-                                    accommodate the ever-increasing masses mainly resulting in unsustainable living
-                                    solutions.
-                                    Scarcity of
-                                    available land for development and an increase in real estate prices has led to the
-                                    trend of
-                                    utilizing
-                                    mixed-use developments to solve the multitude of issues currently presented in
-                                    twenty-first
-                                    century
-                                    cities. This invites an exploration of the potential and the opportunities that
-                                    these types of
-                                    developments can provide in relation to their placed context. This project
-                                    therefore, will
-                                    investigate
-                                    the process of typology analysis in the context of the city as first principle aid
-                                    for the
-                                    production of
-                                    mixed-use architecture.
-                                    <br><br>
-                                    The notion of having vertical cities helps save energy resources and
-                                    supports the ever-increasing population and preserves the further eradication of
-                                    farmlands.,
-                                    nature and
-                                    recreation in the fringe area. The design problem of high rise buildings examines
-                                    the use of
-                                    hybrid
-                                    typology and its contribution towards sustainability. To protect the city against
-                                    this sort of
-                                    expansion
-                                    which eventually would reach a saturation point, a high rise as a building typology
-                                    is a
-                                    possible
-                                    solution by conquering vertical space through agglomeration and intensification.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards design-philosophy">
-                            <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Philosophy</div>
-                                <div class="text">
-                                    <ul>
-                                        <li>
-                                            To design a mixed-use skyscraper which contributes towards sustainable
-                                            environment along
-                                            with
-                                            well-organized different sectors of the living needs.
-                                        </li>
-                                        <li>
-                                            To configure spaces which improve the social and visual collaboration and
-                                            decrease
-                                            disengagement.
-                                        </li>
-                                        <li>
-                                            To design a structurally full proof building to cater to the context and
-                                            need optimally.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards design-objectives">
-                            <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Objectives</div>
-                                <div class="text">
-                                    To study the rich flora and fauna of the region. To implement ways to
-                                    preserve/conserve the rich
-                                    ecology
-                                    of wetlands. To implement scientific interventions to restore the wetlands back to
-                                    its original
-                                    glory.
-                                    Create awareness among the masses through eco-tourism, eventually generate
-                                    socio-economic values
-                                    over
-                                    the area. To create interactive design spaces keeping wetlands in background.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards floor-plan">
-                            <div class="content-wrapper ground">
-                                <div class="image"><img src="./images/nesting_neighbors/gr_floor.png"></div>
-                                <div class="heading">Ground Floor Plan</div>
-                            </div>
-                            <div class="content-wrapper first">
-                                <div class="image"><img src="./images/nesting_neighbors/e_deck_plan.png"
-                                        alt="first floor plan"></div>
-                                <div class="heading">E Deck Plan</div>
-                            </div>
-                        </div>
-                        <div class="info-cards site-plan">
-                            <div class="image"><img src="./images/nesting_neighbors/podium_plan.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Site Plan</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery_title">Gallery</div>
-                    <div class="gallery">
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(1)"><img src="../images/nesting_neighbors/1.png">
-                            </div>
-                            <div class="caption">Image 1</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(2)"><img src="../images/nesting_neighbors/2.png">
-                            </div>
-                            <div class="caption">Image 2</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(3)"><img src="../images/nesting_neighbors/3.png">
-                            </div>
-                            <div class="caption">Image 3</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(4)"><img src="../images/nesting_neighbors/4.png">
-                            </div>
-                            <div class="caption">Image 4</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(5)"><img src="../images/nesting_neighbors/5.png">
-                            </div>
-                            <div class="caption">Image 5</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(6)"><img src="../images/nesting_neighbors/6.png">
-                            </div>
-                            <div class="caption">Image 6</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(7)"><img src="../images/nesting_neighbors/7.png">
-                            </div>
-                            <div class="caption">Image 7</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(8)"><img src="../images/nesting_neighbors/10.png">
-                            </div>
-                            <div class="caption">Image 8</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section archi_project_info" id="maritime_museum">
-                <div class="container">
-                    <div class="slideshow">
-                        <div class="slides active"><img src="../images/maritime_museum_views/1.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/2.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/3.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/4.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/5.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/6.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/7.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/8.png"></div>
-                        <div class="slides"><img src="../images/maritime_museum_views/9.jpg"></div>
-                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
-                    </div>
-                    <div class="title">Maritime Museum</div>
-                    <div class="project-button-wrapper">
-                        <div class="all_projects-button" onclick="opensection('architecture_projects', false)">&#10094;
-                        </div>
-                        <div class="next_project-button" onclick="opensection('dhanauri_wetlands', false)">
-                            &#10095;
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="info-cards design-philosophy">
-                            <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Philosophy</div>
-                                <div class="text">
-                                    The aim is to create a world-class Maritime museum of fame to showcase this aspect
-                                    of history and
-                                    there is no national monument to bring a visionary transformation of the Mumbai Port
-                                    area into a
-                                    tourism hub. As structure has to respond to the evolving urban fabric &amp; serve as
-                                    a benchmark,
-                                    both permanent and temporal.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards design-objectives">
-                            <div class="image"><img src="./images/maritime_museum_views/exploded_iso.jpg"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Objectives</div>
-                                <div class="text">
-                                    <ul>
-                                        <li>
-                                            To engage with historical, theoretical, and practical methods of display and
-                                            viewership.
-                                        </li>
-                                        <li>
-                                            To explore and understand the relationship between exhibition and
-                                            architectural design.
-                                        </li>
-                                        <li>
-                                            To understand user movement, space requirement, accessibility, and standard
-                                            practices for museum
-                                            design &amp; public spaces.
-                                        </li>
-                                        <li>
-                                            Understanding space requirements for various activities for small and large
-                                            groups of people
-                                            along with indoor and outdoor spaces created by built forms.
-                                        </li>
-                                        <li>
-                                            Design of spaces suitable for the intended activity.
-                                        </li>
-                                        <li>
-                                            Design of spaces as per the behavioural needs of individuals and groups.
-                                        </li>
-                                        <li>
-                                            Design and detailing of the built form and required infrastructure regarding
-                                            methods of
-                                            construction and materials.
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards floor-plan">
-                            <div class="content-wrapper ground">
-                                <div class="image"><img src="../images/dhanauri_wetlands/11.png"></div>
-                                <div class="heading">Ground Floor Plan</div>
-                            </div>
-                            <div class="content-wrapper first">
-                                <div class="image"><img alt="first floor plan"></div>
-                                <div class="heading">First Floor Plan</div>
-                            </div>
-                        </div>
-                        <div class="info-cards site-plan">
-                            <div class="image"><img src="../images/dhanauri_wetlands/9.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Site Plan</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery_title">Gallery</div>
-                    <div class="gallery">
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(1)"><img src="../images/maritime_museum_views/1.png">
-                                <div class="caption">Image 1</div>
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(2)"><img src="../images/maritime_museum_views/2.png">
-                            </div>
-
-                            <div class="caption">Image 2</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(3)"><img src="../images/maritime_museum_views/3.png">
-                            </div>
-                            <div class="caption">Image 3</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(4)"><img src="../images/maritime_museum_views/4.png">
-                            </div>
-                            <div class="caption">Image 4</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(5)"><img src="../images/maritime_museum_views/5.png">
-                            </div>
-                            <div class="caption">Image 5</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(6)"><img src="../images/maritime_museum_views/6.png">
-                            </div>
-                            <div class="caption">Image 6</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(7)"><img src="../images/maritime_museum_views/7.png">
-                            </div>
-                            <div class="caption">Image 7</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(8)"><img src="../images/maritime_museum_views/8.png">
-                            </div>
-                            <div class="caption">Image 8</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(8)"><img src="./images/maritime_museum_views/9.jpg">
-                            </div>
-                            <div class="caption">Image 9</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section archi_project_info" id="dhanauri_wetlands">
-                <div class="container">
-                    <div class="slideshow">
-                        <div class="slides active"><img src="../images/dhanauri_wetlands/1.jpg"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/2.png"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/3.jpg"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/4.jpg"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/5.png"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/7.png"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/12.png"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/13.png"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/14.png"></div>
-                        <div class="slides"><img src="../images/dhanauri_wetlands/15.png"></div>
-                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
-                    </div>
-                    <div class="title">Dhanuari Wetlands: Conservation and Restoration of its Multifarious Ecology</div>
-                    <div class="project-button-wrapper">
-                        <div class="all_projects-button" onclick="opensection('architecture_projects', false)">&#10094;
-                        </div>
-                        <div class="next_project-button" onclick="opensection('iim_karjat', false)">
-                            &#10095;
-                        </div>
-                    </div>
-                    <div class="content">
-                        <div class="info-cards design-philosophy">
-                            <div class="image"><img src="../images/dhanauri_wetlands/10.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Philosophy</div>
-                                <div class="text">
-                                    The aim is to protect, manage, conserve and eventually restore the Dhanauri wetlands
-                                    U.P. The purpose
-                                    in achieving these points is through having a research centre and generating
-                                    awareness among the
-                                    masses about the importance of wetlands and its vast biodiversity. Scientific ways
-                                    to be implemented
-                                    to rejuvenate the wetlands back to its original state over a period. Finally
-                                    showcase and elaborate
-                                    various experience to attract tourist with the help of interactive design spaces.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards design-objectives">
-                            <div class="image"><img src="../images/dhanauri_wetlands/8.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Design Objectives</div>
-                                <div class="text">
-                                    To study the rich flora and fauna of the region. To implement ways to
-                                    preserve/conserve the rich
-                                    ecology of wetlands. To implement scientific interventions to restore the wetlands
-                                    back to its
-                                    original glory. Create awareness among the masses through eco-tourism, eventually
-                                    generate
-                                    socio-economic values over the area. To create interactive design spaces keeping
-                                    wetlands in
-                                    background.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="info-cards floor-plan">
-                            <div class="content-wrapper ground">
-                                <div class="image"><img src="../images/dhanauri_wetlands/11.png"></div>
-                                <div class="heading">Ground Floor Plan</div>
-                            </div>
-                            <div class="content-wrapper first">
-                                <div class="image"><img src="../images/dhanauri_wetlands/16.png"></div>
-                                <div class="heading">First Floor Plan</div>
-                            </div>
-                        </div>
-                        <div class="info-cards site-plan">
-                            <div class="image"><img src="../images/dhanauri_wetlands/9.png"></div>
-                            <div class="content-wrapper">
-                                <div class="heading">Site Plan</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery_title">Gallery</div>
-                    <div class="gallery">
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(1)"><img src="./images/dhanauri_wetlands/1.jpg">
-                            </div>
-                            <div class="caption">Elevation View
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(2)"><img src="../images/dhanauri_wetlands/2.png">
-                            </div>
-                            <div class="caption">Visitor's Center Reception Lobby</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(3)"><img src="../images/dhanauri_wetlands/3.jpg">
-                            </div>
-                            <div class="caption">Entrance to Reception Lobby
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(4)"><img src="../images/dhanauri_wetlands/4.jpg">
-                            </div>
-                            <div class="caption">Vistor's Center Public Gallery </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(5)"><img src="../images/dhanauri_wetlands/5.png">
-                            </div>
-                            <div class="caption">Elevation Showing Research Wing
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(7)"><img src="../images/dhanauri_wetlands/7.png">
-                            </div>
-                            <div class="caption">Aerial View of Design
-                            </div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(8)"><img src="../images/dhanauri_wetlands/12.png">
-                            </div>
-                            <div class="caption">Bridge Connecting Visitor Center to Cafeteria</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(9)"><img src="../images/dhanauri_wetlands/13.png">
-                            </div>
-                            <div class="caption">Open Courtyard</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(10)"><img src="../images/dhanauri_wetlands/14.png">
-                            </div>
-                            <div class="caption">Main Entrance of the Site</div>
-                        </div>
-                        <div class="image-section">
-                            <div class="images" onclick="showSlide(11)"><img src="../images/dhanauri_wetlands/15.png">
-                            </div>
-                            <div class="caption">Walkable Deck on Waterbody</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section int_project_info" id="cafe">
-                <div class="container">
-                    <div class="title_image"><img src="./images/cafe/2.png"></div>
-                    <div class="title">Cafe</div>
-                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
-                        neque, aliquam id
-                        aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
-                        pellentesque semper.
-                        Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
-                        nunc id vestibulum.
-                        Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
-                        Curabitur eu lectus
-                        odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
-                        Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Suspendisse libero neque, aliquam id
-                        aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
-                        pellentesque semper.
-                        Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
-                        nunc id vestibulum.
-                        Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
-                        Curabitur eu lectus
-                        odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
-                    </div>
-                    <div class="gallery">
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/1.png"></div>
-                            <div class="text">Outdoor seating two point perspective</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/3.png"></div>
-                            <div class="text">Entrance to the cafe</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/4.png"></div>
-                            <div class="text">Interior seating area</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/5.png"></div>
-                            <div class="text">Waiting area</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/6.png"></div>
-                            <div class="text">Outdoor seating</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/7.png"></div>
-                            <div class="text">Reception lobby</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/8.png"></div>
-                            <div class="text">Indoor seating area with swing seatings</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/9.png"></div>
-                            <div class="text">Night view of indoor seating</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/10.png"></div>
-                            <div class="text">Night view of entrance of cafe</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/11.png"></div>
-                            <div class="text">Night view of reception lobby</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/12.png"></div>
-                            <div class="text">Night view of indoor seatings</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/13.png"></div>
-                            <div class="text">Night view of indoor seatings</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/14.png"></div>
-                            <div class="text">Night view of outdoor seatings</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/15.png"></div>
-                            <div class="text">Night view of outdoor seatings</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/cafe/16.png"></div>
-                            <div class="text">Night view of stage side seatings</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section int_project_info" id="house">
-                <div class="container">
-                    <div class="title_image"><img src="./images/house/1.jpg"></div>
-                    <div class="title">House</div>
-                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
-                        neque, aliquam id
-                        aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
-                        pellentesque semper.
-                        Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
-                        nunc id vestibulum.
-                        Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
-                        Curabitur eu lectus
-                        odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
-                        Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Suspendisse libero neque, aliquam id
-                        aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
-                        pellentesque semper.
-                        Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
-                        nunc id vestibulum.
-                        Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
-                        Curabitur eu lectus
-                        odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
-                    </div>
-                    <div class="gallery">
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/2.jpg"></div>
-                            <div class="text">Main gate</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/3.jpg"></div>
-                            <div class="text">Common courtyard with passageway</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/10.jpg"></div>
-                            <div class="text">Passageway</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/11.jpg"></div>
-                            <div class="text">Structure view from garden</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/6.jpg"></div>
-                            <div class="text">Elevation</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/7.jpg"></div>
-                            <div class="text">Night view of entrance of living hall</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/8.jpg"></div>
-                            <div class="text">Night view of pathway</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/9.jpg"></div>
-                            <div class="text">Night view of pathway</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/12.jpg"></div>
-                            <div class="text">Elevation</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/13.jpg"></div>
-                            <div class="text">Living hall- sofa and dining area</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/14.jpg"></div>
-                            <div class="text">Living hall- door and tv unit</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/15.jpg"></div>
-                            <div class="text">Living hall- mandir</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/16.jpg"></div>
-                            <div class="text">Living room-couryard door and sofa unit</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/17.jpg"></div>
-                            <div class="text">Guest toilet room</div>
-                        </div>
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/house/18.jpg"></div>
-                            <div class="text">Guest toilet room</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section int_project_info" id="living_room">
-                <div class="container">
-                    <div class="title_image"><img src="./images/living_room/1.jpg"></div>
-                    <div class="title">Living Room</div>
-                    <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
-                        neque, aliquam id
-                        aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
-                        pellentesque semper.
-                        Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
-                        nunc id vestibulum.
-                        Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
-                        Curabitur eu lectus
-                        odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
-                        Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit. Suspendisse libero neque, aliquam id
-                        aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
-                        pellentesque semper.
-                        Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
-                        nunc id vestibulum.
-                        Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
-                        Curabitur eu lectus
-                        odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
-                    </div>
-                    <div class="gallery">
-                        <div class="content-wrapper">
-                            <div class="image"><img src="./images/living_room/2.jpg"></div>
-                            <div class="text">Image 1</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section contact" id="contact">
-                <div class="container">
-                    <div class="title_image"><img src="./images/contact_page.jpg"></div>
-                    <div class="content-wrapper">
-                        <div class="title">GET IN TOUCH</div>
-                        <div class="text">
-                            Are you dreaming of the perfect home, looking to inject new life into a commercial property,
-                            or planning a larger architectural project?
-                            I am here to bring your vision to life. Join me on this exciting journey of creativity and
-                            innovation. Let's create something extraordinary together!
-                        </div>
-                        <div class="info">
-                            <div class="items item_one">
-                                <div class="heading">Reach out to us</div>
-                                <div class="text phone">
-                                    <!-- <img src="https://img.icons8.com/ios/50/phone--v1.png" alt="phone-icon" /> -->
-                                    <span> +91 8850628979</span>
-                                </div>
-                                <div class="text email">
-                                    <!-- <img src="https://img.icons8.com/ios/50/gmail-new.png" alt="gmail-new" /> -->
-                                    <span>dhirjain@gmail.com</span>
-                                </div>
-                            </div>
-
-                            <div class="items item_two">
-                                <div class="heading">Connect with us</div>
-                                <div class="text fb">
-                                    <!-- <img src="https://img.icons8.com/ios/50/facebook-new.png" alt="facebook-icon" /> -->
-                                    <span>Facebook</span>
-                                </div>
-                                <div class="text ig">
-                                    <!-- <img src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-icon" /> -->
-                                    <span>Instagram</span>
-                                </div>
-                                <div class="text lkdin">
-                                    <!-- <img src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin-icon" /> -->
-                                    <span>LinkedIn</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
 
-    </body>
+        <section class="nav-bar hide">
+            <div class="container">
+
+                <div class="logo_image" id="logo" onclick="opensection('home', false)"><img
+                        src="./images/logo_white.png">
+                </div>
+
+                <div class='menu-button-container' onclick="menuToggle()">
+                    <div class='menu-button' id="menu-toggle"></div>
+                </div>
+
+                <div class="menu-page" id="menu-page">
+                    <div class="menu-list menu-list-one">
+                        <ul class="menu-items" id="menu-items-one">
+                            <li class="menu-item"><a href="./index.html" onclick="opensection('home')">HOME</a></li>
+                            <li class="menu-item"><a href="./about.html">ABOUT</a></li>
+                            <li class="menu-item" onclick="toggle_menu_two(1)"><a
+                                    href="#">PORTFOLIO<span>&rarr;</span></a></li>
+                            <li class="menu-item"><a href="./contact.html" onclick="opensection('contact')">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-two hide">
+                        <div class="menu-back one" onclick="toggle_menu_two(0)">&#10094; Back</div>
+                        <ul class="menu-items" id="menu-items-two">
+                            <li class="menu-item" onclick="toggle_menu_three(1)"><a href="#">ARCHITECTURE
+                                    <span>&rarr;</span></a></li>
+                            <li class="menu-item" onclick="toggle_menu_three(2)"><a href="#">INTERIOR
+                                    <span>&rarr;</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-three hide" id="architecture-menu">
+                        <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
+                        <ul class="menu-items" id="menu-items-three">
+                            <li class="menu-item"><a href="./architecture/iim_karjat.html"
+                                    onclick="opensection('iim_karjat')">IIM Karjat</a>
+                            </li>
+                            <li class="menu-item"><a href="./architecture/nesting_neighbors.html"
+                                    onclick="opensection('nesting_neighbors')">Nesting
+                                    Neighbors</a></li>
+                            <li class="menu-item"><a href="./architecture/maritime_museum.html"
+                                    onclick="opensection('maritime_museum')">Maritime
+                                    Museum</a></li>
+                            <li class="menu-item"><a href="./architecture/dhanuari_wetlands.html"
+                                    onclick="opensection('dhanauri_wetlands')">Dhanuari
+                                    Wetlands</a></li>
+                            <li class="menu-item all"><a href="./architecture.html"
+                                    onclick="opensection('architecture_projects')">All
+                                    Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-three hide" id="interior-menu">
+                        <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
+                        <ul class="menu-items" id="menu-items-three">
+                            <li class="menu-item"><a href="./interior/cafe.html" onclick="opensection('cafe')">Cafe</a>
+                            </li>
+                            <li class="menu-item"><a href="./interior/house.html"
+                                    onclick="opensection('house')">House</a></li>
+                            <li class="menu-item"><a href="./interior/living_room.html"
+                                    onclick="opensection('living_room')">Living Room</a>
+                            </li>
+                            <li class="menu-item all"><a href="./interior.html"
+                                    onclick="opensection('interior_projects')">All
+                                    Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="section home" id="home">
+            <div class="container">
+                <div class="list">
+                    <div class="item">
+                        <img src="./images/landing_image.jpg">
+                        <div class="content">
+                            “It is not the beauty of a building you should look at;<br>It's the construction of the
+                            foundation that will stand the test of time.” <span>- David Allan Coe </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/dhanauri_wetlands/14.png">
+                        <div class="content">
+                            My architecture is easy to understand and enjoy, I hope it also is hard to forget.
+                            <span>- Oscar Niemeyer</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/cafe/9.png">
+                        <div class="content">
+                            The difference between good and bad architecture is the time you spend on it. <span>-
+                                David Chipperfield</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/living_room/2.jpg">
+                        <div class="content">
+                            “Good design is obvious, great design is transparent.” <span>- Joe Sparano</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/nesting_neighbors/4.png">
+                        <div class="content">
+                            “Design is where science and art break even.” <span>- Mieke Gerritzen</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/iim_karjat/6.png">
+                        <div class="content">
+                            "Design adds value faster than it adds costs." <span>- Joel Spolsky</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/dhanauri_wetlands/1.jpg">
+                        <div class="content">
+                            "Design creates culture. Culture shapes values. Values determine the future." <span>-
+                                Robert L. Peters</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/house/16.jpg">
+                        <div class="content">
+                            "When we build, let us think that we build forever." <span>-John Ruskin</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/maritime_museum_views/4.png">
+                        <div class="content">
+                            "God is in the details." <span>- Ludwig Mies van der Rohe</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/iim_karjat/7.png">
+                        <div class="content">
+                            "Any architectural work that does not express serenity is an error." <span>- Luis
+                                Barragán</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/house/7.jpg">
+                        <div class="content">
+                            "I don't build in order to have clients. I have clients in order to build." <span>- Ayn
+                                Rand</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/cafe/16.png">
+                        <div class="content">
+                            "In pure architecture the smallest detail should have a meaning or serve a purpose."
+                            <span>- Augustus W. N. Pugin</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./images/maritime_museum_views/8.png">
+                        <div class="content">
+                            Real comfort, visual and physical, is vital to every room. <span>- Mark Hampton</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
 
 </html>
