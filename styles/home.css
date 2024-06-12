@@ -56,6 +56,19 @@
   transition: 1s cubic-bezier(0.28, -0.03, 0, 0.99) 100ms;
 }
 
+.home .container .list .item:first-child {
+  animation: image-view 1s cubic-bezier(0.28, -0.03, 0, 0.99) forwards 500ms;
+}
+
+@keyframes image-view {
+  from {
+    padding: 0 25%;
+  }
+  to {
+    padding: 0 0%;
+  }
+}
+
 /* .home .container .list .item.active {
   height: 88vh;
 } */
