@@ -290,20 +290,17 @@ function toggle_menu_three(val) {
 // ---------------------------------------------------- OPEN SECTION ----------------------------------------------------
 
 var sectionNames;
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    document.querySelector(".scrollToTop").style.display = "flex";
+  } else {
+    document.querySelector(".scrollToTop").style.display = "none";
+  }
+}
 
-// function opensection(sectionTab, menu = true) {
-//   onLoadDisplay();
-
-//   setTimeout(() => {
-//     document.getElementById(sectionTab).classList.add("active");
-//     active_section = document.querySelector(".section.active");
-//     if (active_section?.classList.contains("archi_project_info")) {
-//       showDivs(1);
-//     }
-//   }, 1500);
-//   // if (width > 500) document.getElementById("home").querySelectorAll(".item").forEach((item) => observer.observe(item));
-
-// }
+function scrollToTop() {
+  globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+}
 
 // ---------------------------------------------------- SLIDES FUNCTION ----------------------------------------------------
 
@@ -313,19 +310,35 @@ function plusDivs(n) {
   showDivs((slideIndex += n));
 }
 
-function showSlide(n) {
-  var slideshow = active_section.querySelector(".slideshow");
-  slideshow.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "nearest",
-  });
-  showDivs(n);
+// function showSlide(n) {
+//   var slideshow = active_section.querySelector(".slideshow");
+//   slideshow.scrollIntoView({
+//     behavior: "smooth",
+//     block: "start",
+//     inline: "nearest",
+//   });
+//   showDivs(n);
+// }
+
+function showSlide(e) {
+  var preview = active_section.querySelector(".preview");
+  preview.classList.add("active");
+  preview.querySelector("img").src = e.target.src;
+  // console.log(e.target.src);
+}
+
+function exitPreview(e) {
+  var preview = active_section.querySelector(".preview");
+  preview.classList.remove("active");
+  // preview.querySelector("img").src = e.target.src;
+  // console.log(e.target.src);
 }
 
 function showDivs(n) {
   // var i;
   var slides = active_section.querySelectorAll(".slides");
+  var dots = active_section.querySelectorAll(".dot");
+
   if (n > slides.length) {
     slideIndex = 1;
   } else if (n < 1) {
@@ -336,8 +349,12 @@ function showDivs(n) {
   slides.forEach((slide) => {
     slide.classList.remove("active");
   });
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
 
   slides[slideIndex - 1].classList.add("active");
+  dots[slideIndex - 1].classList.add("active");
 }
 
 // ---------------------------------------------------- INTERSECTION OBSERVER ----------------------------------------------------
@@ -411,6 +428,7 @@ function setScrollVar() {
 
 window.addEventListener("scroll", () => {
   setScrollVar();
+  scrollFunction();
 });
 
 window.addEventListener("resize", () => {

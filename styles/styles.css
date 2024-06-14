@@ -303,6 +303,109 @@ img {
 .section.active {
   display: block;
 }
+/*------------ SCROLL TO TOP --------------*/
+.scrollToTop {
+  position: fixed;
+  display: none;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(36 40 50);
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.scrollToTop:hover {
+  background-color: rgb(200, 200, 200);
+} 
+
+.scrollToTop div {
+  color: rgb(160, 0, 0);
+  font-size: 24px;
+  font-weight: 900;
+  padding-bottom: 6px;
+}
+
+/*------------ IMAGE PREVIEW --------------*/
+
+.preview {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 1;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.preview.active {
+  display: flex;
+  animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.preview .close {
+  position: fixed;
+  padding: 40px 60px;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview .close .button::before,
+.preview .close .button::after {
+  content: "";
+  display: block;
+  background-color: rgb(200, 200, 200);
+  position: absolute;
+  height: 2px;
+  width: 30px;
+  border-radius: 2px;
+  translate: -50% -50%;
+}
+
+.preview .close .button::before {
+  rotate: 405deg;
+}
+
+.preview .close .button::after {
+  rotate: -405deg;
+}
+
+.preview .close .button {
+  transition: 0.3s;
+}
+
+.preview .close .button:hover {
+  scale: 1.2 1.2;
+}
+
+.preview .image {
+  width: 75%;
+  text-align: center;
+}
 
 @media (max-width: 500px) {
   .onLoadDisplay .logo_image {
@@ -353,5 +456,20 @@ img {
   }
   .menu-page .menu-item span {
     /* font-size: 27px; */
+  }
+
+  .preview .close {
+    padding: 50px 24px;
+  }
+
+  .preview .close .button::before,
+  .preview .close .button::after {
+    height: 1.9px;
+    width: 25px;
+    translate: -50% -50%;
+  }
+
+  .preview .image {
+    width: 97%;
   }
 }

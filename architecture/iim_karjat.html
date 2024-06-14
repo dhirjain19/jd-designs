@@ -94,6 +94,10 @@
             </div>
         </section>
 
+        <div class="scrollToTop" onclick="scrollToTop()">
+            <div>&#x2191;</div>
+        </div>
+
         <section class="section archi_project_info" id="iim_karjat">
             <div class="container">
                 <div class="slideshow">
@@ -111,10 +115,30 @@
                     <div class="slides"><img src="../images/iim_karjat/6.jpg"></div>
                     <div class="slides"><img src="../images/iim_karjat/7.jpg"></div>
                     <div class="slides"><img src="../images/iim_karjat/8.jpg"></div>
-                    <div class="slides"><img src="../images/iim_karjat/admin interior.png"></div>
-                    <div class="slides"><img src="../images/iim_karjat/admin interior 2.png"></div>
-                    <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    <div class="slides"><img src="../images/iim_karjat/12.png"></div>
+                    <div class="slides"><img src="../images/iim_karjat/13.png"></div>
+
+                    <div class="slider">
+                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <span class="dot active" onclick="showSlide(1)"></span>
+                        <span class="dot" onclick="showSlide(2)"></span>
+                        <span class="dot" onclick="showSlide(3)"></span>
+                        <span class="dot" onclick="showSlide(4)"></span>
+                        <span class="dot" onclick="showSlide(5)"></span>
+                        <span class="dot" onclick="showSlide(6)"></span>
+                        <span class="dot" onclick="showSlide(7)"></span>
+                        <span class="dot" onclick="showSlide(8)"></span>
+                        <span class="dot" onclick="showSlide(9)"></span>
+                        <span class="dot" onclick="showSlide(10)"></span>
+                        <span class="dot" onclick="showSlide(11)"></span>
+                        <span class="dot" onclick="showSlide(12)"></span>
+                        <span class="dot" onclick="showSlide(13)"></span>
+                        <span class="dot" onclick="showSlide(14)"></span>
+                        <span class="dot" onclick="showSlide(15)"></span>
+                        <span class="dot" onclick="showSlide(16)"></span>
+                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    </div>
+
                 </div>
                 <div class="title">IIM Karjat</div>
                 <div class="project-button-wrapper">
@@ -179,80 +203,86 @@
                     </div>
                 </div>
                 <div class="gallery_title">Gallery</div>
+                <div class="preview">
+                    <div class="close" onclick="exitPreview()">
+                        <div class="button"></div>
+                    </div>
+                    <div class="image"><img src=""></div>
+                </div>
                 <div class="gallery">
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(1)"><img src="../images/iim_karjat/5.jpg"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/5.jpg"></div>
                         <div class="caption">Entrance pathway
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(2)"><img src="../images/iim_karjat/4.jpg"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/4.jpg"></div>
                         <div class="caption">Main gate
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(3)"><img src="../images/iim_karjat/3.jpg"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/3.jpg"></div>
                         <div class="caption">Canteen and library common junction</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(4)"><img src="../images/iim_karjat/4.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/4.png"></div>
                         <div class="caption">College entrance
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(5)"><img src="../images/iim_karjat/5.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/5.png"></div>
                         <div class="caption">College common area
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(6)"><img src="../images/iim_karjat/6.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/6.png"></div>
                         <div class="caption">College common area</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(7)"><img src="../images/iim_karjat/7.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/7.png"></div>
                         <div class="caption">College passageway
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(8)"><img src="../images/iim_karjat/8.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/8.png"></div>
                         <div class="caption">Canteen</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(9)"><img src="../images/iim_karjat/9.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/9.png"></div>
                         <div class="caption">Canteen</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(10)"><img src="../images/iim_karjat/10.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/10.png"></div>
                         <div class="caption">Canteen
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(11)"><img src="../images/iim_karjat/11.png"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/11.png"></div>
                         <div class="caption">College entrance from canteen
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(12)"><img src="../images/iim_karjat/6.jpg"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/6.jpg"></div>
                         <div class="caption">Hostel wing elevation
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(13)"><img src="../images/iim_karjat/7.jpg"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/7.jpg"></div>
                         <div class="caption">Ground area
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(14)"><img src="../images/iim_karjat/8.jpg"></div>
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/8.jpg"></div>
                         <div class="caption">Tennis court
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(15)"><img src="../images/iim_karjat/admin interior.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/12.png">
                             <div class="caption">Reception lobby </div>
                         </div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(16)"><img src="../images/iim_karjat/admin interior 2.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/iim_karjat/13.png">
                             <div class="caption">Admin area</div>
                         </div>
                     </div>

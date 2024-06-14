@@ -94,6 +94,10 @@
             </div>
         </section>
 
+        <div class="scrollToTop" onclick="scrollToTop()">
+            <div>&#x2191;</div>
+        </div>
+
         <section class="section archi_project_info" id="nesting_neighbors">
             <div class="container">
                 <div class="slideshow">
@@ -105,8 +109,18 @@
                     <div class="slides"><img src="../images/nesting_neighbors/6.png"></div>
                     <div class="slides"><img src="../images/nesting_neighbors/7.png"></div>
                     <div class="slides"><img src="../images/nesting_neighbors/10.png"></div>
-                    <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    <div class="slider">
+                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <span class="dot active" onclick="showSlide(1)"></span>
+                        <span class="dot" onclick="showSlide(2)"></span>
+                        <span class="dot" onclick="showSlide(3)"></span>
+                        <span class="dot" onclick="showSlide(4)"></span>
+                        <span class="dot" onclick="showSlide(5)"></span>
+                        <span class="dot" onclick="showSlide(6)"></span>
+                        <span class="dot" onclick="showSlide(7)"></span>
+                        <span class="dot" onclick="showSlide(8)"></span>
+                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    </div>
                 </div>
                 <div class="title">Nesting Neighbors</div>
                 <div class="project-button-wrapper">
@@ -245,44 +259,50 @@
                     </div>
                 </div>
                 <div class="gallery_title">Gallery</div>
+                <div class="preview">
+                    <div class="close" onclick="exitPreview()">
+                        <div class="button"></div>
+                    </div>
+                    <div class="image"><img src=""></div>
+                </div>
                 <div class="gallery">
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(1)"><img src="../images/nesting_neighbors/1.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/1.png">
                         </div>
                         <div class="caption">Image 1</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(2)"><img src="../images/nesting_neighbors/2.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/2.png">
                         </div>
                         <div class="caption">Image 2</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(3)"><img src="../images/nesting_neighbors/3.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/3.png">
                         </div>
                         <div class="caption">Image 3</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(4)"><img src="../images/nesting_neighbors/4.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/4.png">
                         </div>
                         <div class="caption">Image 4</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(5)"><img src="../images/nesting_neighbors/5.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/5.png">
                         </div>
                         <div class="caption">Image 5</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(6)"><img src="../images/nesting_neighbors/6.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/6.png">
                         </div>
                         <div class="caption">Image 6</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(7)"><img src="../images/nesting_neighbors/7.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/7.png">
                         </div>
                         <div class="caption">Image 7</div>
                     </div>
                     <div class="image-section">
-                        <div class="images" onclick="showSlide(8)"><img src="../images/nesting_neighbors/10.png">
+                        <div class="images" onclick="showSlide(event)"><img src="../images/nesting_neighbors/10.png">
                         </div>
                         <div class="caption">Image 8</div>
                     </div>

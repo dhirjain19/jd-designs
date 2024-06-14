@@ -93,9 +93,13 @@
             </div>
         </section>
 
+        <div class="scrollToTop" onclick="scrollToTop()">
+            <div>&#x2191;</div>
+        </div>
+
         <section class="section int_project_info" id="living_room">
             <div class="container">
-                <div class="title_image"><img src="../images/living_room/1.jpg"></div>
+                <div class="title_image" onclick="showSlide(event)"><img src="../images/living_room/1.jpg"></div>
                 <div class="title">Living Room</div>
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
                     neque, aliquam id
@@ -116,9 +120,15 @@
                     Curabitur eu lectus
                     odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
                 </div>
+                <div class="preview">
+                    <div class="close" onclick="exitPreview()">
+                        <div class="button"></div>
+                    </div>
+                    <div class="image"><img src=""></div>
+                </div>
                 <div class="gallery">
                     <div class="content-wrapper">
-                        <div class="image"><img src="../images/living_room/2.jpg"></div>
+                        <div class="image" onclick="showSlide(event)"><img src="../images/living_room/2.jpg"></div>
                         <div class="text">Image 1</div>
                     </div>
                 </div>
