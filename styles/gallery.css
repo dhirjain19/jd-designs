@@ -43,8 +43,9 @@
 .archi_project_info .slider {
   position: absolute;
   bottom: 15px;
-  left: 50%;
-  translate: -50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
   cursor: default;
 }
 
@@ -55,7 +56,7 @@
   font-weight: bold;
   background-color: unset;
   border: none;
-  color: rgb(125, 125, 125);
+  color: rgb(255, 255, 255);
   /* position: absolute;
   top: 50%; */
   z-index: 3;
@@ -70,23 +71,23 @@
   height: 16px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: rgb(125, 125, 125);
-  opacity: 0.8;
+  background-color: rgba(100, 100, 100, 0.85);
+  opacity: 0.85;
   transition: 0.3s;
 }
 
 .archi_project_info .slider .button:hover {
-  color: rgb(220, 220, 220);
   scale: 1.3 1.3;
 }
 
 .archi_project_info .slider .dot:hover {
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(255, 255, 255);
   scale: 1.3 1.3;
 }
 
 .archi_project_info .slider .dot.active {
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(255, 255, 255);
+  scale: 1.3 1.3;
 }
 
 .archi_project_info .project-button-wrapper {
@@ -364,6 +365,10 @@
 @media (max-width: 500px) {
   .archi_project_info .slides {
     height: 100%;
+  }
+
+  .archi_project_info .slider {
+    bottom: 10px;
   }
 
   .archi_project_info .project-button-wrapper {

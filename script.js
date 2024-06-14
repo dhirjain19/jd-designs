@@ -287,7 +287,7 @@ function toggle_menu_three(val) {
   }
 }
 
-// ---------------------------------------------------- OPEN SECTION ----------------------------------------------------
+// ---------------------------------------------------- SCROLL TO TOP FUNCTION ----------------------------------------------------
 
 var sectionNames;
 function scrollFunction() {
@@ -302,7 +302,7 @@ function scrollToTop() {
   globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
 
-// ---------------------------------------------------- SLIDES FUNCTION ----------------------------------------------------
+// ---------------------------------------------------- SLIDES AND PREVIEW FUNCTION ----------------------------------------------------
 
 var slideIndex = 1;
 
@@ -310,24 +310,24 @@ function plusDivs(n) {
   showDivs((slideIndex += n));
 }
 
-// function showSlide(n) {
-//   var slideshow = active_section.querySelector(".slideshow");
-//   slideshow.scrollIntoView({
-//     behavior: "smooth",
-//     block: "start",
-//     inline: "nearest",
-//   });
-//   showDivs(n);
-// }
+function showSlide(n) {
+  // var slideshow = active_section.querySelector(".slideshow");
+  // slideshow.scrollIntoView({
+  //   behavior: "smooth",
+  //   block: "start",
+  //   inline: "nearest",
+  // });
+  showDivs(n);
+}
 
-function showSlide(e) {
+function showPreview(e) {
   var preview = active_section.querySelector(".preview");
   preview.classList.add("active");
   preview.querySelector("img").src = e.target.src;
   // console.log(e.target.src);
 }
 
-function exitPreview(e) {
+function closePreview() {
   var preview = active_section.querySelector(".preview");
   preview.classList.remove("active");
   // preview.querySelector("img").src = e.target.src;
