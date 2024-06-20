@@ -197,8 +197,7 @@
 
 .info-cards .image {
   background-color: #ffffff;
-  overflow: hidden;
-  max-height: 90vh;
+  /* max-height: 90vh; */
   border-radius: 35px;
   overflow: hidden;
 }
@@ -225,6 +224,7 @@
   flex-direction: row-reverse;
   background-color: #000000;
   padding: 20px 0;
+  align-items: center;
 }
 
 .design-brief .image-wrapper {
@@ -237,6 +237,9 @@
 
 .design-brief .image {
   border-radius: 35px;
+}
+
+.design-brief .image img {
 }
 
 .design-brief .content-wrapper {
@@ -445,7 +448,7 @@
   }
 
   .design-brief {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0;
     gap: 20px;
   }

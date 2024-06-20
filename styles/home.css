@@ -25,15 +25,7 @@
 }
 
 .home .container {
-  /* background: rgb(36 36 36); */
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: inherit;  */
   padding: 2vh;
-  /* z-index: 10; */
-  /* overflow-y: scroll; */
 }
 
 .home .container .list {
@@ -127,14 +119,21 @@
 }
 
 @media (max-width: 500px) {
+  .home .container {
+    padding: 10px;
+  }
+  
+  .home .container .list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
   .home .container .list .item {
-    height: 96vh;
+    height: 47vh;
     padding: 0;
   }
-
-  /* .home .container .list .item.active {
-    height: 80vh;
-  } */
 
   .home .container .list .item .content {
     font-size: 15px;
