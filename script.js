@@ -393,6 +393,12 @@ function scrollAnimation() {
   // }
 }
 
+// ---------------------------------------------------- TRANSITION-EFFECT FUNCTION ----------------------------------------------------
+
+function imageChange() {
+  document.querySelector('.item.transition img:nth-child(2)').classList.toggle('active');
+}
+
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
 
 function setScrollVar() {
