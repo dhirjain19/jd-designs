@@ -241,9 +241,6 @@
   border-radius: 35px;
 }
 
-.design-brief .image img {
-}
-
 .design-brief .content-wrapper {
   flex: 3;
   border-right: 4px dotted rgb(160, 0, 0);
@@ -253,7 +250,6 @@
   flex-direction: row;
   background-color: #fff;
   color: black;
-  gap: 0;
 }
 
 .design-philosophy .image {
@@ -366,7 +362,53 @@
   text-align: center;
 }
 
+.design-merge {
+  display: flex;
+}
 
+.design-merge .image {
+  flex: 1;
+}
+
+.design-merge .image img {
+  max-height: none;
+}
+
+.design-merge .content-wrapper {
+  flex: 1;
+}
+
+.design-merge .design-philosophy, .design-merge .design-objectives {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000000;
+  color: #fff;
+}
+
+.design-merge .design-philosophy li, .design-merge .design-objectives li {
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+#maritime_museum .design-philosophy {
+  background-color: #000000;
+  color: #fff;
+}
+
+#maritime_museum .design-philosophy .image {
+  background-color: #000000;
+  border-right: 4px dotted rgb(160, 0, 0);
+  border-radius: unset;
+}
+
+#maritime_museum .design-philosophy .content-wrapper {
+  background-color: #fff;
+  border-radius: 35px;
+  border: none;
+  /* color: #fff; */
+}
 
 @media (max-width: 500px) {
   .archi_project_info .slides {
@@ -525,5 +567,25 @@
 
   .site-plan .content-wrapper {
     padding: 0px;
+  }
+
+  .design-merge .image img {
+    max-height: 90vh;
+  }
+  
+  .design-merge .design-philosophy, .design-merge .design-objectives {
+    height: auto;
+    padding: 20px 0;
+    gap: 15px;
+  }
+  
+  .design-merge .design-philosophy li, .design-merge .design-objectives li {
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
+  
+  #maritime_museum .design-philosophy .image {
+    border-right: unset;
+    border-radius: unset;
   }
 }
