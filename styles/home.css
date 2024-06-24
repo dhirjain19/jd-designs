@@ -73,10 +73,6 @@
   object-position: 50% 50%;
 }
 
-.home .container .list .item.transition {
-  position: relative;
-}
-
 .home .container .list .item.transition img {
   position: absolute;
   top: 0;

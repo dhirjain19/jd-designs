@@ -395,8 +395,9 @@ function scrollAnimation() {
 
 // ---------------------------------------------------- TRANSITION-EFFECT FUNCTION ----------------------------------------------------
 
-function imageChange() {
-  document.querySelector('.item.transition img:nth-child(2)').classList.toggle('active');
+function imageChange(e) {
+  // document.querySelector('.item.transition img:nth-child(2)').classList.toggle('active');
+  e.target.offsetParent.offsetParent.querySelector('img:nth-child(2)').classList.toggle('active');
 }
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
