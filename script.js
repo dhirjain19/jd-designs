@@ -47,11 +47,10 @@ const createLoadingPage = () => {
   // console.log(onLoadDisplay);
   document.querySelector(".main").appendChild(onLoadDisplay);
 
-  return onLoadDisplay;  
+  return onLoadDisplay;
 };
 
 var loading_page;
-
 
 // setTimeout(() => {
 //   onLoadDisplay(true);
@@ -287,6 +286,31 @@ function toggle_menu_three(val) {
   }
 }
 
+// ---------------------------------------------------- LAZY LOADING ----------------------------------------------------
+
+const options = {
+  root: null, // Use the viewport as the root
+  rootMargin: "100%",
+  threshold: 0.1, // Specify the threshold for intersection
+};
+
+const handleIntersection = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry);
+      const img = entry.target;
+      const src = img.getAttribute("data-src");
+      // Replace the placeholder with the actual image source
+      img.src = src;
+
+      // Stop observing the image
+      observer.unobserve(img);
+    }
+  });
+};
+
+var imageObserver = new IntersectionObserver(handleIntersection, options);
+
 // ---------------------------------------------------- SCROLL TO TOP FUNCTION ----------------------------------------------------
 
 var sectionNames;
@@ -372,11 +396,6 @@ const observer = new IntersectionObserver(
 );
 
 function scrollAnimation() {
-  // if (width > 500) {
-  // document
-  //   .querySelector("#home")
-  //   .querySelectorAll(".item")
-  //   .forEach((item) => observer.observe(item));
   document
     .querySelector("#architecture_projects")
     ?.querySelectorAll(".card")
@@ -385,19 +404,15 @@ function scrollAnimation() {
     .querySelector("#interior_projects")
     ?.querySelectorAll(".card")
     .forEach((card) => observer.observe(card));
-  // }
-  // else {
-  // document.querySelector("#home").querySelectorAll(".item").forEach((item) => observer.unobserve(item));
-  // document.querySelector("#architecture_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
-  // document.querySelector("#interior_projects").querySelectorAll(".card").forEach((card) => observer.unobserve(card));
-  // }
 }
 
 // ---------------------------------------------------- TRANSITION-EFFECT FUNCTION ----------------------------------------------------
 
 function imageChange(e) {
   // document.querySelector('.item.transition img:nth-child(2)').classList.toggle('active');
-  e.target.offsetParent.offsetParent.querySelector('img:nth-child(2)').classList.toggle('active');
+  e.target.offsetParent.offsetParent
+    .querySelector("img:nth-child(2)")
+    .classList.toggle("active");
 }
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
@@ -453,4 +468,7 @@ window.addEventListener("load", () => {
   setScrollVar();
   scrollAnimation();
   sectionNames = document.querySelectorAll("section");
+  document.querySelectorAll(".lazy").forEach((image) => {
+    imageObserver.observe(image);
+  });
 });
