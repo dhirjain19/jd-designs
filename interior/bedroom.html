@@ -100,9 +100,39 @@
 
         <section class="section int_project_info" id="bedroom">
             <div class="container">
-                <div class="title_image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                        data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYDjG9RShaz8PiL18qzoK0BD-3hGkTCph8LY_ZfxYM4qaOOl531dhI0bHA8QTPOmrmOeT1LGh5U-6VCG2njHfWEjIewnZke-gc=s1600-rw-v1">
+                <div class="slideshow">
+                    <div class="slides active">
+                        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYDjG9RShaz8PiL18qzoK0BD-3hGkTCph8LY_ZfxYM4qaOOl531dhI0bHA8QTPOmrmOeT1LGh5U-6VCG2njHfWEjIewnZke-gc=s1600-rw-v1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbuIzZByqQQu6U6A4NiJB-24W78b-0LiKfWiadM6XmwonkAsQFAWH1qE1QovC8cqtAFf-Ox2fd-tIvkZRc7wzv6sN6HOWgwr7E=s1600-rw-v1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaLWd_G6qVtu_g5eQu2vCsmZ5QdkBGRXjFzrNggWzZdgGJeeq99mo39HoGnkKNKEJHYaDQ2siYBoi4dgvdww_hrmiPzEb-zIxs=s1600-rw-v1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZP-1VVxc7rgbUoWLxZDLfHw2ZTTAj1Yz73TWELi9QVG4YXU6aPR1loBXH29OIq_HtaPHxRf8enNYtkIQSbcNRHPB6Idvyj3BY=s1600-rw-v1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaJ4bcPIHLGMiXlVhUqLbvQ-mE8tRn8_vVqMkR6fQf8KDfsPhI6m-XSP1wo-e32r8Izr5OvwfqkxCx2WeubVijc0IEwvWbdqdM=s1600-rw-v1">
+                    </div>
+
+                    <div class="slider">
+                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <span class="dot active" onclick="showSlide(1)"></span>
+                        <span class="dot" onclick="showSlide(2)"></span>
+                        <span class="dot" onclick="showSlide(3)"></span>
+                        <span class="dot" onclick="showSlide(4)"></span>
+                        <span class="dot" onclick="showSlide(5)"></span>
+                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    </div>
                 </div>
+
+                <div class="project-button-wrapper">
+                    <div class="all_projects-button" onclick="window.location.replace('./');">&#10094;</div>
+                    <div class="next_project-button" onclick="window.location.replace('./cafe.html');">&#10095;</div>
+                </div>
+
                 <div class="title">Bedroom</div>
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
                     neque, aliquam id
@@ -130,6 +160,12 @@
                     <div class="image"><img src=""></div>
                 </div>
                 <div class="gallery">
+                    <div class="content-wrapper">
+                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
+                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYDjG9RShaz8PiL18qzoK0BD-3hGkTCph8LY_ZfxYM4qaOOl531dhI0bHA8QTPOmrmOeT1LGh5U-6VCG2njHfWEjIewnZke-gc=s1600-rw-v1">
+                        </div>
+                        <div class="text">Sofa area</div>
+                    </div>
                     <div class="content-wrapper">
                         <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
                                 data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbuIzZByqQQu6U6A4NiJB-24W78b-0LiKfWiadM6XmwonkAsQFAWH1qE1QovC8cqtAFf-Ox2fd-tIvkZRc7wzv6sN6HOWgwr7E=s1600-rw-v1">

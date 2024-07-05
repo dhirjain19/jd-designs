@@ -100,8 +100,26 @@
 
         <section class="section int_project_info" id="living_room">
             <div class="container">
-                <div class="title_image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                        data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaW3-WXI-h7dS2VpFjmDDHB4Ly0-HCgW9kYJJBXVgxnOUGFxUfmZOaJD5k6ISatmarVMUKqf_0hap3Wk9lup6n5dHbAU1w4nJk=s1600-rw-v1">
+                <div class="slideshow">
+                    <div class="slides active">
+                        <img
+                            src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaW3-WXI-h7dS2VpFjmDDHB4Ly0-HCgW9kYJJBXVgxnOUGFxUfmZOaJD5k6ISatmarVMUKqf_0hap3Wk9lup6n5dHbAU1w4nJk=s1600-rw-v1">
+                    </div>
+                    <div class="slides">
+                        <img
+                            src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaA69Ub-E0hfryzGDOyn-dtV1_Kt2_eFXFtPGlK6jlCwB5DtNkgqJ6j0EPdYu6bgVJzLzGL49FfKw01P2ijvzmSuh94SjBofRQ=s1600-rw-v1">
+                    </div>
+
+                    <div class="slider">
+                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <span class="dot active" onclick="showSlide(1)"></span>
+                        <span class="dot" onclick="showSlide(2)"></span>
+                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="project-button-wrapper">
+                    <div class="all_projects-button" onclick="window.location.replace('./');">&#10094;</div>
+                    <div class="next_project-button" onclick="window.location.replace('./cafe.html');">&#10095;</div>
                 </div>
                 <div class="title">Living Room</div>
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
@@ -132,9 +150,15 @@
                 <div class="gallery">
                     <div class="content-wrapper">
                         <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaA69Ub-E0hfryzGDOyn-dtV1_Kt2_eFXFtPGlK6jlCwB5DtNkgqJ6j0EPdYu6bgVJzLzGL49FfKw01P2ijvzmSuh94SjBofRQ=s1600-rw-v1">
+                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaW3-WXI-h7dS2VpFjmDDHB4Ly0-HCgW9kYJJBXVgxnOUGFxUfmZOaJD5k6ISatmarVMUKqf_0hap3Wk9lup6n5dHbAU1w4nJk=s1600-rw-v1">
                         </div>
                         <div class="text">Image 1</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
+                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihaA69Ub-E0hfryzGDOyn-dtV1_Kt2_eFXFtPGlK6jlCwB5DtNkgqJ6j0EPdYu6bgVJzLzGL49FfKw01P2ijvzmSuh94SjBofRQ=s1600-rw-v1">
+                        </div>
+                        <div class="text">Image 2</div>
                     </div>
                 </div>
             </div>

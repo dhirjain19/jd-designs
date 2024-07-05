@@ -1,5 +1,7 @@
 // ---------------------------------------------------- LOADING PAGE ----------------------------------------------------
 
+var loading_page;
+
 function onLoadDisplay(reload = false) {
   loading_page.classList.add("display");
   setTimeout(() => {
@@ -21,40 +23,7 @@ function onLoadDisplay(reload = false) {
   }
 }
 
-const createLoadingPage = () => {
-  const onLoadDisplay = document.createElement("div");
-  onLoadDisplay.className = "onLoadDisplay";
-  onLoadDisplay.id = "onLoadDisplay";
-
-  const loading_wrapper = document.createElement("div");
-  loading_wrapper.className = "wrapper";
-  onLoadDisplay.appendChild(loading_wrapper);
-
-  const logo_image = document.createElement("div");
-  logo_image.className = "logo_image";
-
-  const image = document.createElement("img");
-  image.src = "images\\logo_white.png";
-  logo_image.appendChild(image);
-
-  const logo_title = document.createElement("div");
-  logo_title.className = "logo_title";
-  logo_title.innerHTML = "Jain Dhir<br>Archi \u2022 terior<br>Designs";
-
-  loading_wrapper.appendChild(logo_image);
-  loading_wrapper.appendChild(logo_title);
-
-  // console.log(onLoadDisplay);
-  document.querySelector(".main").appendChild(onLoadDisplay);
-
-  return onLoadDisplay;
-};
-
-var loading_page;
-
-// setTimeout(() => {
-//   onLoadDisplay(true);
-// }, 200);
+// ---------------------------------------------------- DIMENTIONS ----------------------------------------------------
 
 var width;
 var height;
@@ -63,9 +32,6 @@ function setWindowDimentions() {
   width = window.innerWidth;
   height = window.innerHeight;
 }
-
-// console.log(width);
-// console.log(height);
 
 // ---------------------------------------------------- MENU PAGE ----------------------------------------------------
 
@@ -288,28 +254,73 @@ function toggle_menu_three(val) {
 
 // ---------------------------------------------------- LAZY LOADING ----------------------------------------------------
 
-const options = {
-  root: null, // Use the viewport as the root
+const lazyOptions = {
+  root: null,
   rootMargin: "100%",
-  threshold: 0.1, // Specify the threshold for intersection
+  threshold: 0.1,
 };
 
-const handleIntersection = (entries, observer) => {
+const lazyIntersection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       console.log(entry);
       const img = entry.target;
       const src = img.getAttribute("data-src");
-      // Replace the placeholder with the actual image source
       img.src = src;
-
-      // Stop observing the image
       observer.unobserve(img);
     }
   });
 };
 
-var imageObserver = new IntersectionObserver(handleIntersection, options);
+var lazyObserver = new IntersectionObserver(lazyIntersection, lazyOptions);
+
+// ---------------------------------------------------- SCROLL OBSERVER ANIMATIONS ----------------------------------------------------
+
+const projectObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("active", entry.isIntersecting);
+    });
+  },
+  {
+    threshold: 1,
+  }
+);
+
+var interiorObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry);
+      }
+    });
+  },
+  {
+    threshold: 0.95,
+  }
+);
+
+function scrollAnimation() {
+  document
+    .querySelector("#architecture_projects")
+    ?.querySelectorAll(".card")
+    .forEach((card) => projectObserver.observe(card));
+  document
+    .querySelector("#interior_projects")
+    ?.querySelectorAll(".card")
+    .forEach((card) => projectObserver.observe(card));
+  document
+    .querySelectorAll(".int_project_info")
+    .forEach((project) =>
+      project
+        .querySelectorAll(".content-wrapper")
+        .forEach((content) => interiorObserver.observe(content))
+    );
+  document
+    .querySelectorAll(".lazy")
+    .forEach((image) => lazyObserver.observe(image));
+}
 
 // ---------------------------------------------------- SCROLL TO TOP FUNCTION ----------------------------------------------------
 
@@ -335,12 +346,6 @@ function plusDivs(n) {
 }
 
 function showSlide(n) {
-  // var slideshow = active_section.querySelector(".slideshow");
-  // slideshow.scrollIntoView({
-  //   behavior: "smooth",
-  //   block: "start",
-  //   inline: "nearest",
-  // });
   showDivs(n);
 }
 
@@ -348,18 +353,14 @@ function showPreview(e) {
   var preview = active_section.querySelector(".preview");
   preview.classList.add("active");
   preview.querySelector("img").src = e.target.src;
-  // console.log(e.target.src);
 }
 
 function closePreview() {
   var preview = active_section.querySelector(".preview");
   preview.classList.remove("active");
-  // preview.querySelector("img").src = e.target.src;
-  // console.log(e.target.src);
 }
 
 function showDivs(n) {
-  // var i;
   var slides = active_section.querySelectorAll(".slides");
   var dots = active_section.querySelectorAll(".dot");
 
@@ -370,6 +371,7 @@ function showDivs(n) {
   } else {
     slideIndex = n;
   }
+
   slides.forEach((slide) => {
     slide.classList.remove("active");
   });
@@ -381,35 +383,9 @@ function showDivs(n) {
   dots[slideIndex - 1].classList.add("active");
 }
 
-// ---------------------------------------------------- INTERSECTION OBSERVER ----------------------------------------------------
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      entry.target.classList.toggle("active", entry.isIntersecting);
-    });
-  },
-  {
-    threshold: 1,
-    // rootMargin: '50px'
-  }
-);
-
-function scrollAnimation() {
-  document
-    .querySelector("#architecture_projects")
-    ?.querySelectorAll(".card")
-    .forEach((card) => observer.observe(card));
-  document
-    .querySelector("#interior_projects")
-    ?.querySelectorAll(".card")
-    .forEach((card) => observer.observe(card));
-}
-
 // ---------------------------------------------------- TRANSITION-EFFECT FUNCTION ----------------------------------------------------
 
 function imageChange(e) {
-  // document.querySelector('.item.transition img:nth-child(2)').classList.toggle('active');
   e.target.offsetParent.offsetParent
     .querySelector("img:nth-child(2)")
     .classList.toggle("active");
@@ -456,19 +432,16 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", () => {
   setWindowDimentions();
   setScrollVar();
-  scrollAnimation();
+  // scrollAnimation();
 });
 
 window.addEventListener("load", () => {
   loading_page = document.getElementById("onLoadDisplay");
-  // loading_page = createLoadingPage();
-  onLoadDisplay(true);
+  sectionNames = document.querySelectorAll("section");
 
+  onLoadDisplay(true);
+  scrollToTop();
   setWindowDimentions();
   setScrollVar();
   scrollAnimation();
-  sectionNames = document.querySelectorAll("section");
-  document.querySelectorAll(".lazy").forEach((image) => {
-    imageObserver.observe(image);
-  });
 });

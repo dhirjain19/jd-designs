@@ -97,7 +97,7 @@
 }
 
 .archi_project_info .project-button-wrapper div:nth-child(1)::after {
-  content: " All Project";
+  content: " All Projects";
   font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
