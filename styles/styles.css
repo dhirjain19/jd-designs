@@ -407,6 +407,90 @@ img {
   text-align: center;
 }
 
+.item.transition .effect-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  gap: 30px;
+}
+.item.transition .effect-button {
+  color: black;
+  background-color: rgb(40 40 50);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.effect-button-icon {
+  width: 1.5px;
+  height: 36px;
+  background-color: rgb(175 186 202);
+}
+
+.effect-button-icon::before, .effect-button-icon::after {
+  content: "";
+  width: 13px;
+  height: 25px;
+  position: absolute;
+  top: 17.5px;
+}
+
+.effect-button-icon::before {
+  background-color: rgb(147 238 250);
+  left: 12px;
+}
+
+.effect-button-icon::after {
+  background-color: rgb(156 163 185);
+  right: 12px;
+}
+
+.effect-button.kitchen:nth-child(1) .effect-button-icon::before {
+  background-color: rgb(243 225 187);
+}
+
+.effect-button.kitchen:nth-child(1) .effect-button-icon::after {
+  background-color: rgb(144 96 73);
+}
+
+.effect-button.kitchen:nth-child(2) .effect-button-icon::before {
+  background-color: rgb(241 240 235)
+}
+
+.effect-button.kitchen:nth-child(2) .effect-button-icon::after {
+  background-color: rgb(173 143 83);
+}
+
+.effect-button.kitchen:nth-child(3) .effect-button-icon::before {
+  background-color: rgb(132 73 39);
+}
+
+.effect-button.kitchen:nth-child(3) .effect-button-icon::after {
+  background-color: rgb(224 171 127);
+}
+
+.effect-button.kitchen:nth-child(4) .effect-button-icon::before {
+  background-color: rgb(191 165 141);
+}
+
+.effect-button.kitchen:nth-child(4) .effect-button-icon::after {
+  background-color: rgb(112 85 71);
+}
+
+.item.transition img:nth-child(2).active {
+  opacity: 1;
+}
+
 @media (max-width: 500px) {
   .onLoadDisplay .logo_image {
     height: 100px;

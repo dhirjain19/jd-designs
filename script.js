@@ -318,7 +318,6 @@ const lazyOptions = {
 const lazyIntersection = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry);
       const img = entry.target;
       const src = img.getAttribute("data-src");
       img.src = src;
@@ -440,10 +439,18 @@ function showDivs(n) {
 
 // ---------------------------------------------------- TRANSITION-EFFECT FUNCTION ----------------------------------------------------
 
-function imageChange(e) {
-  e.target.offsetParent.offsetParent
-    .querySelector("img:nth-child(2)")
-    .classList.toggle("active");
+function imageToggle(e) {
+  e.currentTarget.offsetParent.offsetParent
+    .querySelectorAll("img")[1].classList.toggle("active");
+}
+
+function imageChange(e, n = 1) {
+  e.currentTarget.offsetParent.offsetParent
+    .querySelectorAll("img")
+    .forEach((i) => i.classList.remove("active"));
+
+  e.currentTarget.offsetParent.offsetParent
+    .querySelectorAll("img")[n].classList.add("active");
 }
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------

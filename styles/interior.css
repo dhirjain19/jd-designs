@@ -178,6 +178,19 @@
   object-position: 0% 50%;
 }
 
+.int_project_info .content-wrapper .image.transition img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.int_project_info .content-wrapper .image.transition img.active {
+  opacity: 1;
+  transition: 0.5s;
+}
+
 .int_project_info .content-wrapper .text {
   color: rgba(255, 255, 255, 0.75);
   font-size: 18px;
@@ -210,6 +223,7 @@
     transform: translateY(0px);
   }
 }
+
 @media (max-width: 500px) {
   .int_project_info .slides {
     height: 100%;
