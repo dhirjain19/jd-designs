@@ -43,7 +43,7 @@
   /* width: calc( 1% * ( ( max( ( var(--scroll) + 50), -100 )  ) + 100 ) ); */
   position: relative;
   /* padding: 0px; */
-  padding: 0 calc(1% * min(-1 * ( var(--scroll) + 50), 25));
+  /* padding: 0 calc(1% * min(-1 * ( var(--scroll) + 50), 25)); */
   overflow: hidden;
   transition: 1s cubic-bezier(0.28, -0.03, 0, 0.99) 100ms;
 }
