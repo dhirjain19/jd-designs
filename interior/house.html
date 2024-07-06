@@ -61,7 +61,7 @@
 
                     <div class="menu-list menu-list-three hide" id="architecture-menu">
                         <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
-                        <ul class="menu-items" id="menu-items-three">
+                        <ul class="menu-items">
                             <li class="menu-item"><a href="../architecture/iim_karjat.html">IIM Karjat</a>
                             </li>
                             <li class="menu-item"><a href="../architecture/nesting_neighbors.html">Nesting
@@ -77,16 +77,24 @@
 
                     <div class="menu-list menu-list-three hide" id="interior-menu">
                         <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
-                        <ul class="menu-items" id="menu-items-three">
-                            <li class="menu-item"><a href="./cafe.html">Cafe</a></li>
-                            <li class="menu-item"><a href="./coffee_shop.html">Coffee Shop</a></li>
-                            <li class="menu-item"><a href="./house.html">House</a></li>
-                            <li class="menu-item"><a href="./living_room.html">Living Room</a>
+                        <ul class="menu-items">
+                            <li class="menu-item"><a href="./cafe.html">Cafe</a>
                             </li>
-                            <li class="menu-item"><a href="./bedroom.html">Bedroom</a>
+                            <li class="menu-item"><a href="./coffee_shop.html">Coffee Shop</a>
                             </li>
-                            <li class="menu-item all"><a href="./">All
-                                    Projects</a></li>
+                            <li class="menu-item" onclick="toggle_menu_four(1)"><a href="#">House</a></li>
+                            <li class="menu-item all"><a href="./">All Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-four hide" id="house-menu">
+                        <div class="menu-back four" onclick="toggle_menu_four(0)">&#10094; Back</div>
+                        <ul class="menu-items" id="menu-items-four">
+                            <li class="menu-item"><a href="./house.html">Overview</a></li>
+                            <li class="menu-item"><a href="./living_room.html">Living Room</a></li>
+                            <li class="menu-item"><a href="./kitchen.html">Kitchen</a></li>
+                            <li class="menu-item"><a href="./bedroom.html">Master Bedroom</a></li>
+                            <li class="menu-item"><a href="./toilet.html">Common Toilet</a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,36 +141,6 @@
                         <img src="../images/house/12.jpg">
                     </div>
                     <div class="slides">
-                        <img src="../images/house/13.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/14.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/15.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/16.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/17.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/18.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/19.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/22.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/23.jpg">
-                    </div>
-                    <div class="slides">
-                        <img src="../images/house/24.jpg">
-                    </div>
-                    <div class="slides">
                         <img src="../images/house/20.jpg">
                     </div>
                     <div class="slides">
@@ -182,22 +160,13 @@
                         <span class="dot" onclick="showSlide(10)"></span>
                         <span class="dot" onclick="showSlide(11)"></span>
                         <span class="dot" onclick="showSlide(12)"></span>
-                        <span class="dot" onclick="showSlide(13)"></span>
-                        <span class="dot" onclick="showSlide(14)"></span>
-                        <span class="dot" onclick="showSlide(15)"></span>
-                        <span class="dot" onclick="showSlide(16)"></span>
-                        <span class="dot" onclick="showSlide(17)"></span>
-                        <span class="dot" onclick="showSlide(18)"></span>
-                        <span class="dot" onclick="showSlide(19)"></span>
-                        <span class="dot" onclick="showSlide(20)"></span>
-                        <span class="dot" onclick="showSlide(21)"></span>
-                        <span class="dot" onclick="showSlide(22)"></span>
                         <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
                     </div>
                 </div>
                 <div class="project-button-wrapper">
                     <div class="all_projects-button" onclick="window.location.replace('./');">&#10094;</div>
-                    <div class="next_project-button" onclick="window.location.replace('./living_room.html');">&#10095;</div>
+                    <div class="next_project-button" onclick="window.location.replace('./living_room.html');">&#10095;
+                    </div>
                 </div>
                 <div class="title">House</div>
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
@@ -275,56 +244,6 @@
                         <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
                                 data-src="../images/house/12.jpg"></div>
                         <div class="text">Elevation</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/13.jpg"></div>
-                        <div class="text">Living hall- sofa and dining area</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/14.jpg"></div>
-                        <div class="text">Living hall- door and tv unit</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/15.jpg"></div>
-                        <div class="text">Living hall- mandir</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/16.jpg"></div>
-                        <div class="text">Living room-couryard door and sofa unit</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/17.jpg"></div>
-                        <div class="text">Guest toilet room</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/18.jpg"></div>
-                        <div class="text">Guest toilet room</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/19.jpg"></div>
-                        <div class="text">Kitchen</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/22.jpg"></div>
-                        <div class="text">Kitchen</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/23.jpg"></div>
-                        <div class="text">Kitchen</div>
-                    </div>
-                    <div class="content-wrapper">
-                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
-                                data-src="../images/house/24.jpg"></div>
-                        <div class="text">Kitchen</div>
                     </div>
                     <div class="content-wrapper">
                         <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""

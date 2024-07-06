@@ -9,7 +9,7 @@
     </title>
     <link rel="icon" href="../images/logo_icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/project.css">
+    <link rel="stylesheet" href="../styles/interior.css">
     <script src="../script.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
@@ -29,8 +29,8 @@
         <section class="nav-bar hide">
             <div class="container">
 
-                <div class="logo_image" id="logo" onclick="window.location.replace('../');"><img
-                        src="../images/logo_white.png">
+                <div class="logo_image" id="logo" onclick="window.location.replace('../');">
+                    <img src="../images/logo_white.png">
                 </div>
 
                 <div class='menu-button-container' onclick="menuToggle()">
@@ -106,44 +106,82 @@
             <div>&#x2191;</div>
         </div>
 
-        <section class="section projects" id="interior_projects">
-            <div class="wrapper">
-                <div class="title">PROJECTS</div>
-                <div class="container">
-                    <div class="card active" onclick="window.location.replace('./cafe.html');">
-                        <div class="image"><img src="../images/cafe/19.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">Cafe</div>
+        <section class="section int_project_info" id="kitchen">
+            <div class="container">
+
+                <div class="slideshow">
+                    <div class="slides active">
+                        <img src="../images/house/19.jpg">
                     </div>
-                    <div class="card" onclick="window.location.replace('./coffee_shop.html');">
-                        <div class="image"><img src="../images/coffee_shop/1.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">Coffee Shop</div>
+                    <div class="slides">
+                        <img src="../images/house/22.jpg">
                     </div>
-                    <div class="card" onclick="window.location.replace('./house.html');">
-                        <div class="image"><img src="../images/house/1.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">House</div>
+                    <div class="slides">
+                        <img src="../images/house/23.jpg">
                     </div>
-                    <div class="card" onclick="window.location.replace('./living_room.html');">
-                        <div class="image"><img src="../images/living_room/1.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">Living Room</div>
+                    <div class="slides">
+                        <img src="../images/house/24.jpg">
                     </div>
-                    <div class="card" onclick="window.location.replace('./bedroom.html');">
-                        <div class="image"><img src="../images/bedroom/2.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">Master Bedroom</div>
+
+                    <div class="slider">
+                        <button class="button button-left" onclick="plusDivs(-1)">&#10094;</button>
+                        <span class="dot active" onclick="showSlide(1)"></span>
+                        <span class="dot" onclick="showSlide(2)"></span>
+                        <span class="dot" onclick="showSlide(3)"></span>
+                        <span class="dot" onclick="showSlide(4)"></span>
+                        <button class="button button-right" onclick="plusDivs(+1)">&#10095;</button>
                     </div>
-                    <div class="card" onclick="window.location.replace('./toilet.html');">
-                        <div class="image"><img src="../images/house/17.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">Common Toilet</div>
+                </div>
+                <div class="project-button-wrapper">
+                    <div class="all_projects-button" onclick="window.location.replace('./');">&#10094;</div>
+                    <div class="next_project-button" onclick="window.location.replace('./cafe.html');">&#10095;</div>
+                </div>
+                <div class="title">Kitchen</div>
+                <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse libero
+                    neque, aliquam id
+                    aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
+                    pellentesque semper.
+                    Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
+                    nunc id vestibulum.
+                    Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
+                    Curabitur eu lectus
+                    odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
+                    Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Suspendisse libero neque, aliquam id
+                    aliquet a, aliquet sit amet lacus. Donec at pellentesque sem. Etiam malesuada dui sed quam
+                    pellentesque semper.
+                    Praesent hendrerit ligula et mi viverra, vel blandit risus bibendum. Curabitur semper posuere
+                    nunc id vestibulum.
+                    Sed non facilisis nulla. Fusce tortor quam, placerat imperdiet eleifend in, tempus non tellus.
+                    Curabitur eu lectus
+                    odio. Quisque et dui et augue maximus suscipit sed in felis. In hac habitasse platea dictumst.
+                </div>
+                <div class="preview">
+                    <div class="close" onclick="closePreview()">
+                        <div class="button"></div>
                     </div>
-                    <div class="card" onclick="window.location.replace('./kitchen.html');">
-                        <div class="image"><img src="../images/house/19.jpg"></div>
-                        <div class="overlay"></div>
-                        <div class="project-title">Kitchen</div>
+                    <div class="image"><img src=""></div>
+                </div>
+                <div class="gallery">
+                    <div class="content-wrapper">
+                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
+                                data-src="../images/house/19.jpg"></div>
+                        <div class="text">Kitchen</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
+                                data-src="../images/house/22.jpg"></div>
+                        <div class="text">Kitchen</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
+                                data-src="../images/house/23.jpg"></div>
+                        <div class="text">Kitchen</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="image" onclick="showPreview(event)"><img class="lazy" loading="lazy" src=""
+                                data-src="../images/house/24.jpg"></div>
+                        <div class="text">Kitchen</div>
                     </div>
                 </div>
             </div>

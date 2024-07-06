@@ -61,7 +61,7 @@
 
                     <div class="menu-list menu-list-three hide" id="architecture-menu">
                         <div class="menu-back two" onclick="toggle_menu_three(3)">&#10094; Back</div>
-                        <ul class="menu-items" id="menu-items-three">
+                        <ul class="menu-items">
                             <li class="menu-item"><a href="./iim_karjat.html"
                                     onclick="window.location.replace('./architecture/iim_karjat.html');">IIM
                                     Karjat</a>
@@ -80,16 +80,24 @@
 
                     <div class="menu-list menu-list-three hide" id="interior-menu">
                         <div class="menu-back three" onclick="toggle_menu_three(4)">&#10094; Back</div>
-                        <ul class="menu-items" id="menu-items-three">
-                            <li class="menu-item"><a href="../interior/cafe.html">Cafe</a></li>
-                            <li class="menu-item"><a href="../interior/coffee_shop.html">Coffee Shop</a></li>
-                            <li class="menu-item"><a href="../interior/house.html">House</a></li>
-                            <li class="menu-item"><a href="../interior/living_room.html">Living Room</a>
+                        <ul class="menu-items">
+                            <li class="menu-item"><a href="../interior/cafe.html">Cafe</a>
                             </li>
-                            <li class="menu-item"><a href="../interior/bedroom.html">Bedroom</a>
+                            <li class="menu-item"><a href="../interior/coffee_shop.html">Coffee Shop</a>
                             </li>
-                            <li class="menu-item all"><a href="../interior">All
-                                    Projects</a></li>
+                            <li class="menu-item" onclick="toggle_menu_four(1)"><a href="#">House</a></li>
+                            <li class="menu-item all"><a href="../interior">All Projects</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-list menu-list-four hide" id="house-menu">
+                        <div class="menu-back four" onclick="toggle_menu_four(0)">&#10094; Back</div>
+                        <ul class="menu-items" id="menu-items-four">
+                            <li class="menu-item"><a href="../interior/house.html">Overview</a></li>
+                            <li class="menu-item"><a href="../interior/living_room.html">Living Room</a></li>
+                            <li class="menu-item"><a href="../interior/kitchen.html">Kitchen</a></li>
+                            <li class="menu-item"><a href="../interior/bedroom.html">Master Bedroom</a></li>
+                            <li class="menu-item"><a href="../interior/toilet.html">Common Toilet</a></li>
                         </ul>
                     </div>
                 </div>
@@ -142,7 +150,8 @@
                 <div class="content">
                     <div class="info-cards design-philosophy">
                         <div class="image"><img class="lazy" loading="lazy" src=""
-                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYNdu7UaXz8bV07fWD2fkipCS6aCy_FxV3m6Aby28_mbVzsc5vbJyon4dMwc1j5RUNqq-has6tF-aBqNIEXJjlhloDOY0Rhh_Q=s1600-rw-v1"></div>
+                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYNdu7UaXz8bV07fWD2fkipCS6aCy_FxV3m6Aby28_mbVzsc5vbJyon4dMwc1j5RUNqq-has6tF-aBqNIEXJjlhloDOY0Rhh_Q=s1600-rw-v1">
+                        </div>
                         <div class="content-wrapper">
                             <div class="heading">Design Philosophy</div>
                             <div class="text">
@@ -160,7 +169,8 @@
                     </div>
                     <div class="info-cards design-objectives">
                         <div class="image"><img class="lazy" loading="lazy" src=""
-                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYWFVMzZ_HWv0RO1ThGe7nLlyRjAAoo_kQOuvtkFeCJgY2r7P3lSD72eKJvz_teztaRMp4RduwxWzB_t3ICpaAydkfwm98H-vY=s1600-rw-v1"></div>
+                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYWFVMzZ_HWv0RO1ThGe7nLlyRjAAoo_kQOuvtkFeCJgY2r7P3lSD72eKJvz_teztaRMp4RduwxWzB_t3ICpaAydkfwm98H-vY=s1600-rw-v1">
+                        </div>
                         <div class="content-wrapper">
                             <div class="heading">Design Objectives</div>
                             <div class="text">
@@ -179,18 +189,21 @@
                     <div class="info-cards floor-plan">
                         <div class="content-wrapper ground">
                             <div class="image"><img class="lazy" loading="lazy" src=""
-                                    data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbqb7CvPYyMx6e2Tr5Pr6jQ5BdhE0S5nzFgRnKatKPH6cpBb8ed8rRD82P3EOAvZxn_JPkhK_9r2TAkZUpgSI3NUnUahSu3Ojo=s1600-rw-v1"></div>
+                                    data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbqb7CvPYyMx6e2Tr5Pr6jQ5BdhE0S5nzFgRnKatKPH6cpBb8ed8rRD82P3EOAvZxn_JPkhK_9r2TAkZUpgSI3NUnUahSu3Ojo=s1600-rw-v1">
+                            </div>
                             <div class="heading">Ground Floor Plan</div>
                         </div>
                         <div class="content-wrapper first">
                             <div class="image"><img class="lazy" loading="lazy" src=""
-                                    data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZpY-cOcveMrpQesAVWRu9WAGBG49PxY4_JnWsOsmI0Sn0t3v5m5iv0S6n3jh-DfBwOGkUk779UK9YUdAabapkwpjmHfGATEYs=s1600-rw-v1"></div>
+                                    data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZpY-cOcveMrpQesAVWRu9WAGBG49PxY4_JnWsOsmI0Sn0t3v5m5iv0S6n3jh-DfBwOGkUk779UK9YUdAabapkwpjmHfGATEYs=s1600-rw-v1">
+                            </div>
                             <div class="heading">First Floor Plan</div>
                         </div>
                     </div>
                     <div class="info-cards site-plan">
                         <div class="image"><img class="lazy" loading="lazy" src=""
-                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihb892Txw2U0_rjCzKoWxN5SqLc-LweDcispPA4_F7EM46S_HkKD1AG_RiP6CvSyWtFAWfmmbX2hg_Ldf45bxzFD40frFFNxL08=s1600-rw-v1"></div>
+                                data-src="https://lh3.googleusercontent.com/drive-viewer/AKGpihb892Txw2U0_rjCzKoWxN5SqLc-LweDcispPA4_F7EM46S_HkKD1AG_RiP6CvSyWtFAWfmmbX2hg_Ldf45bxzFD40frFFNxL08=s1600-rw-v1">
+                        </div>
                         <div class="content-wrapper">
                             <div class="heading">Site Plan</div>
                         </div>

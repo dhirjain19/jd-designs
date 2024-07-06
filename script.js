@@ -252,6 +252,61 @@ function toggle_menu_three(val) {
   }
 }
 
+function toggle_menu_four(val) {
+  var menu_items_three = document
+    .getElementById("interior-menu")
+    .getElementsByClassName("menu-item");
+  var menu_items_four = document
+    .getElementById("menu-items-four")
+    .getElementsByClassName("menu-item");
+
+  if (val == 0) {
+    for (let i = 0; i < menu_items_four.length; i++) {
+      menu_items_four[i].classList.toggle("active");
+    }
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-four")[0]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-three")[1]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      for (let i = 0; i < menu_items_three.length; i++) {
+        menu_items_three[i].classList.toggle("hide");
+      }
+    }, 325);
+  } else {
+    for (let i = 0; i < menu_items_three.length; i++) {
+      menu_items_three[i].classList.toggle("hide");
+    }
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-three")[1]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-four")[0]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      for (let i = 0; i < menu_items_four.length; i++) {
+        menu_items_four[i].classList.toggle("active");
+      }
+    }, 325);
+  }
+}
+
 // ---------------------------------------------------- LAZY LOADING ----------------------------------------------------
 
 const lazyOptions = {

@@ -62,6 +62,7 @@
   z-index: 3;
   scale: 1 1;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .int_project_info .slider .dot {
