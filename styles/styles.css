@@ -433,16 +433,17 @@ img {
 
 .effect-button-icon {
   width: 1.5px;
-  height: 36px;
+  height: 40px;
   background-color: rgb(175 186 202);
 }
 
 .effect-button-icon::before, .effect-button-icon::after {
   content: "";
-  width: 13px;
-  height: 25px;
+  width: 12px;
+  height: 30px;
   position: absolute;
-  top: 17.5px;
+  top: 15px;
+  border-radius: 1px;
 }
 
 .effect-button-icon::before {
@@ -487,9 +488,6 @@ img {
   background-color: rgb(112 85 71);
 }
 
-.item.transition img:nth-child(2).active {
-  opacity: 1;
-}
 
 @media (max-width: 500px) {
   .onLoadDisplay .logo_image {
@@ -555,5 +553,29 @@ img {
 
   .preview .image {
     width: 97%;
+  }
+
+  .item.transition .effect-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .effect-button-icon {
+    width: 1.5px;
+    height: 24px;
+  }
+  
+  .effect-button-icon::before, .effect-button-icon::after {
+    width: 8px;
+    height: 18px;
+    top: 9px;
+  }
+  
+  .effect-button-icon::before {
+    left: 6px;
+  }
+  
+  .effect-button-icon::after {
+    right: 6px;
   }
 }
