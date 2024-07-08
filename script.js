@@ -394,6 +394,30 @@ function scrollToTop() {
 // ---------------------------------------------------- SLIDES AND PREVIEW FUNCTION ----------------------------------------------------
 
 var slideIndex = 1;
+var itemIndex = 0;
+
+function scrollCount(n) {
+  if (n == -1) {
+    showImage(itemIndex);
+    itemIndex += n;
+  } else {
+    showImage((itemIndex += n));
+  }
+}
+
+function showImage(n) {
+  var slides = document.querySelector(".home").querySelectorAll(".slides");
+  console.log(n);
+  if (n < 1) {
+    itemIndex = 1;
+  }
+  else if (n > slides.length - 1) {
+    itemIndex = slides.length - 1;
+  }
+  else {
+    slides[slides.length - n].classList.toggle("active");
+  }
+}
 
 function plusDivs(n) {
   showDivs((slideIndex += n));
@@ -441,16 +465,16 @@ function showDivs(n) {
 
 function imageToggle(e) {
   e.currentTarget.offsetParent.offsetParent
-    .querySelectorAll("img")[1].classList.toggle("active");
+    .querySelectorAll("img")[1].classList.toggle("deactive");
 }
 
 function imageChange(e, n = 1) {
   e.currentTarget.offsetParent.offsetParent
     .querySelectorAll("img")
-    .forEach((i) => i.classList.remove("active"));
+    .forEach((i) => i.classList.add("deactive"));
 
   e.currentTarget.offsetParent.offsetParent
-    .querySelectorAll("img")[n].classList.add("active");
+    .querySelectorAll("img")[n].classList.remove("deactive");
 }
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
