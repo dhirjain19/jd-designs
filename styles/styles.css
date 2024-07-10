@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 * {
   margin: 0;
@@ -323,7 +323,7 @@ img {
 
 .scrollToTop:hover {
   background-color: rgb(200, 200, 200);
-} 
+}
 
 .scrollToTop div {
   color: rgb(160, 0, 0);
@@ -438,7 +438,8 @@ img {
   background-color: rgb(175 186 202);
 }
 
-.effect-button-icon::before, .effect-button-icon::after {
+.effect-button-icon::before,
+.effect-button-icon::after {
   content: "";
   width: 12px;
   height: 30px;
@@ -457,38 +458,37 @@ img {
   right: 12px;
 }
 
-.effect-button.kitchen:nth-child(1) .effect-button-icon::before {
-  background-color: rgb(243 225 187);
-}
-
-.effect-button.kitchen:nth-child(1) .effect-button-icon::after {
-  background-color: rgb(144 96 73);
-}
-
 .effect-button.kitchen:nth-child(2) .effect-button-icon::before {
-  background-color: rgb(241 240 235)
+  background-color: rgb(219 203 170);
 }
 
 .effect-button.kitchen:nth-child(2) .effect-button-icon::after {
-  background-color: rgb(173 143 83);
+  background-color: rgb(146 96 73);
 }
 
 .effect-button.kitchen:nth-child(3) .effect-button-icon::before {
-  background-color: rgb(132 73 39);
+  background-color: rgb(240 239 235);
 }
 
 .effect-button.kitchen:nth-child(3) .effect-button-icon::after {
-  background-color: rgb(224 171 127);
+  background-color: rgb(100 97 90);
 }
 
 .effect-button.kitchen:nth-child(4) .effect-button-icon::before {
-  background-color: rgb(191 165 141);
+  background-color: rgb(242 192 127);
 }
 
 .effect-button.kitchen:nth-child(4) .effect-button-icon::after {
-  background-color: rgb(112 85 71);
+  background-color: rgb(86 81 75);
 }
 
+.effect-button.kitchen:nth-child(5) .effect-button-icon::before {
+  background-color: rgb(99 82 64);
+}
+
+.effect-button.kitchen:nth-child(5) .effect-button-icon::after {
+  background-color: rgb(205 180 157);
+}
 
 @media (max-width: 500px) {
   .onLoadDisplay .logo_image {
@@ -560,22 +560,23 @@ img {
     width: 36px;
     height: 36px;
   }
-  
+
   .effect-button-icon {
     width: 1.5px;
     height: 24px;
   }
-  
-  .effect-button-icon::before, .effect-button-icon::after {
+
+  .effect-button-icon::before,
+  .effect-button-icon::after {
     width: 8px;
     height: 18px;
     top: 9px;
   }
-  
+
   .effect-button-icon::before {
     left: 6px;
   }
-  
+
   .effect-button-icon::after {
     right: 6px;
   }

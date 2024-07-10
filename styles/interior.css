@@ -102,6 +102,16 @@
   margin: -20px auto 20px;
 }
 
+.int_project_info .description {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0px 25px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-align: center;
+  line-height: 1.4em;
+}
+
 .int_project_info .project-button-wrapper {
   display: flex;
   justify-content: space-between;
@@ -127,14 +137,6 @@
 .int_project_info .project-button-wrapper div:hover {
   scale: 1.05 1.05;
   color: rgb(200, 0, 0);
-}
-
-.int_project_info .description {
-  color: white;
-  padding: 0px 25px 20px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-align: center;
 }
 
 .int_project_info .gallery {
@@ -178,18 +180,6 @@
   object-position: 0% 50%;
 }
 
-.int_project_info .content-wrapper .image.transition img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.int_project_info .content-wrapper .image.transition img.active {
-  opacity: 1;
-  transition: 0.5s;
-}
 
 .int_project_info .content-wrapper .text {
   color: rgba(255, 255, 255, 0.75);
