@@ -406,15 +406,13 @@ function scrollCount(n) {
 }
 
 function showImage(n) {
-  var slides = document.querySelector(".home").querySelectorAll(".slides");
-  console.log(n);
+  var slides = active_section.querySelectorAll(".slides");
+  // console.log(n);
   if (n < 1) {
     itemIndex = 1;
-  }
-  else if (n > slides.length - 1) {
+  } else if (n > slides.length - 1) {
     itemIndex = slides.length - 1;
-  }
-  else {
+  } else {
     slides[slides.length - n].classList.toggle("active");
   }
 }
@@ -465,7 +463,8 @@ function showDivs(n) {
 
 function imageToggle(e) {
   e.currentTarget.offsetParent.offsetParent
-    .querySelectorAll("img")[1].classList.toggle("deactive");
+    .querySelectorAll("img")[1]
+    .classList.toggle("deactive");
 }
 
 function imageChange(e, n = 1) {
@@ -474,7 +473,8 @@ function imageChange(e, n = 1) {
     .forEach((i) => i.classList.add("deactive"));
 
   e.currentTarget.offsetParent.offsetParent
-    .querySelectorAll("img")[n].classList.remove("deactive");
+    .querySelectorAll("img")
+    [n].classList.remove("deactive");
 }
 
 // ---------------------------------------------------- SCROLLING FUNCTION ----------------------------------------------------
@@ -532,5 +532,20 @@ window.addEventListener("load", () => {
   scrollAnimation();
 });
 
+let wheel_count;
+window.addEventListener("wheel", (event) => {
+  if (active_section.classList.contains("home")) {
+    // wheel_count += 1;
+    // console.log(event.deltaY);
+    clearTimeout(wheel_count);
+    wheel_count = setTimeout(() => {
+      if (event.deltaY > 0) {
+        scrollCount(+1);
+      } else if (event.deltaY < 0) {
+        scrollCount(-1);
+      }
+    }, 500);
+  }
+});
 
 // QR Code: <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fjd-designs.netlify.app%2F&chs=180x180&choe=UTF-8&chld=L|2" alt="qr code"><a href="www.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow"></a>
