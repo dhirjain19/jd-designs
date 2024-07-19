@@ -11,7 +11,7 @@
 
 .int_project_info .container {
   overflow-x: hidden;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 .int_project_info .slideshow {
   position: relative;

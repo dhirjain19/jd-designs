@@ -308,7 +308,7 @@ img {
 .scrollToTop {
   position: fixed;
   display: none;
-  bottom: 20px;
+  bottom: 100px;
   right: 20px;
   z-index: 4;
   width: 50px;
@@ -490,6 +490,28 @@ img {
   background-color: rgb(205 180 157);
 }
 
+.footer {
+  background-color: #000;
+  color: rgba(200, 200, 200, 0.75);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  font-size: 15px;
+}
+
+.footer a {
+  color: rgb(200, 200, 200, 0.75);
+}
+
+#contact .footer {
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+  padding: 0;
+}
+
 @media (max-width: 500px) {
   .onLoadDisplay .logo_image {
     height: 100px;
@@ -579,5 +601,22 @@ img {
 
   .effect-button-icon::after {
     right: 6px;
+  }
+
+  .scrollToTop {
+    bottom: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    height: 80px;
+    padding: 20px;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .footer a {
+    color: rgb(200, 200, 200);
   }
 }
