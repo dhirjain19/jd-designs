@@ -231,7 +231,7 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 30px;
   list-style-type: none;
 }
 
@@ -260,7 +260,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   color: #fff;
-  font-size: 30px;
+  font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 6px;
 }

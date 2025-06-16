@@ -256,13 +256,60 @@ function toggle_menu_four(val) {
   var menu_items_three = document
     .getElementById("interior-menu")
     .getElementsByClassName("menu-item");
-  var menu_items_four = document
-    .getElementById("menu-items-four")
+  var house_list = document
+    .getElementById("house-menu")
+    .getElementsByClassName("menu-item");
+  var mahavir_astral_list = document
+    .getElementById("mahavir-astral-menu")
     .getElementsByClassName("menu-item");
 
-  if (val == 0) {
-    for (let i = 0; i < menu_items_four.length; i++) {
-      menu_items_four[i].classList.toggle("active");
+  if (val == 1) {
+    for (let i = 0; i < menu_items_three.length; i++) {
+      menu_items_three[i].classList.toggle("hide");
+    }
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-three")[1]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-four")[0]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      for (let i = 0; i < house_list.length; i++) {
+        house_list[i].classList.toggle("active");
+      }
+    }, 325);
+  } else if (val == 2) {
+    for (let i = 0; i < menu_items_three.length; i++) {
+      menu_items_three[i].classList.toggle("hide");
+    }
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-three")[1]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-four")[1]
+        .classList.toggle("hide");
+    }, 300);
+
+    setTimeout(() => {
+      for (let i = 0; i < mahavir_astral_list.length; i++) {
+        mahavir_astral_list[i].classList.toggle("active");
+      }
+    }, 325);
+  } else if (val == 3) {
+    for (let i = 0; i < house_list.length; i++) {
+      house_list[i].classList.toggle("active");
     }
 
     setTimeout(() => {
@@ -283,9 +330,15 @@ function toggle_menu_four(val) {
       }
     }, 325);
   } else {
-    for (let i = 0; i < menu_items_three.length; i++) {
-      menu_items_three[i].classList.toggle("hide");
+    for (let i = 0; i < mahavir_astral_list.length; i++) {
+      mahavir_astral_list[i].classList.toggle("active");
     }
+
+    setTimeout(() => {
+      document
+        .getElementsByClassName("menu-list-four")[1]
+        .classList.toggle("hide");
+    }, 300);
 
     setTimeout(() => {
       document
@@ -294,14 +347,8 @@ function toggle_menu_four(val) {
     }, 300);
 
     setTimeout(() => {
-      document
-        .getElementsByClassName("menu-list-four")[0]
-        .classList.toggle("hide");
-    }, 300);
-
-    setTimeout(() => {
-      for (let i = 0; i < menu_items_four.length; i++) {
-        menu_items_four[i].classList.toggle("active");
+      for (let i = 0; i < menu_items_three.length; i++) {
+        menu_items_three[i].classList.toggle("hide");
       }
     }, 325);
   }
