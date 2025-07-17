@@ -1,6 +1,6 @@
 .about {
-  background-color: #fff;
-  color: #222;
+  background-color: rgb(40 40 50);
+  color: white;
 }
 
 .about .container {
@@ -15,10 +15,9 @@
   background-color: #fff;
   margin: 20px 0;
   padding: 40px 30px;
-  box-shadow: 0 4px 16px #e8dcc7;
-  border: 2px solid #e8dcc7;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  color: #222;
+  color: black;
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -29,10 +28,7 @@
   font-weight: bold;
   margin-bottom: 10px;
   padding-bottom: 5px;
-  border-bottom: 4px solid #e8dcc7;
-  color: #9c7a4b;
-  background: linear-gradient(90deg, #fff 70%, #e8dcc7 100%);
-  border-radius: 0 0 12px 12px;
+  border-bottom: 4px solid rgb(80, 80, 100);
 }
 
 .about .about-container .description .text {
@@ -55,8 +51,7 @@
   background-color: #fff;
   margin: 20px 0;
   padding: 40px 30px;
-  box-shadow: 0 4px 16px #e8dcc7;
-  border: 2px solid #e8dcc7;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
@@ -67,10 +62,8 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: #9c7a4b;
-  border-bottom: 4px solid #e8dcc7;
-  background: linear-gradient(90deg, #fff 70%, #e8dcc7 100%);
-  border-radius: 0 0 12px 12px;
+  color: black;
+  border-bottom: 4px solid rgb(80, 80, 100);
 }
 
 .skills-list {
@@ -80,32 +73,22 @@
 }
 
 .skill {
-  background: linear-gradient(120deg, #e8dcc7 60%, #fff 100%);
-  color: #9c7a4b;
+  background-color: rgb(155 161 187);
+  color: #fff;
   border-radius: 4px;
   padding: 10px 20px;
   margin: 10px;
   list-style-type: none;
   font-size: 16px;
-  border: 1.5px solid #e8dcc7;
-  box-shadow: 0 2px 8px #e8dcc7;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-}
-.skill:hover {
-  background: #9c7a4b;
-  color: #fff;
-  box-shadow: 0 4px 16px #e8dcc7;
 }
 
 .connect-container {
   /* margin: 20px 0; */
   padding: 40px 30px;
-  background-color: #fff;
-  box-shadow: 0 4px 16px #e8dcc7;
-  border: 2px solid #e8dcc7;
+  background-color: white;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  color: #222;
+  color: black;
 }
 
 .connect-title {
@@ -115,10 +98,7 @@
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: #9c7a4b;
-  border-bottom: 4px solid #e8dcc7;
-  background: linear-gradient(90deg, #fff 70%, #e8dcc7 100%);
-  border-radius: 0 0 12px 12px;
+  border-bottom: 4px solid rgb(80, 80, 100);
 }
 
 .connect-text {
@@ -133,33 +113,17 @@
 .connect-button a {
   display: inline-block;
   padding: 10px 20px;
-  background: linear-gradient(90deg, #9c7a4b 70%, #e8dcc7 100%);
-  color: #fff;
+  background-color: rgba(155, 161, 187, 0.625);
+  color: #000000;
   text-decoration: none;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s ease;
   cursor: pointer;
-  border: none;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  box-shadow: 0 2px 8px #e8dcc7;
 }
 
 .connect-button a:hover {
-  background: #fff;
-  color: #9c7a4b;
-  border: 2px solid #9c7a4b;
-  box-shadow: 0 4px 16px #e8dcc7;
-}
-
-.footer {
-  background-color: #fff;
-  color: #9c7a4b;
-  border-top: 2px solid #e8dcc7;
-}
-
-.footer a {
-  color: #9c7a4b;
+  background-color: rgb(80, 80, 100);
+  color: white;
 }
 
 @media (max-width: 500px) {
